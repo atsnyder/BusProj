@@ -8,8 +8,28 @@ Welcome to BusRide
   = label_tag 'Round Trip', "Round Trip",:id => 'l_RoundTrip'
   %br
   = text_field :search, 'From',:id => 'From_search_box',:placeholder => 'From'
-  = text_field :date, 'From_Date',:id => 'datepicker'
+  = text_field :date, 'From_Date',:id => 'datepicker',:placeholder => 'From_Date'
   = text_field :search, 'To',:id => 'To_search_box',:placeholder => 'To'
-  = text_field :date, 'To_Date',:id => 'datepicker'
+  = text_field :date, 'To_Date',:id => 'datepicker1',:placeholder => 'To_Date'
   %br
   = submit_tag 'Search' 
+
+
+
+%script{src: "pikaday.js"}
+:javascript
+  var picker = new Pikaday({
+      field: document.getElementById('datepicker'),
+      format: 'D MMM YYYY',
+      onselect: function() {
+          console.log(this.getMoment().format('Do MMMM YYYY'));
+          }
+      });
+
+  var picker = new Pikaday({
+      field: document.getElementById('datepicker1'),
+      format: 'D MMM YYYY',
+      onselect: function() {
+          console.log(this.getMoment().format('Do MMMM YYYY'));
+          }
+      });
