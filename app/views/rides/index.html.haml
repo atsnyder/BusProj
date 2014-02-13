@@ -1,0 +1,15 @@
+
+Welcome to BusRide
+= form_tag rides_search_path, :method => :get do
+  %br
+  = radio_button_tag 'search[radio]', 'One Way', true
+  = label_tag 'One Way', "One Way",:id => 'l_OneWay'
+  = radio_button_tag 'search[radio]', 'Round Trip'
+  = label_tag 'Round Trip', "Round Trip",:id => 'l_RoundTrip'
+  %br
+  = text_field :search, 'From',:id => 'From_search_box',:placeholder => 'From'
+  = text_field :date, 'From_Date',:id => 'datepicker',:placeholder => 'From_Date'
+  = text_field :search, 'To',:id => 'To_search_box',:placeholder => 'To'
+  = text_field :date, 'To_Date',:id => 'datepicker',:placeholder => 'To_Date'
+  %br
+  = submit_tag 'Search' 

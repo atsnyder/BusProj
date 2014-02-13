@@ -1,0 +1,38 @@
+.radios{
+  width:300px;
+  position:relative;
+  left:470px;
+
+}
+img{
+  border:0 !important;
+}
+
+.radios input[type="radio"]{
+ 	float:left;
+	height:14px;
+
+}
+
+
+.radios label {
+ 	float:left;
+	height:14px;
+
+	color:#666;
+        cursor:pointer;
+        font-size:11px;
+	padding:0 !important;
+	line-height:14px;
+	vertical-align: middle;
+
+        margin:0 10px 0 3px;
+        white-space:nowrap;
+        /*float:left;*/
+
+}
+
+input[type=radio]{
+        cursor:pointer;
+        /*float:left;*/
+}
