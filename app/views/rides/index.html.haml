@@ -1,6 +1,6 @@
 
 Welcome to BusRide
-= form_tag rides_search_path, :method => :get do
+= form_tag rides_search_path, :method => :post do
   %br
   = radio_button_tag 'search[radio]', 'OneWay', false, :onclick => "javascript:RoundCheck();"
   One Way
