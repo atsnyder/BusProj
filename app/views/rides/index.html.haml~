@@ -1,0 +1,89 @@
+<<<<<<< HEAD
+
+Welcome to BusRide
+= form_tag rides_search_path, :method => :post do
+  %br
+  = radio_button_tag 'search[radio]', 'OneWay', false, :onclick => "javascript:RoundCheck();"
+  One Way
+  = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
+  Round Trip
+  %br
+  = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
+  = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
+  %br
+  = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
+  = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
+  %br
+  = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
+  %br
+  = submit_tag 'Search' 
+=======
+.radientBG
+  .middle
+    #hometitle
+      Welcome to BusRide
+    = form_tag rides_search_path, :method => :get do
+      %br
+      = radio_button_tag 'search[radio]', 'One Way', true
+      = label_tag 'One Way', "One Way",:id => 'l_OneWay'
+      = radio_button_tag 'search[radio]', 'Round Trip'
+      = label_tag 'Round Trip', "Round Trip",:id => 'l_RoundTrip'
+      %br
+      = text_field :search, 'From',:id => 'From_search_box',:placeholder => 'From'
+      = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
+      = text_field :search, 'To',:id => 'To_search_box',:placeholder => 'To'
+      = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
+      %br
+      = submit_tag 'Search' 
+>>>>>>> mc
+
+
+
+%script{src: "pikaday.js"}
+:javascript
+
+  var today = new Date()
+  var from_date = new Date()
+  var to_picker = new Pikaday()
+
+  var from_picker = new Pikaday({
+      field: document.getElementById('from_datepicker'),
+      format: 'D MMM YYYY', 
+      minDate: new Date(),
+      onSelect: function() 
+      {
+        to_picker.destroy();
+        to_picker = new Pikaday({
+            field: document.getElementById('to_datepicker'),
+            format: 'D MMM YYYY',
+            minDate: from_picker.getDate(),
+            onSelect: function() 
+            {
+                console.log(this.getMoment().format('Do MMMM YYYY'));
+            }
+        });
+
+          console.log(this.getMoment().format('Do MMMM YYYY'))
+      }
+
+  });
+
+  if (document.getElementById('search_radio_OneWay').checked) {
+      document.getElementById('to_datepicker').style.visibility = 'hidden';
+  }
+
+
+
+
+
+
+:javascript
+  function RoundCheck() { 
+    if (document.getElementById('search_radio_OneWay').checked) {
+      document.getElementById('to_datepicker').style.visibility = 'hidden';
+    }
+    else {
+      document.getElementById('to_datepicker').style.visibility = 'visible';
+    }
+  }
+
