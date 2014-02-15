@@ -2,13 +2,16 @@
 Welcome to BusRide
 = form_tag rides_search_path, :method => :get do
   %br
-  = radio_button_tag 'search[radio]', 'One Way', true
-  = label_tag 'One Way', "One Way",:id => 'l_OneWay'
-  = radio_button_tag 'search[radio]', 'Round Trip'
-  = label_tag 'Round Trip', "Round Trip",:id => 'l_RoundTrip'
+  = radio_button_tag 'search[radio]', 'OneWay', true, :onclick => "javascript:RoundCheck();"
+  //= label_tag 'One Way', "One Way"
+  One Way
+  = radio_button_tag 'search[radio]', 'RoundTrip', false, :onclick => "javascript:RoundCheck();"
+  //= label_tag 'Round Trip', "Round Trip"
+  Round Trip
   %br
   = text_field :search, 'From',:id => 'From_search_box',:placeholder => 'From'
   = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
+  %br
   = text_field :search, 'To',:id => 'To_search_box',:placeholder => 'To'
   = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
   %br
@@ -29,16 +32,25 @@ Welcome to BusRide
       {
           console.log(this.getMoment().format('Do MMMM YYYY'));
       }
-    
       });
 
   var to_picker = new Pikaday({
       field: document.getElementById('to_datepicker'),
       format: 'D MMM YYYY',
-      minDate: from_picker.getDate(),
       onselect: function() 
       {
           console.log(this.getMoment().format('Do MMMM YYYY'));
       }
       });
+
+
+:javascript
+  function RoundCheck() { 
+    if (document.getElementById('search_radio_OneWay').checked) {
+      document.getElementById('to_datepicker').style.visibility = 'visible';
+    }
+    else {
+      document.getElementById('to_datepicker').style.visibility = 'hidden';
+    }
+  }
 
