@@ -45,10 +45,6 @@ Welcome to BusRide
 
           console.log(this.getMoment().format('Do MMMM YYYY'))
       }
-<<<<<<< HEAD
-=======
-      });
->>>>>>> 87a2fb2d871fa7f4562f2d99deacd304fa1b26b8
 
   });
 
