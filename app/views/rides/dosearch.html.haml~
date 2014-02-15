@@ -1,5 +1,5 @@
 This is results page!!
 
-@to_city.From
+@to_city['From']
 #{@to_city}
 

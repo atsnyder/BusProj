@@ -1,6 +1,6 @@
 
 Welcome to BusRide
-= form_tag rides_search_path, :method => :get do
+= form_tag rides_search_path do
   %br
   = radio_button_tag 'search[radio]', 'One Way', true
   = label_tag 'One Way', "One Way",:id => 'l_OneWay'
@@ -35,7 +35,6 @@ Welcome to BusRide
   var to_picker = new Pikaday({
       field: document.getElementById('to_datepicker'),
       format: 'D MMM YYYY',
-      minDate: from_picker.getDate(),
       onselect: function() 
       {
           console.log(this.getMoment().format('Do MMMM YYYY'));

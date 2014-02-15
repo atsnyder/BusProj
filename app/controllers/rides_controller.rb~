@@ -6,10 +6,15 @@ end
 def new
 end
 
+def show 
+
+end
+
+
 def dosearch
-    radio = params[:search][:radio]
-    search = params[:search][:title]
-    redirect_to jobs_path
+    puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA" 
+    puts params[:search][:To]    
+    print "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"     
 end
 
 end
