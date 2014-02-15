@@ -2,10 +2,10 @@
 Welcome to BusRide
 = form_tag rides_search_path, :method => :get do
   %br
-  = radio_button_tag 'search[radio]', 'One Way', true
-  = label_tag 'One Way', "One Way",:id => 'l_OneWay'
-  = radio_button_tag 'search[radio]', 'Round Trip'
-  = label_tag 'Round Trip', "Round Trip",:id => 'l_RoundTrip'
+  = radio_button_tag 'search[radio]', 'OneWay', true, :onclick => "javascript:RoundCheck();"
+  One Way
+  = radio_button_tag 'search[radio]', 'RoundTrip', false, :onclick => "javascript:RoundCheck();"
+  Round Trip
   %br
   = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
   = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
@@ -51,4 +51,15 @@ Welcome to BusRide
 
 
 
+
+
+:javascript
+  function RoundCheck() { 
+    if (document.getElementById('search_radio_OneWay').checked) {
+      document.getElementById('to_datepicker').style.visibility = 'visible';
+    }
+    else {
+      document.getElementById('to_datepicker').style.visibility = 'hidden';
+    }
+  }
 
