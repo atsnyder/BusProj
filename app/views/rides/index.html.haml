@@ -18,18 +18,26 @@ Welcome to BusRide
 
 %script{src: "pikaday.js"}
 :javascript
-  var picker = new Pikaday({
+
+  var today = new Date()
+
+  var from_picker = new Pikaday({
       field: document.getElementById('from_datepicker'),
-      format: 'D MMM YYYY',
-      onselect: function() {
+      format: 'D MMM YYYY', 
+      minDate: new Date(),
+      onselect: function() 
+      {
           console.log(this.getMoment().format('Do MMMM YYYY'));
-          }
+      }
+    
       });
 
-  var picker = new Pikaday({
+  var to_picker = new Pikaday({
       field: document.getElementById('to_datepicker'),
       format: 'D MMM YYYY',
-      onselect: function() {
+      onselect: function() 
+      {
           console.log(this.getMoment().format('Do MMMM YYYY'));
-          }
+      }
       });
+
