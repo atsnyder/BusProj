@@ -1,0 +1,20 @@
+body {
+  background-image:url('cubeBG.jpg');
+  background-color:#cccccc;
+}
+
+.radientBG{
+   max-width:100%;
+   position:absolute;
+   top:30%;
+}
+
+#hometitle{
+  font-family: Arial;
+  font-size: 50px;
+}
+
+.middle{
+  text-align: center;
+  margin:0 auto;
+}
