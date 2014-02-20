@@ -1,16 +1,10 @@
-    Feature: User can find bus to ride by searching for it
+Feature: Search for bus ride
      
-      As a bus rider
-      so that I can find a bus to ride
-      I want find a bus ride by searching by criteria 
+Scenario: Search for bus with no matches
      
-    Scenario: Try to find nonexistent bus ride (sad path)
-     
-      Given I am on the BusRide home page
-      Then I should see "Search"
-      When I fill in "Search Terms" with "No bus that fits criteria"
-      And I press "Search"
-      Then I should be on the BusRide home page
-      And I should see "No matching bus rides were found."
+ Given I am on the BusRide home page
+ And I have searched for a bus with source "Iowa City" and initial departure date "Thu Apr 17 2014" and destination "Des Moines" and return departure date "Fri Apr 18 2014" and number of passengers "1"
+ Then I should be on the Search Results page
+ And I should see "No matching bus rides were found."
 
 
