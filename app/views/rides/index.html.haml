@@ -11,13 +11,15 @@
       = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
       Round Trip
       %br
-      #destsearch
-        = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
-        = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
-      #datesearch
-        = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
-        = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
-        = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
+
+      = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'from_city'
+      = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'from_Date'
+      %br
+      = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
+      = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
+      %br
+      = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
+
       %br
       = submit_tag 'Search' 
 
