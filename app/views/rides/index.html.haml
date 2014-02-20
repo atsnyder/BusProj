@@ -1,4 +1,5 @@
 
+
 .radientBG
   .middle
     #hometitle
@@ -51,22 +52,39 @@
 
   });
 
-  if (document.getElementById('search_radio_OneWay').checked) {
+  if (document.getElementById('search_radio_OneWay').checked) 
+  {
       document.getElementById('to_datepicker').style.visibility = 'hidden';
   }
 
 
 
 
-
-
-:javascript
-  function RoundCheck() { 
-    if (document.getElementById('search_radio_OneWay').checked) {
+  function RoundCheck()
+  { 
+    if (document.getElementById('search_radio_OneWay').checked)
+    {
       document.getElementById('to_datepicker').style.visibility = 'hidden';
     }
-    else {
+    else 
+    {
       document.getElementById('to_datepicker').style.visibility = 'visible';
     }
   }
+
+
+  $(document).ready(function() 
+  {
+      document.getElementById('from_search_box').value = "";
+      document.getElementById('to_search_box').value = "";
+      document.getElementById('from_datepicker').value = "";
+      document.getElementById('to_datepicker').style.visibility = 'visible';
+      document.getElementById('to_datepicker').value = "";
+      document.getElementById('passengers_box').value = "";
+      document.getElementById('search_radio_OneWay').checked = false;
+      document.getElementById('search_radio_RoundTrip').checked = true;
+
+  });
+
+
 

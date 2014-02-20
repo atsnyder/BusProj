@@ -1,24 +1,25 @@
 
+
 .radientBG
   .middle
     #hometitle
       Welcome to BusRide
     = form_tag rides_search_path, :method => :post do
-    %br
-    = radio_button_tag 'search[radio]', 'OneWay', false, :onclick => "javascript:RoundCheck();"
-    One Way
-    = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
-    Round Trip
-    %br
-    = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
-    = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
-    %br
-    = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
-    = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
-    %br
-    = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
-    %br
-    = submit_tag 'Search' 
+      %br
+      = radio_button_tag 'search[radio]', 'OneWay', false, :onclick => "javascript:RoundCheck();"
+      One Way
+      = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
+      Round Trip
+      %br
+      = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
+      = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
+      %br
+      = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
+      = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
+      %br
+      = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
+      %br
+      = submit_tag 'Search' 
 
 
 
@@ -51,22 +52,39 @@
 
   });
 
-  if (document.getElementById('search_radio_OneWay').checked) {
+  if (document.getElementById('search_radio_OneWay').checked) 
+  {
       document.getElementById('to_datepicker').style.visibility = 'hidden';
   }
 
 
 
 
-
-
-:javascript
-  function RoundCheck() { 
-    if (document.getElementById('search_radio_OneWay').checked) {
+  function RoundCheck()
+  { 
+    if (document.getElementById('search_radio_OneWay').checked)
+    {
       document.getElementById('to_datepicker').style.visibility = 'hidden';
     }
-    else {
+    else 
+    {
       document.getElementById('to_datepicker').style.visibility = 'visible';
     }
   }
+
+
+  $(document).ready(function() 
+  {
+      document.getElementById('from_search_box').value = "";
+      document.getElementById('to_search_box').value = "";
+      document.getElementById('from_datepicker').value = "";
+      document.getElementById('from_datepicker').style.visibility = 'visible';
+      document.getElementById('to_datepicker').value = "";
+      document.getElementById('passengers_box').value = "";
+      document.getElementById('search_radio_OneWay').checked = false;
+      document.getElementById('search_radio_RoundTrip').checked = true;
+
+  });
+
+
 
