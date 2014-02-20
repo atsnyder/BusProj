@@ -11,7 +11,7 @@
       = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
       Round Trip
       %br
-      = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
+      = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From', :readonly => 'readonly'
       = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
       %br
       = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
@@ -78,7 +78,7 @@
       document.getElementById('from_search_box').value = "";
       document.getElementById('to_search_box').value = "";
       document.getElementById('from_datepicker').value = "";
-      document.getElementById('from_datepicker').style.visibility = 'visible';
+      document.getElementById('to_datepicker').style.visibility = 'visible';
       document.getElementById('to_datepicker').value = "";
       document.getElementById('passengers_box').value = "";
       document.getElementById('search_radio_OneWay').checked = false;
