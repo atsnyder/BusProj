@@ -11,13 +11,13 @@
       = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
       Round Trip
       %br
-      = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
-      = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date'
-      %br
-      = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
-      = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date'
-      %br
-      = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
+      #destsearch
+        = text_field :search, 'From',:id => 'from_search_box',:placeholder => 'From'
+        = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
+      #datesearch
+        = text_field :date, 'From_Date',:id => 'from_datepicker',:placeholder => 'From_Date', :readonly => 'readonly'
+        = text_field :date, 'To_Date',:id => 'to_datepicker',:placeholder => 'To_Date', :readonly => 'readonly'
+        = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
       %br
       = submit_tag 'Search' 
 
@@ -65,10 +65,12 @@
     if (document.getElementById('search_radio_OneWay').checked)
     {
       document.getElementById('to_datepicker').style.visibility = 'hidden';
+      document.getElementById('to_datepicker').style.display = 'none';
     }
     else 
     {
       document.getElementById('to_datepicker').style.visibility = 'visible';
+      document.getElementById('to_datepicker').style.display = 'inline';
     }
   }
 
