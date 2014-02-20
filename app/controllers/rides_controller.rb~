@@ -11,10 +11,10 @@ def show
 end
 
 
-def dosearch
-    puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA" 
-    puts params[:search][:To]    
-    print "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"     
+def dosearch    
+     @rides = Ride.fetch_results params[:search]
+     puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+     puts @rides.type
 end
 
 end
