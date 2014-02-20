@@ -4,9 +4,15 @@ body {
 }
 
 .radientBG{
-   max-width:100%;
+   background-image:url('roadBGcrop2.jpg');
+   width:100%;
    position:absolute;
-   top:30%;
+   top:25%;
+   padding-top: 100px;
+   height: 400px;
+   background-repeat:no-repeat;
+   background-attachment:fixed;
+   background-position:center;
 }
 
 #hometitle{
@@ -17,4 +23,9 @@ body {
 .middle{
   text-align: center;
   margin:0 auto;
+  /* default fallback */
+  background: rgb(255, 255, 255) transparent;
+  /* nice browsers */
+  background: rgba(255, 255, 255, 0.8);
+  width: 30%;
 }
