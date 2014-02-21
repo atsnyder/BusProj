@@ -78,9 +78,11 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-
+<<<<<<< HEAD
     mini_portile (0.5.1)
-
+=======
+    mini_portile (0.5.2)
+>>>>>>> NDlocal
     multi_json (1.8.4)
     multi_test (0.0.2)
     nokogiri (1.6.0)

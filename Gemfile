@@ -22,14 +22,14 @@ end
 
 gem 'jquery-rails'
 
-
 group :development, :test do
 gem 'capybara'
 gem 'launchy'
 gem 'database_cleaner'
-#gem 'sqlite3'
+gem 'sqlite3'
 gem 'rspec-rails'
-#gem 'simplecov', :require => false
+gem 'simplecov', :require => false
+
 
 end
 
@@ -38,7 +38,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
 end
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
