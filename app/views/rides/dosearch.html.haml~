@@ -1,5 +1,0 @@
-This is results page!!
-
-= @rides.each { |ride| ride.from_city }
-
-
