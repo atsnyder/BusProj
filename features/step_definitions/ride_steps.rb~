@@ -19,3 +19,30 @@ Then(/^I should see "(.*?)"$/) do |msg|
   pending # express the regexp above with the code you wish you had
 end
 
+When(/^"(.*?)" is chosen$/) do |radio|
+  if(radio == "Round Trip")
+    radio_id = "search_radio_RoundTrip"
+  elsif(radio == "One Way Trip")
+    radio_id = "search_radio_OneWay"
+  end
+  choose(radio_id)
+end
+
+When(/^I choose "(.*?)"$/) do |radio|
+  if(radio == "Round Trip")
+    radio_id = "search_radio_RoundTrip"
+  elsif(radio == "One Way Trip")
+    radio_id = "search_radio_OneWay"
+  end
+  choose(radio_id)
+end
+
+Then(/^I should see the text field for return date$/) do
+  page.should have_css('#to_datepicker', :visible => true)
+end
+
+Then(/^I should not see the text field for return date$/) do
+  pending
+end
+
+
