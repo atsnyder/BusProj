@@ -1,5 +1,10 @@
 This is results page!!
 
-= @rides.map { |ride| ride.from_city }
-
-
+%table#rides
+  %thead
+    %tr
+      %th From City
+  %tbody
+    = @rides.map do |ride|
+      %tr
+        %td= ride.from_city

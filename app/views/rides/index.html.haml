@@ -5,22 +5,23 @@
     #hometitle
       Welcome to BusRide
     = form_tag rides_search_path, :method => :post do
-      %br
-      = radio_button_tag 'search[radio]', 'OneWay', false, :onclick => "javascript:RoundCheck();"
-      One Way
-      = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
-      Round Trip
-      %br
+      .search_field
+        %br
+        = radio_button_tag 'search[radio]', 'OneWay', false, :onclick => "javascript:RoundCheck();"
+        One Way
+        = radio_button_tag 'search[radio]', 'RoundTrip', true, :onclick => "javascript:RoundCheck();"
+        Round Trip
+        %br
 
-      #destsearch
-        = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'from_city'
-        = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
-      #datesearch
-        = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'from_Date', :readonly => 'readonly'
-        = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'to_Date', :readonly => 'readonly'
-        = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
-      %br
-      = submit_tag 'Search', :id => 'search'
+        #destsearch
+          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'from_city'
+          = text_field :search, 'To',:id => 'to_search_box',:placeholder => 'To'
+        #datesearch
+          = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'from_Date', :readonly => 'readonly'
+          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'to_Date', :readonly => 'readonly'
+          = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
+        %br
+          = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
 
 
 
