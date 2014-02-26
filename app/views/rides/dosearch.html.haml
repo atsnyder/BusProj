@@ -4,7 +4,11 @@ This is results page!!
   %thead
     %tr
       %th From City
+      %th Time
+      %th To City
   %tbody
-    = @rides.map do |ride|
+    - @rides.map do |ride|
       %tr
         %td= ride.from_city
+        %td TBD
+        %td Iowa City
