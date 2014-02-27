@@ -6,6 +6,7 @@
       Welcome to BusRide
     = form_tag rides_search_path, :method => :post do
       .search_field
+
         %br
         = radio_button_tag 'search[radio]', 'OneWay', false, :onclick => "javascript:RoundCheck();"
         One Way
@@ -14,81 +15,13 @@
         %br
 
         #destsearch
-          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'from_city'
+          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From'
           = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To'
         #datesearch
-          = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'from_Date', :readonly => 'readonly'
-          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'to_Date', :readonly => 'readonly'
+          = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :readonly => 'readonly'
+          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
           = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
         %br
           = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
-
-
-
-%script{src: "pikaday.js"}
-:javascript
-
-  var today = new Date()
-  var from_date = new Date()
-  var to_picker = new Pikaday()
-
-  var from_picker = new Pikaday({
-      field: document.getElementById('from_datepicker'),
-      format: 'D MMM YYYY', 
-      minDate: new Date(),
-      onSelect: function() 
-      {
-        to_picker.destroy();
-        to_picker = new Pikaday({
-            field: document.getElementById('to_datepicker'),
-            format: 'D MMM YYYY',
-            minDate: from_picker.getDate(),
-            onSelect: function() 
-            {
-                console.log(this.getMoment().format('Do MMMM YYYY'));
-            }
-        });
-
-          console.log(this.getMoment().format('Do MMMM YYYY'))
-      }
-
-  });
-
-  if (document.getElementById('search_radio_OneWay').checked) 
-  {
-      document.getElementById('to_datepicker').style.visibility = 'hidden';
-  }
-
-
-
-
-  function RoundCheck()
-  { 
-    if (document.getElementById('search_radio_OneWay').checked)
-    {
-      document.getElementById('to_datepicker').style.visibility = 'hidden';
-      document.getElementById('to_datepicker').style.display = 'none';
-    }
-    else 
-    {
-      document.getElementById('to_datepicker').style.visibility = 'visible';
-      document.getElementById('to_datepicker').style.display = 'inline';
-    }
-  }
-
-
-  $(document).ready(function() 
-  {
-      document.getElementById('from_search_box').value = "";
-      document.getElementById('to_search_box').value = "";
-      document.getElementById('from_datepicker').value = "";
-      document.getElementById('to_datepicker').style.visibility = 'visible';
-      document.getElementById('to_datepicker').value = "";
-      document.getElementById('passengers_box').value = "";
-      document.getElementById('search_radio_OneWay').checked = false;
-      document.getElementById('search_radio_RoundTrip').checked = true;
-
-  });
-
 
 

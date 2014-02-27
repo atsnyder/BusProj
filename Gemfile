@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'haml'
 gem "pikaday-gem" , "~>1.1.0.0"
+gem "jasmine", "~> 2.0.0"
+gem "jasmine-jquery-rails"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -67,6 +67,13 @@ GEM
       tilt
     hike (1.2.3)
     i18n (0.6.1)
+    jasmine (2.0.0)
+      jasmine-core (~> 2.0.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (2.0.0)
+    jasmine-jquery-rails (2.0.2)
     journey (1.0.4)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
@@ -83,6 +90,7 @@ GEM
     multi_test (0.0.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    phantomjs (1.9.7.0)
     pikaday-gem (1.1.0.0)
       railties (>= 3.1)
     polyglot (0.3.3)
@@ -159,6 +167,8 @@ DEPENDENCIES
   cucumber-rails-training-wheels
   database_cleaner
   haml
+  jasmine (~> 2.0.0)
+  jasmine-jquery-rails
   jquery-rails
   launchy
   pikaday-gem (~> 1.1.0.0)
