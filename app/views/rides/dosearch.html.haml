@@ -1,14 +1,23 @@
 This is results page!!
 
-%table#rides
+%table#rides_result
   %thead
     %tr
       %th From City
       %th Time
       %th To City
   %tbody
+    - style = 0
     - @rides.map do |ride|
-      %tr
-        %td= ride.from_city
-        %td TBD
-        %td Iowa City
+      - if style == 0
+        - style = 1
+        %tr
+          %td= ride.from_city
+          %td TBD
+          %td Iowa City
+      - else
+        - style = 0
+        %tr{ :class=>'alt'}
+          %td= ride.from_city
+          %td TBD
+          %td Iowa City
