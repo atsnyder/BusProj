@@ -23,7 +23,7 @@
     background-color:#EAF2D3;
   }
 
-#rides_result th, td {
+#rides_result th td {
     overflow: hidden;
     min-width: 200px; 
     width: 200px; 
