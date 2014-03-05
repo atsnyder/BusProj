@@ -1,4 +1,6 @@
-This is results page!!
+Results:
+
+= paginate @rides 
 
 %table#rides_result
   %thead
@@ -21,3 +23,5 @@ This is results page!!
           %td= ride.from_city
           %td TBD
           %td Iowa City
+
+= paginate @rides

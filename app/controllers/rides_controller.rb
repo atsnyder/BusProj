@@ -1,6 +1,7 @@
 class RidesController < ApplicationController
 
 def index
+    @perpage = 5
 end
 
 def new
