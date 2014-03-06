@@ -1,9 +1,9 @@
 class Ride < ActiveRecord::Base
 
-attr_accessible :from_city
+attr_accessible :from_city , :to_city
 
 def self.fetch_results params
-	rides = Ride.find_by_sql("SELECT * from BusTable WHERE SourceCity = '#{params}'")
+	rides = Ride.find_by_sql("SELECT * from 2014March7 WHERE DEPART_CITY like '%#{params[:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%'")
 	return rides
 end
 

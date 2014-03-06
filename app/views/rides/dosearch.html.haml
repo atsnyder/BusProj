@@ -1,5 +1,37 @@
-This is results page!!
+Results:
 
-= @rides.map { |ride| ride.CName  }
+
+%table#rides_result
+  %thead
+    %tr
+      %th Origin City
+      %th Depart Time
+      %th Destination City
+      %th Destination Time
+      %th Trip Cost
+      %th URL
+  %tbody
+    - style = 0
+    - @rides.map do |ride|
+      - if style == 0
+        - style = 1
+        %tr
+          %td= ride.DEPART_CITY
+          %td= ride.DEPART_TIME
+          %td= ride.ARRIVE_CITY
+          %td= ride.ARRIVE_TIME
+          %td= ride.TRIP_COST
+          %td
+            %a{href:"#{ride.URL}"}More Information     
+      - else
+        - style = 0
+        %tr{ :class=>'alt'}
+          %td= ride.DEPART_CITY
+          %td= ride.DEPART_TIME
+          %td= ride.ARRIVE_CITY
+          %td= ride.ARRIVE_TIME
+          %td= ride.TRIP_COST
+          %td
+            %a{href:"#{ride.URL}"}More Information  
 
 

@@ -5,10 +5,12 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'mysql2','~>0.3.15'
+gem 'mysql2' , "~>0.3.15"
 gem 'haml'
 gem "pikaday-gem" , "~>1.1.0.0"
+gem "jasmine", "~> 2.0.0"
+gem "jasmine-jquery-rails"
+gem 'kaminari'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

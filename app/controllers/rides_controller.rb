@@ -1,6 +1,7 @@
 class RidesController < ApplicationController
 
 def index
+    @perpage = 5
 end
 
 def new
@@ -12,10 +13,11 @@ end
 
 
 def dosearch    
-     scity = params[:search][:from_city]	
-     @rides = Ride.fetch_results scity
-     puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-     puts @rides
+     @rides = Ride.fetch_results params[:search]
+     if(@rides.size == 0)
+      flash[:notice] = "No routes match the search terms."
+      redirect_to rides_path
+    end
 end
 
 end
