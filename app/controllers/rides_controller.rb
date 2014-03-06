@@ -13,7 +13,7 @@ end
 
 
 def dosearch    
-     @rides = Ride.fetch_results params[:search]
+     @rides = Ride.fetch_results params[:search][:from_city]
      puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
      puts @rides
 end
