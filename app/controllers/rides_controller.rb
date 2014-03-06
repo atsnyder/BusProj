@@ -1,6 +1,7 @@
 class RidesController < ApplicationController
 
 def index
+    @perpage = 5
 end
 
 def new
@@ -11,8 +12,7 @@ def show
 end
 
 
-def dosearch    
-     
+def dosearch
      @rides = Ride.fetch_results params[:search][:from_city]
      puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
      puts @rides
