@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20140219182333) do
 
+  create_table "BusTable", :force => true do |t|
+    t.string "CName",           :limit => 45, :null => false
+    t.string "SourceCity",      :limit => 45, :null => false
+    t.string "DestinationCity", :limit => 45, :null => false
+    t.date   "Date",                          :null => false
+  end
+
   create_table "rides", :force => true do |t|
     t.string "from_city"
   end

@@ -8,12 +8,7 @@
  #ride = Ride.where(fakerides : 'IowaCity').first_or_intialize
 # ride.save!
 
-#rides = [{:from_city => 'iowa city'},{:from_city => 'iowa city2'},{:from_city => 'iowa city3'}]
+#routes = [{:from_city => 'iowa city'},{:from_city => 'iowa city2'},{:from_city => 'iowa city3'}]
 
-#rides.each do |ride|
-#	Ride.create!(ride)
-#end
-
-  15.times do |i|
-	Ride.create(from_city: "Chicago #{i}")
-  end
+#INSERT INTO BusTable () VALUES ('Greyhound','Iowa city','Chicago','2014-02-28');
+ 
