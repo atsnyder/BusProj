@@ -14,6 +14,3 @@
 #	Ride.create!(ride)
 #end
 
-  15.times do |i|
-	Ride.create(from_city: "Chicago #{i}")
-  end

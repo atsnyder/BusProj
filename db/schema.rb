@@ -11,10 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140219182333) do
+ActiveRecord::Schema.define(:version => 0) do
 
-  create_table "rides", :force => true do |t|
-    t.string "from_city"
+  create_table "BusRideTest", :primary_key => "ID", :force => true do |t|
+    t.string "C_NAME",       :limit => 45, :null => false
+    t.string "SOURCE_CITY",  :limit => 45, :null => false
+    t.string "DESTINY_CITY", :limit => 45, :null => false
+    t.date   "DATE",                       :null => false
   end
 
 end
