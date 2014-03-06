@@ -7,11 +7,11 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: BusRideTest
+  database: heroku_8726e1df1758d14
   pool: 5
-  username: root
-  password: saasbook
-  host: localhost
+  username: b3830eaa3b19ce
+  password: 03c6c2b9
+  host: us-cdbr-east-05.cleardb.net
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -20,11 +20,12 @@ test: &test
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: BusRideTest
+  database: heroku_8726e1df1758d14
+
   pool: 5
-  username: root
-  password: saasbook
-  host: localhost
+  username: b3830eaa3b19ce
+  password: 03c6c2b9
+  host: us-cdbr-east-05.cleardb.net
 
 
 
@@ -32,11 +33,11 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: BusRideTest
+  database: heroku_8726e1df1758d14
   pool: 5
-  username: root
-  password: saasbook
-  host: localhost
+  username: b3830eaa3b19ce
+  password: 03c6c2b9
+  host: us-cdbr-east-05.cleardb.net
 
 
 
