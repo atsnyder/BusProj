@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20140219182333) do
 
-  create_table "2014March5", :primary_key => "TRIP_ID", :force => true do |t|
+  create_table "2014march7", :primary_key => "TRIP_ID", :force => true do |t|
     t.string   "COMPANY_NAME", :limit => 40
     t.string   "DEPART_CITY",  :limit => 40
     t.string   "ARRIVE_CITY",  :limit => 40
@@ -24,28 +24,28 @@ ActiveRecord::Schema.define(:version => 20140219182333) do
     t.string   "URL",          :limit => 500
   end
 
-  create_table "BoltBus_makeup", :primary_key => "TRIP_ID", :force => true do |t|
+  create_table "boltbus_makeup", :primary_key => "TRIP_ID", :force => true do |t|
     t.string "COMPANY_NAME", :limit => 40
     t.string "DEPART_CITY",  :limit => 40
     t.string "ARRIVE_CITY",  :limit => 40
     t.date   "DEPART_DATE"
   end
 
-  create_table "EasternTravel_makeup", :primary_key => "TRIP_ID", :force => true do |t|
+  create_table "easterntravel_makeup", :primary_key => "TRIP_ID", :force => true do |t|
     t.string "COMPANY_NAME", :limit => 40
     t.string "DEPART_CITY",  :limit => 40
     t.string "ARRIVE_CITY",  :limit => 40
     t.date   "DEPART_DATE"
   end
 
-  create_table "GoBus_makeup", :primary_key => "TRIP_ID", :force => true do |t|
+  create_table "gobus_makeup", :primary_key => "TRIP_ID", :force => true do |t|
     t.string "COMPANY_NAME", :limit => 40
     t.string "DEPART_CITY",  :limit => 40
     t.string "ARRIVE_CITY",  :limit => 40
     t.date   "DEPART_DATE"
   end
 
-  create_table "Greyhound_makeup", :primary_key => "TRIP_ID", :force => true do |t|
+  create_table "greyhound_makeup", :primary_key => "TRIP_ID", :force => true do |t|
     t.string "COMPANY_NAME", :limit => 40
     t.string "DEPART_CITY",  :limit => 40
     t.string "ARRIVE_CITY",  :limit => 40
