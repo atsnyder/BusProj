@@ -1,0 +1,337 @@
+2014-03-06 12:23:08,581: EasternTravel_2_straight  - Setting up mysql and firefox connections...
+2014-03-06 12:23:08,587: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-06 12:23:08,588: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-06 12:23:08,590: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-06 12:23:08,593: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-06 12:23:08,594: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-06 12:23:08,595: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-06 12:23:08,600: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-06 12:23:08,603: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-06 12:23:08,608: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-06 12:23:08,609: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-06 12:23:08,609: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-06 12:23:08,618: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-06 12:23:08,620: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-06 12:23:08,623: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-06 12:23:08,631: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-06 12:23:08,633: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-06 12:23:08,635: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-06 12:23:08,636: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-06 12:23:08,638: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-06 12:23:08,639: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-06 12:23:08,643: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-06 12:23:08,646: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-06 12:23:08,647: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-06 12:23:08,649: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-06 12:23:08,658: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-06 12:23:08,666: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-06 12:23:08,668: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February20
+2014-03-06 12:23:08,671: EasternTravel_2_straight  - DROP TABLE IF EXISTS 2014February20
+2014-03-06 12:23:25,574: EasternTravel_2_straight  - Retrieving jobs...
+2014-03-06 12:23:25,582: EasternTravel_2_straight  - Number of jobs: 4
+2014-03-06 12:23:25,586: EasternTravel_2_straight  - Setting up makeups...
+2014-03-06 12:23:25,641: EasternTravel_2_straight  - CREATE TABLE IF NOT EXISTS EasternTravel_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-06 12:23:25,662: EasternTravel_2_straight  - INSERT INTO EasternTravel_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1030708,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-06 12:23:25,688: EasternTravel_2_straight  - CREATE TABLE IF NOT EXISTS EasternTravel_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-06 12:23:25,729: EasternTravel_2_straight  - INSERT INTO EasternTravel_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(2030708,'EasternTravel','New York, NY','Washington, DC','2014-03-07') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-06 12:23:25,757: EasternTravel_2_straight  - CREATE TABLE IF NOT EXISTS EasternTravel_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-06 12:23:25,783: EasternTravel_2_straight  - INSERT INTO EasternTravel_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(3030708,'EasternTravel','Washington, DC','New York, NY','2014-03-07') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-06 12:23:25,783: EasternTravel_2_straight  - CREATE TABLE IF NOT EXISTS EasternTravel_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-06 12:23:25,787: EasternTravel_2_straight  - INSERT INTO EasternTravel_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(30708,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-06 12:23:25,788: EasternTravel_2_straight  - Starting session!
+2014-03-06 12:23:25,826: EasternTravel_2_straight  - Not using proxies!
+2014-03-06 12:23:25,882: EasternTravel_2_straight  - Jobs remaining: 4
+2014-03-06 12:23:25,886: EasternTravel_2_straight  - Number of proxy rotations allowed: 4
+2014-03-06 12:23:25,898: EasternTravel_2_straight  - Number of browser restarts allowed: 2
+2014-03-06 12:23:25,902: EasternTravel_2_straight  - NEW SEARCH
+2014-03-06 12:23:25,921: EasternTravel_2_straight  - From New York, NY to Baltimore, MD (03/07/2014)
+2014-03-06 12:23:35,988: EasternTravel_2_straight  - Loading URL...
+2014-03-06 12:23:53,618: EasternTravel_2_straight  - Clicking on origin city...
+2014-03-06 12:24:04,684: EasternTravel_2_straight  - Clicking on destination city...
+2014-03-06 12:24:15,406: EasternTravel_2_straight  - Entering departure date...
+2014-03-06 12:24:26,290: EasternTravel_2_straight  - Clicking on Search button...
+2014-03-06 12:24:38,862: EasternTravel_2_straight  - Parsing table...
+2014-03-06 12:24:46,080: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,081: EasternTravel_2_straight  - Depart time: 7:30 am
+2014-03-06 12:24:46,084: EasternTravel_2_straight  - Arrive time: 10:30 am
+2014-03-06 12:24:46,084: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,141: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700073008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 07:30:00','2014-03-07 10:30:00','3H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,144: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,150: EasternTravel_2_straight  - Depart time: 8:30 am
+2014-03-06 12:24:46,153: EasternTravel_2_straight  - Arrive time: 11:50 am
+2014-03-06 12:24:46,153: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,283: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700083008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 08:30:00','2014-03-07 11:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,291: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,293: EasternTravel_2_straight  - Depart time: 9:30 am
+2014-03-06 12:24:46,297: EasternTravel_2_straight  - Arrive time: 12:40 pm
+2014-03-06 12:24:46,299: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,391: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700093008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 09:30:00','2014-03-07 12:40:00','3H, 9m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,393: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,394: EasternTravel_2_straight  - Depart time: 10:30 am
+2014-03-06 12:24:46,394: EasternTravel_2_straight  - Arrive time: 1:50 pm
+2014-03-06 12:24:46,396: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,426: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700103008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 10:30:00','2014-03-07 13:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,427: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,428: EasternTravel_2_straight  - Depart time: 11:30 am
+2014-03-06 12:24:46,428: EasternTravel_2_straight  - Arrive time: 2:50 pm
+2014-03-06 12:24:46,429: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,501: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700113008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 11:30:00','2014-03-07 14:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,502: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,503: EasternTravel_2_straight  - Depart time: 12:30 pm
+2014-03-06 12:24:46,503: EasternTravel_2_straight  - Arrive time: 3:30 pm
+2014-03-06 12:24:46,504: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,631: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700123008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 12:30:00','2014-03-07 15:30:00','3H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,634: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,635: EasternTravel_2_straight  - Depart time: 2:30 pm
+2014-03-06 12:24:46,635: EasternTravel_2_straight  - Arrive time: 5:30 pm
+2014-03-06 12:24:46,636: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,714: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700143008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 14:30:00','2014-03-07 17:30:00','3H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,715: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,716: EasternTravel_2_straight  - Depart time: 3:30 pm
+2014-03-06 12:24:46,716: EasternTravel_2_straight  - Arrive time: 6:50 pm
+2014-03-06 12:24:46,717: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,786: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700153008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 15:30:00','2014-03-07 18:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,788: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,788: EasternTravel_2_straight  - Depart time: 4:30 pm
+2014-03-06 12:24:46,789: EasternTravel_2_straight  - Arrive time: 7:50 pm
+2014-03-06 12:24:46,789: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,869: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700163008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 16:30:00','2014-03-07 19:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,870: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,871: EasternTravel_2_straight  - Depart time: 5:30 pm
+2014-03-06 12:24:46,871: EasternTravel_2_straight  - Arrive time: 8:50 pm
+2014-03-06 12:24:46,873: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,927: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700173008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 17:30:00','2014-03-07 20:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,935: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,935: EasternTravel_2_straight  - Depart time: 6:30 pm
+2014-03-06 12:24:46,936: EasternTravel_2_straight  - Arrive time: 9:50 pm
+2014-03-06 12:24:46,936: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:46,995: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700183008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 18:30:00','2014-03-07 21:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:46,996: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:46,997: EasternTravel_2_straight  - Depart time: 7:30 pm
+2014-03-06 12:24:46,997: EasternTravel_2_straight  - Arrive time: 10:50 pm
+2014-03-06 12:24:46,998: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:47,044: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700193008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 19:30:00','2014-03-07 22:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:47,045: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:24:47,046: EasternTravel_2_straight  - Depart time: 10:30 pm
+2014-03-06 12:24:47,046: EasternTravel_2_straight  - Arrive time: 1:50 am
+2014-03-06 12:24:47,047: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:24:47,092: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(700223008,'EasternTravel','New York, NY','Baltimore, MD','2014-03-07 22:30:00','2014-03-08 01:50:00','3H, 20m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Baltimore%2C+MD&sbus_to=Baltimore%2C+MD&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:24:47,096: EasternTravel_2_straight  - Number of proxy rotations allowed: 4
+2014-03-06 12:24:47,100: EasternTravel_2_straight  - Number of browser restarts allowed: 2
+2014-03-06 12:24:47,101: EasternTravel_2_straight  - NEW SEARCH
+2014-03-06 12:24:47,107: EasternTravel_2_straight  - From New York, NY to Washington, DC (03/07/2014)
+2014-03-06 12:24:57,114: EasternTravel_2_straight  - Loading URL...
+2014-03-06 12:25:09,518: EasternTravel_2_straight  - Clicking on origin city...
+2014-03-06 12:25:22,016: EasternTravel_2_straight  - Clicking on destination city...
+2014-03-06 12:25:35,410: EasternTravel_2_straight  - Entering departure date...
+2014-03-06 12:25:46,374: EasternTravel_2_straight  - Clicking on Search button...
+2014-03-06 12:25:53,830: EasternTravel_2_straight  - Parsing table...
+2014-03-06 12:25:57,462: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,464: EasternTravel_2_straight  - Depart time: 7:30 am
+2014-03-06 12:25:57,464: EasternTravel_2_straight  - Arrive time: 12:01 pm
+2014-03-06 12:25:57,470: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,517: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711073008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 07:30:00','2014-03-07 12:01:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,518: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,519: EasternTravel_2_straight  - Depart time: 8:30 am
+2014-03-06 12:25:57,520: EasternTravel_2_straight  - Arrive time: 1:00 pm
+2014-03-06 12:25:57,520: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,562: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711083008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 08:30:00','2014-03-07 13:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,564: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,565: EasternTravel_2_straight  - Depart time: 9:30 am
+2014-03-06 12:25:57,566: EasternTravel_2_straight  - Arrive time: 2:00 pm
+2014-03-06 12:25:57,566: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,632: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711093008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 09:30:00','2014-03-07 14:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,633: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,633: EasternTravel_2_straight  - Depart time: 10:30 am
+2014-03-06 12:25:57,634: EasternTravel_2_straight  - Arrive time: 3:00 pm
+2014-03-06 12:25:57,635: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,651: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711103008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 10:30:00','2014-03-07 15:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,652: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,652: EasternTravel_2_straight  - Depart time: 11:30 am
+2014-03-06 12:25:57,653: EasternTravel_2_straight  - Arrive time: 4:00 pm
+2014-03-06 12:25:57,653: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,684: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711113008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 11:30:00','2014-03-07 16:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,685: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,685: EasternTravel_2_straight  - Depart time: 12:30 pm
+2014-03-06 12:25:57,686: EasternTravel_2_straight  - Arrive time: 5:00 pm
+2014-03-06 12:25:57,686: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,725: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711123008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 12:30:00','2014-03-07 17:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,731: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,737: EasternTravel_2_straight  - Depart time: 2:30 pm
+2014-03-06 12:25:57,738: EasternTravel_2_straight  - Arrive time: 7:00 pm
+2014-03-06 12:25:57,738: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,777: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711143008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 14:30:00','2014-03-07 19:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,778: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,779: EasternTravel_2_straight  - Depart time: 3:30 pm
+2014-03-06 12:25:57,779: EasternTravel_2_straight  - Arrive time: 8:00 pm
+2014-03-06 12:25:57,780: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,829: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711153008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 15:30:00','2014-03-07 20:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,830: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,831: EasternTravel_2_straight  - Depart time: 4:30 pm
+2014-03-06 12:25:57,831: EasternTravel_2_straight  - Arrive time: 9:00 pm
+2014-03-06 12:25:57,832: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,854: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711163008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 16:30:00','2014-03-07 21:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,863: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,863: EasternTravel_2_straight  - Depart time: 5:30 pm
+2014-03-06 12:25:57,864: EasternTravel_2_straight  - Arrive time: 10:00 pm
+2014-03-06 12:25:57,864: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,912: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711173008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 17:30:00','2014-03-07 22:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,914: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,914: EasternTravel_2_straight  - Depart time: 6:30 pm
+2014-03-06 12:25:57,915: EasternTravel_2_straight  - Arrive time: 11:00 pm
+2014-03-06 12:25:57,916: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,951: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711183008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 18:30:00','2014-03-07 23:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,952: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,953: EasternTravel_2_straight  - Depart time: 7:30 pm
+2014-03-06 12:25:57,953: EasternTravel_2_straight  - Arrive time: 12:01 am
+2014-03-06 12:25:57,954: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:57,977: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711193008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 19:30:00','2014-03-08 00:01:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:57,982: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:25:57,988: EasternTravel_2_straight  - Depart time: 10:30 pm
+2014-03-06 12:25:57,989: EasternTravel_2_straight  - Arrive time: 3:00 am
+2014-03-06 12:25:57,989: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:25:58,023: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(711223008,'EasternTravel','New York, NY','Washington, DC','2014-03-07 22:30:00','2014-03-08 03:00:00','4H, 30m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=New+York%2C+NY&sbus_from=New+York%2C+NY&bus_to=Washington%2C+DC&sbus_to=Washington%2C+DC&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:25:58,027: EasternTravel_2_straight  - Number of proxy rotations allowed: 4
+2014-03-06 12:25:58,033: EasternTravel_2_straight  - Number of browser restarts allowed: 2
+2014-03-06 12:25:58,034: EasternTravel_2_straight  - NEW SEARCH
+2014-03-06 12:25:58,035: EasternTravel_2_straight  - From Washington, DC to New York, NY (03/07/2014)
+2014-03-06 12:26:08,042: EasternTravel_2_straight  - Loading URL...
+2014-03-06 12:26:19,205: EasternTravel_2_straight  - Clicking on origin city...
+2014-03-06 12:26:30,066: EasternTravel_2_straight  - Clicking on destination city...
+2014-03-06 12:26:40,832: EasternTravel_2_straight  - Entering departure date...
+2014-03-06 12:26:51,452: EasternTravel_2_straight  - Clicking on Search button...
+2014-03-06 12:26:59,065: EasternTravel_2_straight  - Parsing table...
+2014-03-06 12:27:01,168: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,173: EasternTravel_2_straight  - Depart time: 1:30 am
+2014-03-06 12:27:01,174: EasternTravel_2_straight  - Arrive time: 6:30 am
+2014-03-06 12:27:01,175: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,322: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107013008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 01:30:00','2014-03-07 06:30:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,323: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,329: EasternTravel_2_straight  - Depart time: 7:00 am
+2014-03-06 12:27:01,331: EasternTravel_2_straight  - Arrive time: 12:01 pm
+2014-03-06 12:27:01,332: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,345: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107070008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 07:00:00','2014-03-07 12:01:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,346: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,346: EasternTravel_2_straight  - Depart time: 8:00 am
+2014-03-06 12:27:01,347: EasternTravel_2_straight  - Arrive time: 1:00 pm
+2014-03-06 12:27:01,362: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,381: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107080008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 08:00:00','2014-03-07 13:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,383: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,383: EasternTravel_2_straight  - Depart time: 10:00 am
+2014-03-06 12:27:01,384: EasternTravel_2_straight  - Arrive time: 3:00 pm
+2014-03-06 12:27:01,391: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,425: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107100008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 10:00:00','2014-03-07 15:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,431: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,432: EasternTravel_2_straight  - Depart time: 12:00 pm
+2014-03-06 12:27:01,432: EasternTravel_2_straight  - Arrive time: 5:00 pm
+2014-03-06 12:27:01,433: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,497: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107120008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 12:00:00','2014-03-07 17:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,498: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,499: EasternTravel_2_straight  - Depart time: 1:00 pm
+2014-03-06 12:27:01,499: EasternTravel_2_straight  - Arrive time: 6:00 pm
+2014-03-06 12:27:01,500: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,521: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107130008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 13:00:00','2014-03-07 18:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,522: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,531: EasternTravel_2_straight  - Depart time: 2:00 pm
+2014-03-06 12:27:01,531: EasternTravel_2_straight  - Arrive time: 7:00 pm
+2014-03-06 12:27:01,532: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,555: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107140008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 14:00:00','2014-03-07 19:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,556: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,557: EasternTravel_2_straight  - Depart time: 3:00 pm
+2014-03-06 12:27:01,557: EasternTravel_2_straight  - Arrive time: 8:00 pm
+2014-03-06 12:27:01,558: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,597: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107150008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 15:00:00','2014-03-07 20:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,599: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,599: EasternTravel_2_straight  - Depart time: 4:00 pm
+2014-03-06 12:27:01,600: EasternTravel_2_straight  - Arrive time: 9:00 pm
+2014-03-06 12:27:01,600: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,639: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107160008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 16:00:00','2014-03-07 21:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,640: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,641: EasternTravel_2_straight  - Depart time: 5:00 pm
+2014-03-06 12:27:01,641: EasternTravel_2_straight  - Arrive time: 10:00 pm
+2014-03-06 12:27:01,644: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,681: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107170008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 17:00:00','2014-03-07 22:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,682: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,682: EasternTravel_2_straight  - Depart time: 6:00 pm
+2014-03-06 12:27:01,683: EasternTravel_2_straight  - Arrive time: 11:00 pm
+2014-03-06 12:27:01,684: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,725: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107180008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 18:00:00','2014-03-07 23:00:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,726: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,730: EasternTravel_2_straight  - Depart time: 7:30 pm
+2014-03-06 12:27:01,731: EasternTravel_2_straight  - Arrive time: 11:30 pm
+2014-03-06 12:27:01,732: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,776: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107193008,'EasternTravel','Washington, DC','New York, NY','2014-03-07 19:30:00','2014-03-07 23:30:00','4H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,777: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:27:01,777: EasternTravel_2_straight  - Depart time: 11:45 pm
+2014-03-06 12:27:01,778: EasternTravel_2_straight  - Arrive time: 4:45 am
+2014-03-06 12:27:01,778: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:27:01,813: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(1107234508,'EasternTravel','Washington, DC','New York, NY','2014-03-07 23:45:00','2014-03-08 04:45:00','5H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Washington%2C+DC&sbus_from=Washington%2C+DC&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:27:01,816: EasternTravel_2_straight  - Number of proxy rotations allowed: 4
+2014-03-06 12:27:01,817: EasternTravel_2_straight  - Number of browser restarts allowed: 2
+2014-03-06 12:27:01,821: EasternTravel_2_straight  - NEW SEARCH
+2014-03-06 12:27:01,821: EasternTravel_2_straight  - From Baltimore, MD to New York, NY (03/07/2014)
+2014-03-06 12:27:11,831: EasternTravel_2_straight  - Loading URL...
+2014-03-06 12:27:22,990: EasternTravel_2_straight  - Clicking on origin city...
+2014-03-06 12:27:34,282: EasternTravel_2_straight  - Clicking on destination city...
+2014-03-06 12:27:45,402: EasternTravel_2_straight  - Entering departure date...
+2014-03-06 12:27:55,648: EasternTravel_2_straight  - Clicking on Search button...
+2014-03-06 12:28:03,334: EasternTravel_2_straight  - Parsing table...
+2014-03-06 12:28:05,188: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,189: EasternTravel_2_straight  - Depart time: 2:20 am
+2014-03-06 12:28:05,189: EasternTravel_2_straight  - Arrive time: 5:30 am
+2014-03-06 12:28:05,190: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,224: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7022008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 02:20:00','2014-03-07 05:30:00','3H, 9m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,231: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,231: EasternTravel_2_straight  - Depart time: 7:50 am
+2014-03-06 12:28:05,231: EasternTravel_2_straight  - Arrive time: 11:15 am
+2014-03-06 12:28:05,232: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,280: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7075008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 07:50:00','2014-03-07 11:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,281: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,282: EasternTravel_2_straight  - Depart time: 8:50 am
+2014-03-06 12:28:05,282: EasternTravel_2_straight  - Arrive time: 12:15 pm
+2014-03-06 12:28:05,283: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,368: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7085008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 08:50:00','2014-03-07 12:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,369: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,370: EasternTravel_2_straight  - Depart time: 12:50 pm
+2014-03-06 12:28:05,370: EasternTravel_2_straight  - Arrive time: 4:15 pm
+2014-03-06 12:28:05,371: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,411: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7125008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 12:50:00','2014-03-07 16:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,412: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,416: EasternTravel_2_straight  - Depart time: 1:50 pm
+2014-03-06 12:28:05,417: EasternTravel_2_straight  - Arrive time: 5:15 pm
+2014-03-06 12:28:05,419: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,455: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7135008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 13:50:00','2014-03-07 17:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,464: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,467: EasternTravel_2_straight  - Depart time: 2:50 pm
+2014-03-06 12:28:05,467: EasternTravel_2_straight  - Arrive time: 6:15 pm
+2014-03-06 12:28:05,468: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,503: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7145008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 14:50:00','2014-03-07 18:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,507: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,510: EasternTravel_2_straight  - Depart time: 3:50 pm
+2014-03-06 12:28:05,511: EasternTravel_2_straight  - Arrive time: 7:45 pm
+2014-03-06 12:28:05,511: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,552: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7155008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 15:50:00','2014-03-07 19:45:00','3H, 54m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,553: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,554: EasternTravel_2_straight  - Depart time: 4:50 pm
+2014-03-06 12:28:05,554: EasternTravel_2_straight  - Arrive time: 8:15 pm
+2014-03-06 12:28:05,555: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,606: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7165008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 16:50:00','2014-03-07 20:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,608: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,608: EasternTravel_2_straight  - Depart time: 5:50 pm
+2014-03-06 12:28:05,609: EasternTravel_2_straight  - Arrive time: 9:15 pm
+2014-03-06 12:28:05,615: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,670: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7175008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 17:50:00','2014-03-07 21:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,671: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,672: EasternTravel_2_straight  - Depart time: 6:50 pm
+2014-03-06 12:28:05,672: EasternTravel_2_straight  - Arrive time: 10:15 pm
+2014-03-06 12:28:05,673: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,695: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7185008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 18:50:00','2014-03-07 22:15:00','3H, 24m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,696: EasternTravel_2_straight  - Depart date: 03/07/2014
+2014-03-06 12:28:05,703: EasternTravel_2_straight  - Depart time: 8:20 pm
+2014-03-06 12:28:05,708: EasternTravel_2_straight  - Arrive time: 12:20 am
+2014-03-06 12:28:05,709: EasternTravel_2_straight  - Cost: $25
+2014-03-06 12:28:05,726: EasternTravel_2_straight  - INSERT INTO 2014March7(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(7202008,'EasternTravel','Baltimore, MD','New York, NY','2014-03-07 20:20:00','2014-03-08 00:20:00','4H, 0m',25,'http://www.easternshuttle.com/cgi-bin/bus.cgi?is_prev=&return_flag=&is_roundtrip=&nm=4305&st=4305&option=Select&roundtrip=0&bus_from=Baltimore%2C+MD&sbus_from=Baltimore%2C+MD&bus_to=New+York%2C+NY&sbus_to=New+York%2C+NY&filter_date=2014-03-07&return_date=&quantity=1') ON DUPLICATE KEY UPDATE TRIP_COST = 25
+2014-03-06 12:28:05,728: EasternTravel_2_straight  - Successfully completed schedule requests!
+2014-03-06 12:28:05,744: EasternTravel_2_straight  - Jobs remaining: 0
+2014-03-06 12:28:05,745: EasternTravel_2_straight  - Quitting...
+2014-03-06 12:28:05,878: EasternTravel_2_straight  - Successfully deleted profile directory

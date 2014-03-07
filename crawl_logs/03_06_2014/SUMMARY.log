@@ -1,0 +1,14 @@
+2014-03-06 12:23:25,788: EasternTravel_2_straight  - Starting session!
+2014-03-06 12:23:25,882: EasternTravel_2_straight  - Jobs remaining: 4
+2014-03-06 12:23:27,131: GoBus_2_straight  - Starting session!
+2014-03-06 12:23:27,132: GoBus_2_straight  - Jobs remaining: 2
+2014-03-06 12:23:27,429: BoltBus_3_straight  - Starting session!
+2014-03-06 12:23:27,438: BoltBus_3_straight  - Jobs remaining: 24
+2014-03-06 12:28:05,728: EasternTravel_2_straight  - Successfully completed schedule requests!
+2014-03-06 12:28:05,744: EasternTravel_2_straight  - Jobs remaining: 0
+2014-03-06 12:28:13,167: Greyhound_1_straight  - Starting session!
+2014-03-06 12:28:13,196: Greyhound_1_straight  - Jobs remaining: 30
+2014-03-06 12:31:30,435: GoBus_2_straight  - Aborting all operations.
+2014-03-06 12:31:30,436: GoBus_2_straight  - Failed too many times! Shutting down!
+2014-03-06 12:31:30,437: GoBus_2_straight  - Unable to complete schedule request!
+2014-03-06 12:31:30,437: GoBus_2_straight  - Jobs remaining: 2

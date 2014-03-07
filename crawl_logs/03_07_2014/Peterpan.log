@@ -1,0 +1,30 @@
+2014-03-07 09:55:43,757: Peterpan_1_straight  - Setting up mysql and firefox connections...
+2014-03-07 09:55:43,765: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March6
+2014-03-07 09:55:43,768: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March6
+2014-03-07 09:55:43,775: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-07 09:55:43,776: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-07 09:55:43,778: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-07 09:55:43,784: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-07 09:55:43,797: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-07 09:55:43,797: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-07 09:55:43,797: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-07 09:55:43,797: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-07 09:55:43,797: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-07 09:55:43,798: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-07 09:55:43,798: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-07 09:55:43,814: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-07 09:55:43,823: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-07 09:55:43,824: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-07 09:55:43,828: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-07 09:55:43,840: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-07 09:55:43,842: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-07 09:55:43,847: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-07 09:55:43,847: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-07 09:55:43,848: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-07 09:55:43,848: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-07 09:55:43,851: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-07 09:55:43,859: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-07 09:55:43,860: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-07 09:55:43,861: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-07 09:55:43,874: Peterpan_1_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-07 09:55:44,651: Peterpan_1_straight  - Using default load_proxy function.

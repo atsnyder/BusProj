@@ -1,0 +1,732 @@
+2014-03-04 13:52:42,656: GoBus_2_straight  - Setting up mysql and firefox connections...
+2014-03-04 13:52:42,706: GoBus_2_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-04 13:52:42,709: GoBus_2_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-04 13:52:42,725: GoBus_2_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-04 13:52:42,727: GoBus_2_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-04 13:52:42,737: GoBus_2_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-04 13:52:42,741: GoBus_2_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-04 13:52:42,750: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-04 13:52:42,754: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-04 13:52:42,762: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-04 13:52:42,770: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-04 13:52:42,772: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-04 13:52:42,780: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-04 13:52:42,784: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-04 13:52:42,786: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-04 13:52:42,788: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-04 13:52:42,798: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-04 13:52:42,803: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-04 13:52:42,805: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-04 13:52:42,809: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-04 13:52:42,818: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-04 13:52:42,828: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-04 13:52:42,831: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-04 13:52:42,837: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February20
+2014-03-04 13:52:42,840: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February20
+2014-03-04 13:52:42,850: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February19
+2014-03-04 13:52:42,854: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February19
+2014-03-04 13:52:42,861: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February18
+2014-03-04 13:52:42,868: GoBus_2_straight  - DROP TABLE IF EXISTS 2014February18
+2014-03-04 13:53:16,338: GoBus_2_straight  - Retrieving jobs...
+2014-03-04 13:53:16,383: GoBus_2_straight  - Number of jobs: 2
+2014-03-04 13:53:16,383: GoBus_2_straight  - Setting up makeups...
+2014-03-04 13:53:16,384: GoBus_2_straight  - CREATE TABLE IF NOT EXISTS GoBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-04 13:53:16,389: GoBus_2_straight  - INSERT INTO GoBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(2030505,'GoBus','New York, NY','Boston, MA','2014-03-05') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-04 13:53:16,393: GoBus_2_straight  - CREATE TABLE IF NOT EXISTS GoBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-04 13:53:16,394: GoBus_2_straight  - INSERT INTO GoBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1030505,'GoBus','Boston, MA','New York, NY','2014-03-05') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-04 13:53:16,401: GoBus_2_straight  - Starting session!
+2014-03-04 13:53:16,404: GoBus_2_straight  - Not using proxies!
+2014-03-04 13:53:16,407: GoBus_2_straight  - Jobs remaining: 2
+2014-03-04 13:53:16,414: GoBus_2_straight  - Number of proxy rotations allowed: 4
+2014-03-04 13:53:16,415: GoBus_2_straight  - Number of browser restarts allowed: 2
+2014-03-04 13:53:16,415: GoBus_2_straight  - NEW SEARCH
+2014-03-04 13:53:22,428: GoBus_2_straight  - Loading URL...
+2014-03-04 13:53:57,379: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 13:53:57,386: GoBus_2_straight  - Selecting departure city...
+2014-03-04 13:54:04,623: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:54:04,624: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 13:54:10,998: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:54:10,999: GoBus_2_straight  - Selecting correct date
+2014-03-04 13:54:11,079: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpxZy13j/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 13:54:11,103: GoBus_2_straight  - Restarting browser...
+2014-03-04 13:54:11,172: GoBus_2_straight  - Successfully deleted profile directory
+2014-03-04 13:54:16,580: GoBus_2_straight  - Now using new browser!
+2014-03-04 13:54:16,582: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 13:54:18,587: GoBus_2_straight  - NEW SEARCH
+2014-03-04 13:54:24,631: GoBus_2_straight  - Loading URL...
+2014-03-04 13:54:55,469: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 13:54:55,471: GoBus_2_straight  - Selecting departure city...
+2014-03-04 13:55:03,653: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:55:03,654: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 13:55:10,974: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:55:10,975: GoBus_2_straight  - Selecting correct date
+2014-03-04 13:55:11,447: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpshu2Kn/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 13:55:11,487: GoBus_2_straight  - Restarting browser...
+2014-03-04 13:55:11,581: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 13:55:11,582: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 13:55:22,443: GoBus_2_straight  - Now using new browser!
+2014-03-04 13:55:22,445: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 13:55:24,452: GoBus_2_straight  - NEW SEARCH
+2014-03-04 13:55:30,457: GoBus_2_straight  - Loading URL...
+2014-03-04 13:55:56,493: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 13:55:56,495: GoBus_2_straight  - Selecting departure city...
+2014-03-04 13:56:03,266: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:56:03,267: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 13:56:09,933: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:56:09,934: GoBus_2_straight  - Selecting correct date
+2014-03-04 13:56:10,101: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpLhX2De/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 13:56:10,118: GoBus_2_straight  - Restarting browser...
+2014-03-04 13:56:10,141: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 13:56:10,142: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 13:56:17,257: GoBus_2_straight  - Now using new browser!
+2014-03-04 13:56:17,267: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 13:56:19,279: GoBus_2_straight  - NEW SEARCH
+2014-03-04 13:56:25,285: GoBus_2_straight  - Loading URL...
+2014-03-04 13:56:51,297: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 13:56:51,298: GoBus_2_straight  - Selecting departure city...
+2014-03-04 13:56:58,490: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:56:58,492: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 13:57:05,201: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:57:05,202: GoBus_2_straight  - Selecting correct date
+2014-03-04 13:57:05,313: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmphJ8Vgs/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 13:57:05,332: GoBus_2_straight  - Restarting browser...
+2014-03-04 13:57:05,364: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 13:57:05,365: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 13:57:11,408: GoBus_2_straight  - Now using new browser!
+2014-03-04 13:57:11,412: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 13:57:13,415: GoBus_2_straight  - NEW SEARCH
+2014-03-04 13:57:19,423: GoBus_2_straight  - Loading URL...
+2014-03-04 13:57:45,839: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 13:57:45,841: GoBus_2_straight  - Selecting departure city...
+2014-03-04 13:57:52,593: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:57:52,594: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 13:57:59,293: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:57:59,294: GoBus_2_straight  - Selecting correct date
+2014-03-04 13:57:59,414: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpqVOqkJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 13:57:59,436: GoBus_2_straight  - Restarting browser...
+2014-03-04 13:57:59,465: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 13:57:59,468: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 13:58:07,089: GoBus_2_straight  - Now using new browser!
+2014-03-04 13:58:07,090: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 13:58:09,093: GoBus_2_straight  - NEW SEARCH
+2014-03-04 13:58:15,099: GoBus_2_straight  - Loading URL...
+2014-03-04 13:58:41,133: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 13:58:41,135: GoBus_2_straight  - Selecting departure city...
+2014-03-04 13:58:47,889: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:58:47,890: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 13:58:54,577: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:58:54,578: GoBus_2_straight  - Selecting correct date
+2014-03-04 13:58:54,705: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpOYJmsL/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 13:58:54,724: GoBus_2_straight  - Restarting browser...
+2014-03-04 13:58:54,770: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 13:58:54,771: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 13:59:05,166: GoBus_2_straight  - Now using new browser!
+2014-03-04 13:59:05,169: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 13:59:05,174: GoBus_2_straight  - Evaluating diagnostics!
+2014-03-04 13:59:05,175: GoBus_2_straight  - Saving html code...
+2014-03-04 13:59:05,250: GoBus_2_straight  - Saved html source to: ../crawl_logs/03_04_2014/GoBus_13_59_05.html
+2014-03-04 13:59:05,251: GoBus_2_straight  - Taking screenshot...
+2014-03-04 13:59:05,529: GoBus_2_straight  - Saved screenshot to: ../crawl_logs/03_04_2014/GoBus_13_59_05.png
+2014-03-04 13:59:07,532: GoBus_2_straight  - NEW SEARCH
+2014-03-04 13:59:13,538: GoBus_2_straight  - Loading URL...
+2014-03-04 13:59:40,225: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 13:59:40,227: GoBus_2_straight  - Selecting departure city...
+2014-03-04 13:59:47,093: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:59:47,094: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 13:59:53,918: GoBus_2_straight  - Typing departure date...
+2014-03-04 13:59:53,920: GoBus_2_straight  - Selecting correct date
+2014-03-04 13:59:54,018: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmp226ZTS/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 13:59:54,036: GoBus_2_straight  - Restarting browser...
+2014-03-04 13:59:54,074: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 13:59:54,075: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 14:00:01,466: GoBus_2_straight  - Now using new browser!
+2014-03-04 14:00:01,468: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:00:01,469: GoBus_2_straight  - Evaluating diagnostics!
+2014-03-04 14:00:01,469: GoBus_2_straight  - Saving html code...
+2014-03-04 14:00:01,502: GoBus_2_straight  - Saved html source to: ../crawl_logs/03_04_2014/GoBus_14_00_01.html
+2014-03-04 14:00:01,502: GoBus_2_straight  - Taking screenshot...
+2014-03-04 14:00:01,683: GoBus_2_straight  - Saved screenshot to: ../crawl_logs/03_04_2014/GoBus_14_00_01.png
+2014-03-04 14:00:03,685: GoBus_2_straight  - NEW SEARCH
+2014-03-04 14:00:09,692: GoBus_2_straight  - Loading URL...
+2014-03-04 14:00:35,813: GoBus_2_straight  - From New York, NY to Boston, MA (03/05/2014)
+2014-03-04 14:00:35,814: GoBus_2_straight  - Selecting departure city...
+2014-03-04 14:00:42,661: GoBus_2_straight  - Typing departure date...
+2014-03-04 14:00:42,665: GoBus_2_straight  - Selecting arrival city...
+2014-03-04 14:00:50,125: GoBus_2_straight  - Typing departure date...
+2014-03-04 14:00:50,127: GoBus_2_straight  - Selecting correct date
+2014-03-04 14:00:50,239: GoBus_2_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpBVzyda/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:00:50,256: GoBus_2_straight  - Restarting browser...
+2014-03-04 14:00:50,304: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 14:00:50,305: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 14:01:02,285: GoBus_2_straight  - Now using new browser!
+2014-03-04 14:01:02,298: GoBus_2_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:01:02,301: GoBus_2_straight  - Evaluating diagnostics!
+2014-03-04 14:01:02,304: GoBus_2_straight  - Saving html code...
+2014-03-04 14:01:02,366: GoBus_2_straight  - Saved html source to: ../crawl_logs/03_04_2014/GoBus_14_01_02.html
+2014-03-04 14:01:02,367: GoBus_2_straight  - Taking screenshot...
+2014-03-04 14:01:02,550: GoBus_2_straight  - Saved screenshot to: ../crawl_logs/03_04_2014/GoBus_14_01_02.png
+2014-03-04 14:01:04,558: GoBus_2_straight  - Aborting all operations.
+2014-03-04 14:01:04,559: GoBus_2_straight  - Failed too many times! Shutting down!
+2014-03-04 14:01:04,560: GoBus_2_straight  - Unable to complete schedule request!
+2014-03-04 14:01:04,562: GoBus_2_straight  - Jobs remaining: 2
+2014-03-04 14:01:04,563: GoBus_2_straight  - Quitting...
+2014-03-04 14:01:04,564: GoBus_2_straight  - [Errno 2] No such file or directory: '/tmp/tmpxZy13j'
+2014-03-04 14:01:04,565: GoBus_2_straight  - Unable to delete profile directory: /tmp/tmpxZy13j
+2014-03-04 14:08:26,838: GoBus_5_straight  - Setting up mysql and firefox connections...
+2014-03-04 14:08:26,849: GoBus_5_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-04 14:08:26,855: GoBus_5_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-04 14:08:26,856: GoBus_5_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-04 14:08:26,858: GoBus_5_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-04 14:08:26,860: GoBus_5_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-04 14:08:26,863: GoBus_5_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-04 14:08:26,864: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-04 14:08:26,874: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-04 14:08:26,881: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-04 14:08:26,884: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-04 14:08:26,885: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-04 14:08:26,886: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-04 14:08:26,893: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-04 14:08:26,894: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-04 14:08:26,897: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-04 14:08:26,900: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-04 14:08:26,905: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-04 14:08:26,917: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-04 14:08:26,923: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-04 14:08:26,928: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-04 14:08:26,932: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-04 14:08:26,938: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-04 14:08:26,946: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February20
+2014-03-04 14:08:26,948: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February20
+2014-03-04 14:08:26,951: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February19
+2014-03-04 14:08:26,952: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February19
+2014-03-04 14:08:26,969: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February18
+2014-03-04 14:08:26,970: GoBus_5_straight  - DROP TABLE IF EXISTS 2014February18
+2014-03-04 14:08:37,138: GoBus_5_straight  - Retrieving jobs...
+2014-03-04 14:08:37,151: GoBus_5_straight  - Number of jobs: 2
+2014-03-04 14:08:37,155: GoBus_5_straight  - Setting up makeups...
+2014-03-04 14:08:37,156: GoBus_5_straight  - CREATE TABLE IF NOT EXISTS GoBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-04 14:08:37,157: GoBus_5_straight  - INSERT INTO GoBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1030505,'GoBus','Boston, MA','New York, NY','2014-03-05') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-04 14:08:37,159: GoBus_5_straight  - CREATE TABLE IF NOT EXISTS GoBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-04 14:08:37,160: GoBus_5_straight  - INSERT INTO GoBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(2030505,'GoBus','New York, NY','Boston, MA','2014-03-05') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-04 14:08:37,161: GoBus_5_straight  - Starting session!
+2014-03-04 14:08:37,162: GoBus_5_straight  - Not using proxies!
+2014-03-04 14:08:37,162: GoBus_5_straight  - Jobs remaining: 2
+2014-03-04 14:08:37,163: GoBus_5_straight  - Number of proxy rotations allowed: 4
+2014-03-04 14:08:37,163: GoBus_5_straight  - Number of browser restarts allowed: 2
+2014-03-04 14:08:37,164: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:08:43,167: GoBus_5_straight  - Loading URL...
+2014-03-04 14:09:08,950: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:09:08,950: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:09:15,389: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:09:15,390: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:09:21,727: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:09:21,729: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:09:21,791: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpHDYJx9/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:09:21,809: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:09:21,879: GoBus_5_straight  - Successfully deleted profile directory
+2014-03-04 14:09:32,775: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:09:32,778: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:09:34,782: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:09:40,790: GoBus_5_straight  - Loading URL...
+2014-03-04 14:10:12,295: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:10:12,306: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:10:23,058: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:10:23,070: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:10:32,393: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:10:32,395: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:10:32,535: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpaHv8aJ/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:10:32,551: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:10:32,603: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:10:32,604: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9
+2014-03-04 14:10:41,768: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:10:41,770: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:10:43,773: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:10:49,781: GoBus_5_straight  - Loading URL...
+2014-03-04 14:11:16,197: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:11:16,199: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:11:23,215: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:11:23,218: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:11:30,039: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:11:30,041: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:11:30,180: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpwXfjXz/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:11:30,202: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:11:30,268: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:11:30,269: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9
+2014-03-04 14:11:38,901: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:11:38,902: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:11:40,905: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:11:46,913: GoBus_5_straight  - Loading URL...
+2014-03-04 14:12:13,398: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:12:13,399: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:12:21,117: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:12:21,118: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:12:27,925: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:12:27,926: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:12:28,040: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpO_kgxX/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:12:28,057: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:12:28,080: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:12:28,081: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9
+2014-03-04 14:12:36,087: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:12:36,095: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:12:38,109: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:12:44,117: GoBus_5_straight  - Loading URL...
+2014-03-04 14:13:10,817: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:13:10,818: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:13:18,601: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:13:18,602: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:13:25,305: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:13:25,306: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:13:25,644: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpt4mqLx/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:13:25,681: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:13:25,817: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:13:25,819: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9
+2014-03-04 14:13:35,658: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:13:35,662: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:13:37,665: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:13:43,672: GoBus_5_straight  - Loading URL...
+2014-03-04 14:14:11,493: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:14:11,494: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:14:19,972: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:14:19,974: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:14:26,841: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:14:26,846: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:14:27,115: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpwT3ZeU/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:14:27,166: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:14:27,275: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:14:27,279: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9
+2014-03-04 14:14:36,494: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:14:36,503: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:14:36,504: GoBus_5_straight  - Evaluating diagnostics!
+2014-03-04 14:14:36,513: GoBus_5_straight  - Saving html code...
+2014-03-04 14:14:36,597: GoBus_5_straight  - Saved html source to: ../crawl_logs/03_04_2014/GoBus_14_14_36.html
+2014-03-04 14:14:36,598: GoBus_5_straight  - Taking screenshot...
+2014-03-04 14:14:36,752: GoBus_5_straight  - Saved screenshot to: ../crawl_logs/03_04_2014/GoBus_14_14_36.png
+2014-03-04 14:14:38,755: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:14:44,763: GoBus_5_straight  - Loading URL...
+2014-03-04 14:15:12,102: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:15:12,104: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:15:19,681: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:15:19,684: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:15:27,203: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:15:27,204: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:15:27,309: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmp2RlAwT/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:15:27,331: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:15:27,366: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:15:27,366: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9
+2014-03-04 14:15:34,771: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:15:34,773: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:15:34,774: GoBus_5_straight  - Evaluating diagnostics!
+2014-03-04 14:15:34,775: GoBus_5_straight  - Saving html code...
+2014-03-04 14:15:34,868: GoBus_5_straight  - Saved html source to: ../crawl_logs/03_04_2014/GoBus_14_15_34.html
+2014-03-04 14:15:34,869: GoBus_5_straight  - Taking screenshot...
+2014-03-04 14:15:35,046: GoBus_5_straight  - Saved screenshot to: ../crawl_logs/03_04_2014/GoBus_14_15_34.png
+2014-03-04 14:15:37,049: GoBus_5_straight  - NEW SEARCH
+2014-03-04 14:15:43,057: GoBus_5_straight  - Loading URL...
+2014-03-04 14:16:09,537: GoBus_5_straight  - From Boston, MA to New York, NY (03/05/2014)
+2014-03-04 14:16:09,538: GoBus_5_straight  - Selecting departure city...
+2014-03-04 14:16:17,349: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:16:17,351: GoBus_5_straight  - Selecting arrival city...
+2014-03-04 14:16:24,101: GoBus_5_straight  - Typing departure date...
+2014-03-04 14:16:24,102: GoBus_5_straight  - Selecting correct date
+2014-03-04 14:16:24,239: GoBus_5_straight  - Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+Traceback (most recent call last):
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/MyController.py", line 126, in my_logic
+    request_success = self.my_fcn(self.proxy_obj.browser,self.sql_obj,cur_job,self.my_logger)
+  File "/home/saasbook/Documents/bus_catchers-master/python_code/get_gobus.py", line 112, in my_fcn
+    date_spot.clear()
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 67, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webelement.py", line 369, in _execute
+    return self._parent.execute(command, params)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium-2.40.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidElementStateException: Message: u'Element is read-only and so may not be used for actions' ; Stacktrace: 
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:8236)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10861)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10878)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10883)
+    at <anonymous> (file:///tmp/tmpsMvj2z/extensions/fxdriver@googlecode.com/components/command_processor.js:10825) 
+2014-03-04 14:16:24,258: GoBus_5_straight  - Restarting browser...
+2014-03-04 14:16:24,305: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:16:24,306: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9
+2014-03-04 14:16:31,674: GoBus_5_straight  - Now using new browser!
+2014-03-04 14:16:31,681: GoBus_5_straight  - Request failed - trying again with same browser configuration.
+2014-03-04 14:16:31,696: GoBus_5_straight  - Evaluating diagnostics!
+2014-03-04 14:16:31,709: GoBus_5_straight  - Saving html code...
+2014-03-04 14:16:31,822: GoBus_5_straight  - Saved html source to: ../crawl_logs/03_04_2014/GoBus_14_16_31.html
+2014-03-04 14:16:31,823: GoBus_5_straight  - Taking screenshot...
+2014-03-04 14:16:32,070: GoBus_5_straight  - Saved screenshot to: ../crawl_logs/03_04_2014/GoBus_14_16_31.png
+2014-03-04 14:16:34,074: GoBus_5_straight  - Aborting all operations.
+2014-03-04 14:16:34,079: GoBus_5_straight  - Failed too many times! Shutting down!
+2014-03-04 14:16:34,079: GoBus_5_straight  - Unable to complete schedule request!
+2014-03-04 14:16:34,080: GoBus_5_straight  - Jobs remaining: 2
+2014-03-04 14:16:34,081: GoBus_5_straight  - Quitting...
+2014-03-04 14:16:34,081: GoBus_5_straight  - [Errno 2] No such file or directory: '/tmp/tmpHDYJx9'
+2014-03-04 14:16:34,082: GoBus_5_straight  - Unable to delete profile directory: /tmp/tmpHDYJx9

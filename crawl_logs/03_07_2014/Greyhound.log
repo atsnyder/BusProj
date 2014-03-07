@@ -1,0 +1,206 @@
+2014-03-07 09:52:35,117: Greyhound_3_straight  - Setting up mysql and firefox connections...
+2014-03-07 09:52:35,119: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March6
+2014-03-07 09:52:35,120: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March6
+2014-03-07 09:52:35,127: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-07 09:52:35,132: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-07 09:52:35,133: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-07 09:52:35,143: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-07 09:52:35,151: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-07 09:52:35,151: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-07 09:52:35,152: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-07 09:52:35,158: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-07 09:52:35,159: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-07 09:52:35,159: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-07 09:52:35,160: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-07 09:52:35,160: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-07 09:52:35,161: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-07 09:52:35,166: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-07 09:52:35,168: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-07 09:52:35,175: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-07 09:52:35,180: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-07 09:52:35,191: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-07 09:52:35,192: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-07 09:52:35,192: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-07 09:52:35,195: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-07 09:52:35,199: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-07 09:52:35,199: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-07 09:52:35,204: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-07 09:52:35,209: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-07 09:52:35,209: Greyhound_3_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-07 09:52:41,502: Greyhound_3_straight  - Retrieving jobs...
+2014-03-07 09:52:41,504: Greyhound_3_straight  - Number of jobs: 30
+2014-03-07 09:52:41,505: Greyhound_3_straight  - Setting up makeups...
+2014-03-07 09:52:41,506: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,511: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(106030801,'Greyhound','Boston, MA','Newark, NJ','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,512: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,512: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(108030801,'Greyhound','Boston, MA','Philadelphia, PA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,513: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,520: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(111030801,'Greyhound','Boston, MA','Washington, DC','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,521: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,521: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(100030801,'Greyhound','Boston, MA','Baltimore, MD','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,523: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,523: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(107030801,'Greyhound','Boston, MA','New York, NY','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,539: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,539: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(601030801,'Greyhound','Newark, NJ','Boston, MA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,540: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,541: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(608030801,'Greyhound','Newark, NJ','Philadelphia, PA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,542: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,542: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(611030801,'Greyhound','Newark, NJ','Washington, DC','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,545: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,545: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(600030801,'Greyhound','Newark, NJ','Baltimore, MD','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,546: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,549: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(607030801,'Greyhound','Newark, NJ','New York, NY','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,550: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,551: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(801030801,'Greyhound','Philadelphia, PA','Boston, MA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,551: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,555: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(806030801,'Greyhound','Philadelphia, PA','Newark, NJ','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,556: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,556: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(811030801,'Greyhound','Philadelphia, PA','Washington, DC','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,557: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,558: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(800030801,'Greyhound','Philadelphia, PA','Baltimore, MD','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,559: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,563: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(807030801,'Greyhound','Philadelphia, PA','New York, NY','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,563: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,563: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1101030801,'Greyhound','Washington, DC','Boston, MA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,564: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,564: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1106030801,'Greyhound','Washington, DC','Newark, NJ','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,564: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,565: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1108030801,'Greyhound','Washington, DC','Philadelphia, PA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,565: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,575: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1100030801,'Greyhound','Washington, DC','Baltimore, MD','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,584: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,585: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1107030801,'Greyhound','Washington, DC','New York, NY','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,587: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,591: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1030801,'Greyhound','Baltimore, MD','Boston, MA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,592: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,592: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(6030801,'Greyhound','Baltimore, MD','Newark, NJ','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,593: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,594: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(8030801,'Greyhound','Baltimore, MD','Philadelphia, PA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,594: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,595: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(11030801,'Greyhound','Baltimore, MD','Washington, DC','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,603: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,608: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(7030801,'Greyhound','Baltimore, MD','New York, NY','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,611: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,612: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(701030801,'Greyhound','New York, NY','Boston, MA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,613: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,616: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(706030801,'Greyhound','New York, NY','Newark, NJ','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,616: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,618: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(708030801,'Greyhound','New York, NY','Philadelphia, PA','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,623: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,623: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(711030801,'Greyhound','New York, NY','Washington, DC','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,624: Greyhound_3_straight  - CREATE TABLE IF NOT EXISTS Greyhound_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:52:41,625: Greyhound_3_straight  - INSERT INTO Greyhound_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(700030801,'Greyhound','New York, NY','Baltimore, MD','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:52:41,625: Greyhound_3_straight  - Starting session!
+2014-03-07 09:52:41,626: Greyhound_3_straight  - Not using proxies!
+2014-03-07 09:52:41,634: Greyhound_3_straight  - Jobs remaining: 30
+2014-03-07 09:52:41,635: Greyhound_3_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:52:41,636: Greyhound_3_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:52:41,639: Greyhound_3_straight  - NEW SEARCH
+2014-03-07 09:52:41,646: Greyhound_3_straight  - Deleting all cookies...
+2014-03-07 09:53:16,452: Greyhound_3_straight  - From Boston, MA to Newark, NJ (03/08/2014)
+2014-03-07 09:53:16,453: Greyhound_3_straight  - Clearing text fields
+2014-03-07 09:53:16,907: Greyhound_3_straight  - Typing origin city...
+2014-03-07 09:53:23,147: Greyhound_3_straight  - Typing destination city...
+2014-03-07 09:53:29,326: Greyhound_3_straight  - Typing departure date...
+2014-03-07 09:53:35,515: Greyhound_3_straight  - Clicking on search button...
+2014-03-07 09:54:26,191: Greyhound_3_straight  - Parsing table...
+2014-03-07 09:54:41,260: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,266: Greyhound_3_straight  - Depart time: 01:00 AM
+2014-03-07 09:54:41,267: Greyhound_3_straight  - Arrive time: 06:45 AM
+2014-03-07 09:54:41,269: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:41,270: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 45
+2014-03-07 09:54:41,316: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106010001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 01:00:00','2014-03-08 06:45:00','5H, 45m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:41,329: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,341: Greyhound_3_straight  - Depart time: 02:00 AM
+2014-03-07 09:54:41,341: Greyhound_3_straight  - Arrive time: 07:40 AM
+2014-03-07 09:54:41,342: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:41,345: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 40
+2014-03-07 09:54:41,384: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106020001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 02:00:00','2014-03-08 07:40:00','5H, 40m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:41,386: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,386: Greyhound_3_straight  - Depart time: 07:00 AM
+2014-03-07 09:54:41,387: Greyhound_3_straight  - Arrive time: 01:00 PM
+2014-03-07 09:54:41,391: Greyhound_3_straight  - Ticket is sold out
+2014-03-07 09:54:41,393: Greyhound_3_straight  - Days: 0; hours: 6; minutes: 0
+2014-03-07 09:54:41,439: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106070001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 07:00:00','2014-03-08 13:00:00','6H, 0m',NULL,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = NULL
+2014-03-07 09:54:41,441: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,447: Greyhound_3_straight  - Depart time: 07:30 AM
+2014-03-07 09:54:41,453: Greyhound_3_straight  - Arrive time: 01:00 PM
+2014-03-07 09:54:41,457: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:41,459: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 30
+2014-03-07 09:54:41,521: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106073001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 07:30:00','2014-03-08 13:00:00','5H, 30m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:41,522: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,523: Greyhound_3_straight  - Depart time: 08:00 AM
+2014-03-07 09:54:41,524: Greyhound_3_straight  - Arrive time: 01:35 PM
+2014-03-07 09:54:41,524: Greyhound_3_straight  - Ticket is sold out
+2014-03-07 09:54:41,525: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 35
+2014-03-07 09:54:41,642: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106080001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 08:00:00','2014-03-08 13:35:00','5H, 35m',NULL,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = NULL
+2014-03-07 09:54:41,647: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,650: Greyhound_3_straight  - Depart time: 09:00 AM
+2014-03-07 09:54:41,650: Greyhound_3_straight  - Arrive time: 02:45 PM
+2014-03-07 09:54:41,651: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:41,658: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 45
+2014-03-07 09:54:41,739: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106090001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 09:00:00','2014-03-08 14:45:00','5H, 45m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:41,741: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,747: Greyhound_3_straight  - Depart time: 09:15 AM
+2014-03-07 09:54:41,755: Greyhound_3_straight  - Arrive time: 02:45 PM
+2014-03-07 09:54:41,755: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:41,756: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 30
+2014-03-07 09:54:41,847: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106091501,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 09:15:00','2014-03-08 14:45:00','5H, 30m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:41,857: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,862: Greyhound_3_straight  - Depart time: 10:30 AM
+2014-03-07 09:54:41,864: Greyhound_3_straight  - Arrive time: 04:10 PM
+2014-03-07 09:54:41,882: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:41,894: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 40
+2014-03-07 09:54:41,983: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106103001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 10:30:00','2014-03-08 16:10:00','5H, 40m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:41,985: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:41,987: Greyhound_3_straight  - Depart time: 10:45 AM
+2014-03-07 09:54:41,987: Greyhound_3_straight  - Arrive time: 04:40 PM
+2014-03-07 09:54:41,987: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:41,988: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 55
+2014-03-07 09:54:42,039: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106104501,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 10:45:00','2014-03-08 16:40:00','5H, 55m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:42,042: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:42,045: Greyhound_3_straight  - Depart time: 12:01 PM
+2014-03-07 09:54:42,046: Greyhound_3_straight  - Arrive time: 05:55 PM
+2014-03-07 09:54:42,046: Greyhound_3_straight  - Ticket is sold out
+2014-03-07 09:54:42,050: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 54
+2014-03-07 09:54:42,108: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106120101,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 12:01:00','2014-03-08 17:55:00','5H, 54m',NULL,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = NULL
+2014-03-07 09:54:42,110: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:42,111: Greyhound_3_straight  - Depart time: 12:15 PM
+2014-03-07 09:54:42,111: Greyhound_3_straight  - Arrive time: 05:55 PM
+2014-03-07 09:54:42,112: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:42,115: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 40
+2014-03-07 09:54:42,172: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106121501,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 12:15:00','2014-03-08 17:55:00','5H, 40m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:42,173: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:42,174: Greyhound_3_straight  - Depart time: 01:00 PM
+2014-03-07 09:54:42,175: Greyhound_3_straight  - Arrive time: 06:55 PM
+2014-03-07 09:54:42,178: Greyhound_3_straight  - Ticket is sold out
+2014-03-07 09:54:42,186: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 55
+2014-03-07 09:54:42,226: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106130001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 13:00:00','2014-03-08 18:55:00','5H, 55m',NULL,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = NULL
+2014-03-07 09:54:42,228: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:42,229: Greyhound_3_straight  - Depart time: 01:15 PM
+2014-03-07 09:54:42,229: Greyhound_3_straight  - Arrive time: 06:55 PM
+2014-03-07 09:54:42,239: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:42,239: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 40
+2014-03-07 09:54:42,297: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106131501,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 13:15:00','2014-03-08 18:55:00','5H, 40m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:42,298: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:42,299: Greyhound_3_straight  - Depart time: 03:00 PM
+2014-03-07 09:54:42,299: Greyhound_3_straight  - Arrive time: 08:40 PM
+2014-03-07 09:54:42,300: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:42,301: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 40
+2014-03-07 09:54:42,359: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106150001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 15:00:00','2014-03-08 20:40:00','5H, 40m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:42,361: Greyhound_3_straight  - Depart date: 03/08/2014
+2014-03-07 09:54:42,361: Greyhound_3_straight  - Depart time: 04:00 PM
+2014-03-07 09:54:42,362: Greyhound_3_straight  - Arrive time: 09:45 PM
+2014-03-07 09:54:42,366: Greyhound_3_straight  - Cost: $42
+2014-03-07 09:54:42,369: Greyhound_3_straight  - Days: 0; hours: 5; minutes: 45
+2014-03-07 09:54:42,441: Greyhound_3_straight  - INSERT INTO 2014March8(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_TIME,ARRIVE_TIME,TRIP_LENGTH,TRIP_COST,URL) VALUES(106160001,'Greyhound','Boston, MA','Newark, NJ','2014-03-08 16:00:00','2014-03-08 21:45:00','5H, 45m',42,'https://www.greyhound.com/farefinder/step2.aspx?SessionId=f9b1bcb3-abec-4ed9-afa8-af48cedb96a4') ON DUPLICATE KEY UPDATE TRIP_COST = 42
+2014-03-07 09:54:42,445: Greyhound_3_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:54:42,448: Greyhound_3_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:54:42,450: Greyhound_3_straight  - NEW SEARCH
+2014-03-07 09:54:42,454: Greyhound_3_straight  - Deleting all cookies...
+2014-03-07 09:55:15,931: Greyhound_3_straight  - From Boston, MA to Philadelphia, PA (03/08/2014)
+2014-03-07 09:55:15,932: Greyhound_3_straight  - Clearing text fields
+2014-03-07 09:55:16,283: Greyhound_3_straight  - Typing origin city...
+2014-03-07 09:55:22,463: Greyhound_3_straight  - Typing destination city...
+2014-03-07 09:55:28,727: Greyhound_3_straight  - Typing departure date...
+2014-03-07 09:55:34,895: Greyhound_3_straight  - Clicking on search button...

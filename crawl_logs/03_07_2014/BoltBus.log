@@ -1,0 +1,177 @@
+2014-03-07 09:47:49,667: BoltBus_1_straight  - Setting up mysql and firefox connections...
+2014-03-07 09:47:49,671: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March6
+2014-03-07 09:47:49,671: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March6
+2014-03-07 09:47:49,673: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-07 09:47:49,675: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March5
+2014-03-07 09:47:49,677: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-07 09:47:49,678: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March4
+2014-03-07 09:47:49,684: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-07 09:47:49,686: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March3
+2014-03-07 09:47:49,687: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-07 09:47:49,690: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March2
+2014-03-07 09:47:49,692: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-07 09:47:49,694: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014March1
+2014-03-07 09:47:49,704: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-07 09:47:49,706: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February28
+2014-03-07 09:47:49,708: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-07 09:47:49,713: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February27
+2014-03-07 09:47:49,716: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-07 09:47:49,716: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February26
+2014-03-07 09:47:49,717: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-07 09:47:49,720: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February25
+2014-03-07 09:47:49,722: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-07 09:47:49,725: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February24
+2014-03-07 09:47:49,727: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-07 09:47:49,739: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February23
+2014-03-07 09:47:49,741: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-07 09:47:49,743: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February22
+2014-03-07 09:47:49,745: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-07 09:47:49,749: BoltBus_1_straight  - DROP TABLE IF EXISTS 2014February21
+2014-03-07 09:48:05,512: BoltBus_1_straight  - Retrieving jobs...
+2014-03-07 09:48:05,528: BoltBus_1_straight  - Number of jobs: 24
+2014-03-07 09:48:05,542: BoltBus_1_straight  - Setting up makeups...
+2014-03-07 09:48:05,543: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,544: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(12030800,'BoltBus','Newark','Baltimore','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,555: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,556: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(9030800,'BoltBus','New York 34th','Philadelphia JFK','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,563: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,565: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(17030800,'BoltBus','Philadelphia JFK','Boston','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,566: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,572: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(19030800,'BoltBus','Philadelphia JFK','New York 6th','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,573: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,576: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(4030800,'BoltBus','Boston','Philadelphia','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,577: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,578: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(14030800,'BoltBus','Newark','Philadelphia','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,580: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,600: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(3030800,'BoltBus','Boston','Newark','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,602: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,619: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(2030800,'BoltBus','Boston','New York','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,627: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,627: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(5030800,'BoltBus','New York 33rd','Baltimore','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,631: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,634: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(18030800,'BoltBus','Philadelphia JFK','New York 34th','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,638: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,649: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(8030800,'BoltBus','New York 34th','Philadelphia - Cherry','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,650: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,656: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(22030800,'BoltBus','Washington','New York 6th','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,659: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,662: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(21030800,'BoltBus','Washington','New York 33rd','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,663: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,694: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(10030800,'BoltBus','New York 6th','Philadelphia JFK','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,694: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,706: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(6030800,'BoltBus','New York 33rd','Washington','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,710: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,720: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(15030800,'BoltBus','Newark','Washington','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,722: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,724: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(20030800,'BoltBus','Philadelphia JFK','Newark','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,734: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,752: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(24030800,'BoltBus','Baltimore','New York','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,764: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,770: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(7030800,'BoltBus','New York 34th','Boston','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,772: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,778: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(16030800,'BoltBus','Philadelphia - Cherry','New York 34th','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,787: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,790: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(23030800,'BoltBus','Washington','Newark','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,791: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,798: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(13030800,'BoltBus','Newark','Boston','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,799: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,807: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(1030800,'BoltBus','Baltimore','Newark','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,819: BoltBus_1_straight  - CREATE TABLE IF NOT EXISTS BoltBus_makeup(TRIP_ID INT PRIMARY KEY, COMPANY_NAME VARCHAR(40), DEPART_CITY VARCHAR(40), ARRIVE_CITY VARCHAR(40), DEPART_DATE DATE)
+2014-03-07 09:48:05,825: BoltBus_1_straight  - INSERT INTO BoltBus_makeup(TRIP_ID,COMPANY_NAME,DEPART_CITY,ARRIVE_CITY,DEPART_DATE) VALUES(11030800,'BoltBus','New York 6th','Washington','2014-03-08') ON DUPLICATE KEY UPDATE TRIP_ID = TRIP_ID
+2014-03-07 09:48:05,831: BoltBus_1_straight  - Starting session!
+2014-03-07 09:48:05,839: BoltBus_1_straight  - Not using proxies!
+2014-03-07 09:48:05,847: BoltBus_1_straight  - Jobs remaining: 24
+2014-03-07 09:48:05,849: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:48:05,850: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:48:05,853: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:48:13,863: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:48:42,883: BoltBus_1_straight  - From Newark to Baltimore (03/08/2014)
+2014-03-07 09:48:42,888: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:48:44,158: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:48:54,376: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:48:56,775: BoltBus_1_straight  - Selecting origin city (Newark)
+2014-03-07 09:48:58,188: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:48:58,191: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:48:58,204: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:48:58,204: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:49:06,225: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:49:38,792: BoltBus_1_straight  - From New York 34th to Philadelphia JFK (03/08/2014)
+2014-03-07 09:49:38,794: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:49:40,771: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:49:51,446: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:49:53,023: BoltBus_1_straight  - Selecting origin city (New York 34th)
+2014-03-07 09:49:55,070: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:49:55,073: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:49:55,074: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:49:55,074: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:50:03,083: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:50:28,727: BoltBus_1_straight  - From Philadelphia JFK to Boston (03/08/2014)
+2014-03-07 09:50:28,728: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:50:30,131: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:50:40,587: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:50:41,993: BoltBus_1_straight  - Selecting origin city (Philadelphia JFK)
+2014-03-07 09:50:42,367: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:50:42,367: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:50:42,368: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:50:42,369: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:50:50,375: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:51:16,483: BoltBus_1_straight  - From Philadelphia JFK to New York 6th (03/08/2014)
+2014-03-07 09:51:16,484: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:51:17,846: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:51:28,290: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:51:29,915: BoltBus_1_straight  - Selecting origin city (Philadelphia JFK)
+2014-03-07 09:51:30,536: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:51:30,537: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:51:30,537: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:51:30,538: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:51:38,546: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:52:04,164: BoltBus_1_straight  - From Boston to Philadelphia (03/08/2014)
+2014-03-07 09:52:04,165: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:52:05,696: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:52:16,167: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:52:17,515: BoltBus_1_straight  - Selecting origin city (Boston)
+2014-03-07 09:52:17,928: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:52:17,930: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:52:17,931: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:52:17,931: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:52:25,939: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:52:51,291: BoltBus_1_straight  - From Newark to Philadelphia (03/08/2014)
+2014-03-07 09:52:51,292: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:52:52,883: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:53:03,362: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:53:04,758: BoltBus_1_straight  - Selecting origin city (Newark)
+2014-03-07 09:53:05,137: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:53:05,138: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:53:05,139: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:53:05,139: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:53:13,146: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:53:40,175: BoltBus_1_straight  - From Boston to Newark (03/08/2014)
+2014-03-07 09:53:40,176: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:53:42,406: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:53:53,595: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:53:54,976: BoltBus_1_straight  - Selecting origin city (Boston)
+2014-03-07 09:53:55,513: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:53:55,514: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:53:55,515: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:53:55,515: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:54:03,524: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:54:29,288: BoltBus_1_straight  - From Boston to New York (03/08/2014)
+2014-03-07 09:54:29,289: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:54:30,838: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:54:41,555: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:54:43,748: BoltBus_1_straight  - Selecting origin city (Boston)
+2014-03-07 09:54:44,308: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:54:44,309: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:54:44,309: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:54:44,310: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:54:52,318: BoltBus_1_straight  - Loading URL...
+2014-03-07 09:55:18,387: BoltBus_1_straight  - From New York 33rd to Baltimore (03/08/2014)
+2014-03-07 09:55:18,387: BoltBus_1_straight  - Clicking on region tab...
+2014-03-07 09:55:19,779: BoltBus_1_straight  - Selecting northeast...
+2014-03-07 09:55:30,267: BoltBus_1_straight  - Clicking origin city...
+2014-03-07 09:55:31,648: BoltBus_1_straight  - Selecting origin city (New York 33rd)
+2014-03-07 09:55:32,019: BoltBus_1_straight  - Unable to find origin city, continuing to next search
+2014-03-07 09:55:32,020: BoltBus_1_straight  - Number of proxy rotations allowed: 4
+2014-03-07 09:55:32,020: BoltBus_1_straight  - Number of browser restarts allowed: 2
+2014-03-07 09:55:32,021: BoltBus_1_straight  - NEW SEARCH
+2014-03-07 09:55:40,027: BoltBus_1_straight  - Loading URL...
