@@ -11,13 +11,12 @@ def show
 
 end
 
-
-def dosearch
-  @rides = Ride.fetch_results params[:search][:from_city]
-  if(@rides.size == 0)
-    flash[:notice] = "No Result"
-    redirect_to rides_path
-  end
+def dosearch    
+     @rides = Ride.fetch_results params[:search]
+     if(@rides.size == 0)
+      flash[:notice] = "No routes found match the search terms."
+      redirect_to rides_path
+    end
 end
 
 end

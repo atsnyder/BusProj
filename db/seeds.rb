@@ -7,10 +7,3 @@
   # Mayor.create(name: 'Emanuel', city: cities.first)
  #ride = Ride.where(fakerides : 'IowaCity').first_or_intialize
 # ride.save!
-
-#rides = [{:from_city => 'iowa city'},{:from_city => 'iowa city2'},{:from_city => 'iowa city3'}]
-
-#rides.each do |ride|
-#	Ride.create!(ride)
-#end
-

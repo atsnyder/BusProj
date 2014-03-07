@@ -1,7 +1,5 @@
 Results:
 
-=# paginate @rides 
-
 %table#rides_result
   %thead
     %tr
@@ -22,7 +20,8 @@ Results:
           %td= ride.ARRIVE_CITY
           %td= ride.ARRIVE_TIME
           %td= ride.TRIP_COST
-          %td= ride.URL
+          %td
+            %a{href:"#{ride.URL}"}More Information     
       - else
         - style = 0
         %tr{ :class=>'alt'}
@@ -31,6 +30,5 @@ Results:
           %td= ride.ARRIVE_CITY
           %td= ride.ARRIVE_TIME
           %td= ride.TRIP_COST
-          %td= ride.URL
-=# paginate @rides
-
+          %td
+            %a{href:"#{ride.URL}"}More Information
