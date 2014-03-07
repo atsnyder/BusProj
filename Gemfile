@@ -29,7 +29,7 @@ group :development, :test do
 gem 'capybara'
 gem 'launchy'
 gem 'database_cleaner'
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'rspec-rails'
 gem 'simplecov', :require => false
 

@@ -19,10 +19,14 @@ development:
   password: 03c6c2b9
   host: us-cdbr-east-05.cleardb.net
 
-
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+#test: &test
+#  adapter: sqlite3
+#  database: db/test.sqlite3
+#  pool: 5
+#  timeout: 5000
 test: &test
   adapter: mysql2
   encoding: utf8
@@ -33,7 +37,6 @@ test: &test
   password: 03c6c2b9
   host: us-cdbr-east-05.cleardb.net
 
-
 production:
   adapter: mysql2
   encoding: utf8
@@ -43,7 +46,6 @@ production:
   username: b3830eaa3b19ce
   password: 03c6c2b9
   host: us-cdbr-east-05.cleardb.net
-
 
 cucumber:
   <<: *test

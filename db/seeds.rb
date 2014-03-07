@@ -7,8 +7,3 @@
   # Mayor.create(name: 'Emanuel', city: cities.first)
  #ride = Ride.where(fakerides : 'IowaCity').first_or_intialize
 # ride.save!
-
-#routes = [{:from_city => 'iowa city'},{:from_city => 'iowa city2'},{:from_city => 'iowa city3'}]
-
-#INSERT INTO BusTable () VALUES ('Greyhound','Iowa city','Chicago','2014-02-28');
- 
