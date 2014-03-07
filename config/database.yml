@@ -10,7 +10,7 @@ development:
   database: BusRideTest
   pool: 5
   username: root
-  password: root
+  password: yayichi
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test: &test
   database: BusRideTest
   pool: 5
   username: root
-  password: root
+  password: yayichi
   host: localhost
 
 
@@ -39,7 +39,7 @@ production:
   database: BusRideTest
   pool: 5
   username: root
-  password: root
+  password: yayichi
   host: localhost
 cucumber:
   <<: *test

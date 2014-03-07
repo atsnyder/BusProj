@@ -13,9 +13,11 @@ end
 
 
 def dosearch
-     @rides = Ride.fetch_results params[:search][:from_city]
-     puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-     puts @rides
+  @rides = Ride.fetch_results params[:search][:from_city]
+  if(@rides.size == 0)
+    flash[:notice] = "No Result"
+    redirect_to rides_path
+  end
 end
 
 end
