@@ -1,5 +1,6 @@
 Results:
 
+= paginate @rides
 %table#rides_result
   %thead
     %tr
@@ -34,6 +35,7 @@ Results:
             %a{href:"#{ride.URL}"}= ride.COMPANY_NAME
 
 - if @round_trip
+  = paginate @rides2
   %br
   Back Trip:
 
