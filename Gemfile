@@ -30,6 +30,7 @@ gem 'capybara'
 gem 'launchy'
 gem 'database_cleaner'
 gem 'mysql2' , "~>0.3.15"
+#gem 'sqlite3'
 gem 'rspec-rails'
 gem 'simplecov', :require => false
 
