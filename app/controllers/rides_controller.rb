@@ -19,14 +19,15 @@ def dosearch
       @round_trip = true
       @rides2 = Ride.fetch_back_results params[:search]
       @rides2 = Kaminari.paginate_array(@rides2).page(params[:page]).per(5)
-      if(@rides2.size == 0)
-        flash[:notice] = "No routes found match the search terms."
-        redirect_to rides_path
-      end
     end
     if(@rides.size == 0)
       flash[:notice] = "No routes found match the search terms."
       redirect_to rides_path
+    elsif(@round_trip == true)
+      if(@rides2.size == 0)
+        flash[:notice] = "No routes found match the search terms."
+        redirect_to rides_path
+      end
     end
 end
 
