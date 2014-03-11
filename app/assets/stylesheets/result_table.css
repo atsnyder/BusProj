@@ -29,3 +29,35 @@
     width: 200px; 
     max-width: 200px;
 }
+
+#rides_back_result table 
+  {
+    /*border-collapse:collapse;*/
+    border: 3px solid black;
+    table-layout: fixed;
+    width:1000px;
+  }
+#rides_back_result th
+  {
+    height:50px;
+    padding:10px;
+    background-color:green;
+    color:white;
+  }
+#rides_back_result td
+  {
+    padding:10px;
+    height:50px;
+  }
+#rides_back_result tr.alt td
+  {
+    color:#000000;
+    background-color:#EAF2D3;
+  }
+
+#rides_back_result th td {
+    overflow: hidden;
+    min-width: 200px; 
+    width: 200px; 
+    max-width: 200px;
+}
