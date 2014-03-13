@@ -71,3 +71,14 @@ Results:
             %td= ride2.TRIP_COST
             %td
               %a{href:"#{ride2.URL}"}= ride2.COMPANY_NAME
+
+
+
+%form{:action => rides_search_path, :method => "post"}
+  %select{name: "perpage"}
+    %option{value: 5} 5
+    %option{value: 10} 10
+    %option{value: 20} 20
+    %option{value: 50} 50
+  %input{type: "SUBMIT", value: "Refresh results"}
+
