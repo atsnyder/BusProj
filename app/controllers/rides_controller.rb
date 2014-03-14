@@ -7,8 +7,7 @@ end
 def new
 end
 
-def show 
-
+def show
 end
 
 def dosearch
@@ -27,7 +26,11 @@ def dosearch
       if(@rides2.size == 0)
         flash[:notice] = "No routes found match the search terms."
         redirect_to rides_path
+      else
+        render :layout=>"frameset"
       end
+    else
+      render :layout=>"frameset"
     end
 end
 

@@ -1,0 +1,10 @@
+!!! Frameset
+%html
+  %head
+    %title BusRide
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    %script{ :src=>"/assets/frameset.js?body=1", :type=>"text/javascript"}
+    = yield(:head)
+    = csrf_meta_tag
+  = yield
