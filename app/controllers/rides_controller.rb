@@ -12,12 +12,11 @@ end
 
 def dosearch
 
-    cookies[:radio] = cookies[:radio] || params[:search]["radio"]
+    cookies[:radio] = "OneWay" || params[:search]["radio"]
     cookies[:from] = cookies[:from] || params[:search]["from_city"]
     cookies[:to] = cookies[:to] || params[:search]["to_city"]
 
     params[:search] = params[:search] || {"radio" => cookies[:radio], "from_city" => cookies[:from], "to_city" => cookies[:to]}
-
 
     @perpage = @perpage || 5
     @perpage = params[:perpage] || @perpage
