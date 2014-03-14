@@ -3,6 +3,7 @@ BusRide::Application.routes.draw do
   # first created -> highest priority.
     resources :rides 
     match '/rides/search', to: 'rides#dosearch', via: :post
+    match '/rides/updatesearch', to: 'rides#updatesearch', via: :post
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

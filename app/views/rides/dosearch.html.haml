@@ -41,5 +41,11 @@
               %td
                 %a{href:"#{ride.URL}"}= ride.COMPANY_NAME
 
-    %br/
+  %form{:action => rides_search_path, :method => "post"}
+    %select{name: "perpage"}
+      %option{value: 5} 5
+      %option{value: 10} 10
+      %option{value: 20} 20
+      %option{value: 50} 50
+    %input{type: "SUBMIT", value: "Refresh results"}
     =link_to "back", rides_path, :target => "_parent"
