@@ -52,6 +52,7 @@
   { 
     if (document.getElementById('search_radio_OneWay').checked)
     {
+      document.getElementById('to_datepicker').required = false;
       document.getElementById('to_datepicker').style.visibility = 'hidden';
       document.getElementById('to_datepicker').style.display = 'none';
     }
