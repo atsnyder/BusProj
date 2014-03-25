@@ -1,6 +1,6 @@
 - if flash[:notice]
   %p#notice= flash[:notice]
-
+%script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places", type: "text/javascript"}
 .radientBG
   .middle
     #hometitle
@@ -15,13 +15,13 @@
         %br
 
         #destsearch
-          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From'
-          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To'
+          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:onfocus => "javascript:initializeSourceCity();"
+          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:onfocus => "javascript:initializeDestinationCity();"
         #datesearch
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :readonly => 'readonly'
           = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
           = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
         %br
-          = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
+        = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
 
 
