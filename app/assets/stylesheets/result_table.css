@@ -61,3 +61,15 @@
     width: 200px; 
     max-width: 200px;
 }
+
+.divcontr {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.centerdiv {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
