@@ -4,7 +4,7 @@
 .radientBG
   .middle
     #hometitle
-      Welcome to BusRide
+      BusRide
     = form_tag rides_search_path, :method => :post do
       .search_field
         %br
@@ -20,7 +20,6 @@
         #datesearch
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :readonly => 'readonly'
           = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
-          = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
         %br
         = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
 
