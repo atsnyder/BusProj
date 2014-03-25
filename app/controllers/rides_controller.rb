@@ -24,7 +24,8 @@ def dosearch
     @perpage = params[:perpage] || @perpage
 
     @round_trip = false
-    @rides = Ride.fetch_results params[:search]
+    @rides = Ride.fetch_results(params[:search],params[:date])
+    
     @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
     if(params[:search]["radio"] == "RoundTrip")
       @round_trip = true
