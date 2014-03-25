@@ -7,18 +7,16 @@ end
 def new
 end
 
-def show 
-
+def show
 end
 
 def dosearch
 
-    cookies[:radio] = cookies[:radio] || params[:search]["radio"]
+    cookies[:radio] = "OneWay" || params[:search]["radio"]
     cookies[:from] = cookies[:from] || params[:search]["from_city"]
     cookies[:to] = cookies[:to] || params[:search]["to_city"]
 
     params[:search] = params[:search] || {"radio" => cookies[:radio], "from_city" => cookies[:from], "to_city" => cookies[:to]}
-
 
     @perpage = @perpage || 5
     @perpage = params[:perpage] || @perpage
@@ -39,7 +37,11 @@ def dosearch
       if(@rides2.size == 0)
         flash[:notice] = "No routes found match the search terms."
         redirect_to rides_path
+      else
+        render :layout=>"frameset"
       end
+    else
+      render :layout=>"frameset"
     end
 end
 
