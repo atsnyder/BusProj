@@ -1,45 +1,59 @@
 - if @round_trip
   %frameset{ :rows => '*,50%', :frameborder => "0"}
-    %frame{ :name => 'go_table', :src =>"search_go#{params[:search]}"}/
-    %frame{ :name => 'back_table', :src =>"search_back#{params[:search]}"}/
+    %frame{ :name => 'go_table', :src =>"search_go#{params}"}/
+    %frame{ :name => 'back_table', :src =>"search_back#{params}"}/
     %noframes Sorry, your browser does not handle frames!
 
 - else
   %body
-    Results:
-    = paginate @rides
-    %table#rides_result
-      %thead
-        %tr
-          %th Origin City
-          %th Depart Time
-          %th Destination City
-          %th Destination Time
-          %th Trip Cost
-          %th URL
-      %tbody
-        - style = 0
-        - @rides.map do |ride|
-          - if style == 0
-            - style = 1
+    .container 
+      Results:
+      
+      = paginate @rides
+      
+      .table-responsive
+        %table.table.table-hover.h4.table-striped
+          %thead
             %tr
-              %td{ :class=>'depart_city'}= ride.DEPART_CITY
-              %td= ride.DEPART_TIME
-              %td{ :class=>'arrive_city'}= ride.ARRIVE_CITY
-              %td= ride.ARRIVE_TIME
-              %td= ride.TRIP_COST
-              %td
-                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
-          - else
+              %th Cost
+              %th Depart
+              %th Arrival
+              %th URL
+          %tbody
             - style = 0
-            %tr{ :class=>'alt'}
-              %td{ :class=>'depart_city'}= ride.DEPART_CITY
-              %td= ride.DEPART_TIME
-              %td{ :class=>'arrive_city'}= ride.ARRIVE_CITY
-              %td= ride.ARRIVE_TIME
-              %td= ride.TRIP_COST
-              %td
-                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
+            - @rides.map do |ride|
+              - if style == 0
+                - style = 1
+                %tr
+                  %td.lead
+                    $
+                    = ride.TRIP_COST
+                  %td{ :class=>'depart_city'}
+                    = ride.DEPART_CITY
+                    %br
+                    = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
+                  %td{ :class=>'arrive_city'}
+                    = ride.ARRIVE_CITY
+                    %br
+                    = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
+                  %td
+                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
+              - else
+                - style = 0
+                %tr{ :class=>'alt'}
+                  %td.lead
+                    $
+                    = ride.TRIP_COST
+                  %td{ :class=>'depart_city'}
+                    = ride.DEPART_CITY
+                    %br
+                    = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
+                  %td{ :class=>'arrive_city'}
+                    = ride.ARRIVE_CITY
+                    %br
+                    = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
+                  %td
+                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
 
   %form{:action => rides_search_path, :method => "post"}
     %select{name: "perpage"}

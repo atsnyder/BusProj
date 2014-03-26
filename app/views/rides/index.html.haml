@@ -4,7 +4,7 @@
 .radientBG
   .middle
     #hometitle
-      Welcome to BusRide
+      BusRide
     = form_tag rides_search_path, :method => :post do
       .search_field
         %br
@@ -15,12 +15,11 @@
         %br
 
         #destsearch
-          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:onfocus => "javascript:initializeSourceCity();"
-          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:onfocus => "javascript:initializeDestinationCity();"
+          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:required => true,:onfocus => "javascript:initializeSourceCity();"
+          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
         #datesearch
-          = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :readonly => 'readonly'
-          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
-          = text_field :passengers, 'Passengers', :id => 'passengers_box', :placeholder => '# of passengers'
+          = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
+          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :required => true,:readonly => 'readonly'
         %br
         = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
 

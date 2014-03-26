@@ -3,21 +3,26 @@ Now Loading...
 - @exp = %r'^search_(go|back)(.*)$'
 - @result = params[:id].scan(@exp)[0]
 - @p = eval(@result[1])
-- @p["radio"] = "OnyWay"
+- @p["search"]["radio"] = "OnyWay"
 - if(@result[0] == "back")
-  - @temp = @p["from_city"]
-  - @p["from_city"] = @p["to_city"]
-  - @p["to_city"] = @temp
+  - @temp = @p['search']["from_city"]
+  - @p["search"]["from_city"] = @p["search"]["to_city"]
+  - @p["search"]["to_city"] = @temp
 %br/
 = form_tag rides_search_path, :method => :post do
-  %input#hide1{ :name => "search[radio]", :value => @p["radio"]}
-  %input#hide2{ :name => "search[from_city]", :value => @p["from_city"]}
-  %input#hide3{ :name => "search[to_city]", :value => @p["to_city"]}
+  %input#hide1{ :name => "search[radio]", :value => @p["search"]["radio"]}
+  %input#hide2{ :name => "search[from_city]", :value => @p["search"]["from_city"]}
+  %input#hide3{ :name => "search[to_city]", :value => @p["search"]["to_city"]}
+  %input#hide4{ :name => "date[from_Date]", :value => @p["date"]["from_Date"]}
+  %input#hide5{ :name => "date[to_Date]", :value => @p["date"]["to_Date"]}
   = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search_button'
 
 %script{ :type => 'text/javascript'}
   document.getElementById('hide1').style.visibility = 'hidden';
   document.getElementById('hide2').style.visibility = 'hidden';
   document.getElementById('hide3').style.visibility = 'hidden';
+  document.getElementById('hide4').style.visibility = 'hidden';
+  document.getElementById('hide5').style.visibility = 'hidden';
   document.getElementById('search_button').style.visibility = 'hidden';
   document.getElementById('search_button').click();
+
