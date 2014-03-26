@@ -20,7 +20,7 @@ end
 
 def self.fetch_back_results (params,paramsdate)         
 	table = tablename(paramsdate[:to_Date])
-	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:to_city]}%' AND ARRIVE_CITY like '%#{params[:from_city]}%'")
+	rides = Ride.find_by_sql("SELECT * from 2014March8 WHERE DEPART_CITY like '%#{params[:to_city]}%' AND ARRIVE_CITY like '%#{params[:from_city]}%'")
 	return rides
 end
 
