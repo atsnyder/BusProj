@@ -60,6 +60,7 @@ end
 Then(/^I should( not)? see the( back)? result table$/) do |should, back|
   exist = should ? :should_not : :should
   table = back ? '#rides_back_result' : '#rides_result'
+  puts within_frame("go_table")
   page.send(exist, have_css(table))
 end
 

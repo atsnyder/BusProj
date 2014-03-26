@@ -1,5 +1,5 @@
 - if @round_trip
-  %frameset{ :rows => '*,50%'}
+  %frameset{ :rows => '*,50%', :frameborder => "0"}
     %frame{ :name => 'go_table', :src =>"search_go#{params[:search]}"}/
     %frame{ :name => 'back_table', :src =>"search_back#{params[:search]}"}/
     %noframes Sorry, your browser does not handle frames!
@@ -29,7 +29,7 @@
               %td= ride.ARRIVE_TIME
               %td= ride.TRIP_COST
               %td
-                %a{href:"#{ride.URL}"}= ride.COMPANY_NAME
+                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
           - else
             - style = 0
             %tr{ :class=>'alt'}
@@ -39,7 +39,7 @@
               %td= ride.ARRIVE_TIME
               %td= ride.TRIP_COST
               %td
-                %a{href:"#{ride.URL}"}= ride.COMPANY_NAME
+                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
 
   %form{:action => rides_search_path, :method => "post"}
     %select{name: "perpage"}
