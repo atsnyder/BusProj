@@ -10,6 +10,15 @@
       Results:
       
       = paginate @rides
+
+      %form{:action => rides_search_path, :method => "post"}
+        %select{name: "perpage", onchange: "this.form.submit()"}
+          %option Results per page
+          %option{value: 5} 5
+          %option{value: 10} 10
+          %option{value: 20} 20
+          %option{value: 50} 50
+        =link_to "back", rides_path, :target => "_parent"
       
       .table-responsive
         %table.table.table-hover.h4.table-striped
@@ -55,11 +64,3 @@
                   %td
                     %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
 
-  %form{:action => rides_search_path, :method => "post"}
-    %select{name: "perpage"}
-      %option{value: 5} 5
-      %option{value: 10} 10
-      %option{value: 20} 20
-      %option{value: 50} 50
-    %input{type: "SUBMIT", value: "Refresh results"}
-    =link_to "back", rides_path, :target => "_parent"
