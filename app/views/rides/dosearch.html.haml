@@ -1,7 +1,7 @@
 - if @round_trip
   %frameset{ :rows => '*,50%', :frameborder => "0"}
-    %frame{ :name => 'go_table', :src =>"search_go#{params}"}/
-    %frame{ :name => 'back_table', :src =>"search_back#{params}"}/
+    %frame{ :name => 'go_table', :src =>"search_go{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
+    %frame{ :name => 'back_table', :src =>"search_back{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
     %noframes Sorry, your browser does not handle frames!
 
 - else

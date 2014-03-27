@@ -8,6 +8,7 @@ Now Loading...
   - @temp = @p['search']["from_city"]
   - @p["search"]["from_city"] = @p["search"]["to_city"]
   - @p["search"]["to_city"] = @temp
+  - @p["date"]["from_Date"] = @p["date"]["to_Date"]
 %br/
 = form_tag rides_search_path, :method => :post do
   %input#hide1{ :name => "search[radio]", :value => @p["search"]["radio"]}
