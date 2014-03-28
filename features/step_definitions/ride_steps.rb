@@ -87,3 +87,7 @@ Then(/^I should see "(.*?)" in the "(.*?)" column of "(.*?)"$/) do |text, column
 
 end
 
+Then(/^I should see two result table$/) do
+  pending
+end
+

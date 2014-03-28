@@ -40,9 +40,8 @@ Scenario: Search bus for a round trip
   And I initial destination "Washington, DC"
   When I click the search button
   #Then I should be on the BusRide home page
-  Then I should see the result table
+  Then I should see two result table
   And I should see "New York, NY" in the "Origin City" column of "result table"
   And I should see "Washington, DC" in the "Destination City" column of "result table"
-  And I should see the back result table
   And I should see "Washington, DC" in the "Origin City" column of "back result table"
   And I should see "New York, NY" in the "Destination City" column of "back result table"
