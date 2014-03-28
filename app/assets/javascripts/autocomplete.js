@@ -1,7 +1,7 @@
 function initializeSourceCity(){
 var options = {
   types: ['(cities)'],
-
+  componentRestrictions: {country: 'us'}
 };
 var input = document.getElementById('from_search_box');
 var autocomplete = new google.maps.places.Autocomplete(input, options);
