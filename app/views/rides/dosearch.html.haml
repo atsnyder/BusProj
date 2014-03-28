@@ -1,8 +1,8 @@
 %script{src: "http://code.jquery.com/jquery-1.11.0.js", type: "text/javascript"}
 - if @round_trip
-  %frameset{ :rows => '*,50%'}
-    %frame{ :name => 'go_table', :src =>"search_go#{params}"}/
-    %frame{ :name => 'back_table', :src =>"search_back#{params}"}/
+  %frameset{ :rows => '*,50%', :frameborder => "0"}
+    %frame{ :name => 'go_table', :src =>"search_go{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
+    %frame{ :name => 'back_table', :src =>"search_back{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
     %noframes Sorry, your browser does not handle frames!
 
 - else
@@ -11,6 +11,15 @@
       Results:
       
       = paginate @rides
+
+      %form{:action => rides_search_path, :method => "post"}
+        %select{name: "perpage", onchange: "this.form.submit()"}
+          %option Results per page
+          %option{value: 5} 5
+          %option{value: 10} 10
+          %option{value: 20} 20
+          %option{value: 50} 50
+        =link_to "back", rides_path, :target => "_parent"
       
       .table-responsive
         %table.table.table-hover.h4.table-striped
@@ -29,38 +38,30 @@
                   %td.lead
                     $
                     = ride.TRIP_COST
-                  %td
+                  %td{ :class=>'depart_city'}
                     = ride.DEPART_CITY
                     %br
                     = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
-                  %td
+                  %td{ :class=>'arrive_city'}
                     = ride.ARRIVE_CITY
                     %br
                     = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
                   %td
-                    %a{href:"#{ride.URL}"}= ride.COMPANY_NAME
+                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
               - else
                 - style = 0
                 %tr{ :class=>'alt'}
                   %td.lead
                     $
                     = ride.TRIP_COST
-                  %td
+                  %td{ :class=>'depart_city'}
                     = ride.DEPART_CITY
                     %br
                     = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
-                  %td
+                  %td{ :class=>'arrive_city'}
                     = ride.ARRIVE_CITY
                     %br
                     = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
                   %td
-                    %a{href:"#{ride.URL}"}= ride.COMPANY_NAME
+                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
 
-  %form{:action => rides_search_path, :method => "post"}
-    %select{name: "perpage"}
-      %option{value: 5} 5
-      %option{value: 10} 10
-      %option{value: 20} 20
-      %option{value: 50} 50
-    %input{type: "SUBMIT", value: "Refresh results"}
-    =link_to "back", rides_path, :target => "_parent"

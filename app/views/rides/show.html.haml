@@ -3,12 +3,14 @@ Now Loading...
 - @exp = %r'^search_(go|back)(.*)$'
 - @result = params[:id].scan(@exp)[0]
 - @p = eval(@result[1])
-- @p["search"]["radio"] = "OnyWay"
+- @p["search"]["radio"] = "OneWay"
 - if(@result[0] == "back")
   - @temp = @p['search']["from_city"]
   - @p["search"]["from_city"] = @p["search"]["to_city"]
   - @p["search"]["to_city"] = @temp
+  - @p["date"]["from_Date"] = @p["date"]["to_Date"]
 %br/
+
 = form_tag rides_search_path, :method => :post do
   %input#hide1{ :name => "search[radio]", :value => @p["search"]["radio"]}
   %input#hide2{ :name => "search[from_city]", :value => @p["search"]["from_city"]}
