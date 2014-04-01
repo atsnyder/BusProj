@@ -18,6 +18,16 @@ def self.fetch_results (params,paramsdate)
 
 end
 
+
+def self.fetch_back_results (params,paramsdate)
+	params[:from_city].slice! ", United States"
+	params[:to_city].slice! ", United States"       
+	table = tablename(paramsdate[:to_Date])         
+	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:to_city]}%' AND ARRIVE_CITY like '%#{params[:from_city]}%'")
+	return rides.to_a
+
+end
+
 def self.tablename table
 	  year = table[(table.length)-4..table.length]	
 	  day = ((table[(table.length-7)..(table.length-6)]).to_i).to_s

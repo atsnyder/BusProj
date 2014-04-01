@@ -1,4 +1,6 @@
-%script{src: "http://code.jquery.com/jquery-1.11.0.js", type: "text/javascript"}
+%head
+  %script{src: "http://code.jquery.com/jquery-1.11.0.js", type: "text/javascript"}
+  %script{src: "http://mottie.github.io/tablesorter/js/jquery.tablesorter.js", type: "text/javascript"}
 - if @round_trip
   %frameset{ :rows => '*,50%', :frameborder => "0"}
     %frame{ :name => 'go_table', :src =>"search_go{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
@@ -18,11 +20,11 @@
           %option{value: 5} 5
           %option{value: 10} 10
           %option{value: 20} 20
-          %option{value: 50} 50
+          %option{value: 255} All
         =link_to "back", rides_path, :target => "_parent"
       
       .table-responsive
-        %table.table.table-hover.h4.table-striped
+        %table#myTable.tablesorter.table.table-hover.h4.table-striped
           %thead
             %tr
               %th Cost

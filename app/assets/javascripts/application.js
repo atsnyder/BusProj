@@ -17,4 +17,4 @@
 //= require autocomplete
 //= require jquery.tablesorter
 //= require jquery-latest
-
+//= require dosearch
