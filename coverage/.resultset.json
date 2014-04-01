@@ -1,16 +1,16 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/saasbook/Documents/sep033014/app/controllers/application_controller.rb": [
+      "/home/saasbook/Documents/sep040114/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/home/saasbook/Documents/sep033014/app/helpers/application_helper.rb": [
+      "/home/saasbook/Documents/sep040114/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Documents/sep033014/app/controllers/rides_controller.rb": [
+      "/home/saasbook/Documents/sep040114/app/controllers/rides_controller.rb": [
         1,
         null,
         1,
@@ -70,7 +70,7 @@
         null,
         null
       ],
-      "/home/saasbook/Documents/sep033014/app/models/ride.rb": [
+      "/home/saasbook/Documents/sep040114/app/models/ride.rb": [
         1,
         null,
         1,
@@ -102,18 +102,18 @@
         null,
         null,
         1,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
         null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1396387708
+    "timestamp": 1396388983
   }
 }
