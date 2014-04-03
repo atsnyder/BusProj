@@ -1,6 +1,7 @@
 %head
   %script{src: "http://code.jquery.com/jquery-1.11.0.js", type: "text/javascript"}
   %script{src: "http://mottie.github.io/tablesorter/js/jquery.tablesorter.js", type: "text/javascript"}
+  %script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places", type: "text/javascript"}
 - if @round_trip
   %frameset{ :rows => '*,50%', :frameborder => "0"}
     %frame{ :name => 'go_table', :src =>"search_go{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
