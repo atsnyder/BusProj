@@ -14,7 +14,7 @@ def dosearch
 
     params[:date] = params[:date] || {"from_Date" => cookies[:from_date], "to_Date" => cookies[:to_date]}
 
-    cookies[:radio] = params[:search]["radio"] || "Oneway"
+    cookies[:radio] = "OneWay" || params[:search]["radio"]
 
     cookies[:from] = cookies[:from] || params[:search]["from_city"]
     cookies[:to] = cookies[:to] || params[:search]["to_city"]
