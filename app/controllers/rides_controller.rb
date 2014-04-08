@@ -31,7 +31,7 @@ def dosearch
     params[:date]["to_Date"] = params[:date]["to_Date"] || cookies[:to_date]
 
 
-    @perpage = @perpage || 5
+    @perpage = @perpage || 10
     @perpage = params[:perpage] || @perpage
 
     @round_trip = false
