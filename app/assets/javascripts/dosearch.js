@@ -1,9 +1,12 @@
 $(document).ready(function() 
     { 
-        $("#myTable").tablesorter({
-		headers : { 1 : {sorter : 'shortdate' }, 
-			    2 : {sorter : 'shortdate' },
- 			    3 : {sorter : false       }
+	$("#myTable").tablesorter({
+		headers : { 		    
+				1 : {sorter : 'time'},
+                                2 : {sorter : 'false'},
+                                3 : {sorter : 'time'},	
+                                4 : {sorter : 'false'},			
+				5 : {sorter : false}
  			  }
 		}	
 	); 
