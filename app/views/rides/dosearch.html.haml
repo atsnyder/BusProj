@@ -1,87 +1,97 @@
-%head
-  %script{src: "http://code.jquery.com/jquery-1.11.0.js", type: "text/javascript"}
-  %script{src: "http://mottie.github.io/tablesorter/js/jquery.tablesorter.js", type: "text/javascript"}
-  %script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places", type: "text/javascript"}
-- if @round_trip
-  %frameset{ :rows => '*,50%', :frameborder => "0"}
-    %frame{ :name => 'go_table', :src =>"search_go{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
-    %frame{ :name => 'back_table', :src =>"search_back{\"search\"=>#{params[:search]}, \"date\"=>#{params[:date]}}"}/
-    %noframes Sorry, your browser does not handle frames!
-
-- else
-  %body
-    %nav.navbar.navbar-default{role: "navigation"}
-      .container-fluid
-        .navbar-header
-          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand{href: "#"} BusRide
-          
-          .navbar-form.navbar-left.form-group
-            = form_tag rides_search_path, :method => :post do
-              = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:required => true,:onfocus => "javascript:initializeSourceCity();"
-              = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
-              = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
-              = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :required => true,:readonly => 'readonly'
-              = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
-    .container 
-      Results:
+%nav.navbar.navbar-default{role: "navigation"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{href: "./"} BusRide
       
-      = paginate @rides
+      .navbar-form.navbar-left.form-group
+        = form_tag rides_search_path, :method => :post do
+          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:required => true,:onfocus => "javascript:initializeSourceCity();"
+          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
+          = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
+          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :required => true,:readonly => 'readonly'
+          = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
+.container
+  Results:
+  = paginate @rides
 
-      %form{:action => rides_search_path, :method => "post"}
-        %select{name: "perpage", onchange: "this.form.submit()"}
-          %option Results per page
-          %option{value: 5} 5
-          %option{value: 10} 10
-          %option{value: 20} 20
-          %option{value: 255} All
-        =link_to "back", rides_path, :target => "_parent"
-      
-      .table-responsive
-        %table#myTable.tablesorter.table.table-hover.h4.table-striped
-          %thead
+  -if @round_trip
+    = form_tag rides_search_path, :method => :post do
+      %input#hide1{ :name => "search[radio]", :value => "RoundTrip"}
+      %input#hide2{ :name => "search[from_city]", :value => @back_from}
+      %input#hide3{ :name => "search[to_city]", :value => @back_to}
+      %input#hide4{ :name => "date[from_Date]", :value => @from_date}
+      %input#hide5{ :name => "date[to_Date]", :value => @to_date}
+      %input#hide6{ :name => "search[button_tag]", :value => "#@button_tag"}
+      -if @button_tag
+        = button_tag 'Return Trip' , class: 'search-button' , type: :submit, :id => 'search_button'
+      -else
+        = button_tag 'Go Trip' , class: 'search-button' , type: :submit, :id => 'search_button'
+
+
+  %form{:action => rides_search_path, :method => "post"}
+    %select{name: "perpage", onchange: "this.form.submit()"}
+      %option Results per page
+      %option{value: 5} 5
+      %option{value: 10} 10
+      %option{value: 20} 20
+      %option{value: 255} All
+    =link_to "back", rides_path, :target => "_parent"
+  
+  .table-responsive
+    %table#myTable.tablesorter.table.table-hover.h4.table-striped
+      %thead
+        %tr
+          %th Cost
+          %th Depart
+          %th Arrival
+          %th URL
+      %tbody
+        - style = 0
+        - @rides.map do |ride|
+          - if style == 0
+            - style = 1
             %tr
-              %th Cost
-              %th Depart
-              %th Arrival
-              %th URL
-          %tbody
+              %td.lead
+                $
+                = ride.TRIP_COST
+              %td{ :class=>'depart_city'}
+                = ride.DEPART_CITY
+                %br
+                = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
+              %td{ :class=>'arrive_city'}
+                = ride.ARRIVE_CITY
+                %br
+                = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
+              %td
+                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
+          - else
             - style = 0
-            - @rides.map do |ride|
-              - if style == 0
-                - style = 1
-                %tr
-                  %td.lead
-                    $
-                    = ride.TRIP_COST
-                  %td{ :class=>'depart_city'}
-                    = ride.DEPART_CITY
-                    %br
-                    = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
-                  %td{ :class=>'arrive_city'}
-                    = ride.ARRIVE_CITY
-                    %br
-                    = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
-                  %td
-                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
-              - else
-                - style = 0
-                %tr{ :class=>'alt'}
-                  %td.lead
-                    $
-                    = ride.TRIP_COST
-                  %td{ :class=>'depart_city'}
-                    = ride.DEPART_CITY
-                    %br
-                    = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
-                  %td{ :class=>'arrive_city'}
-                    = ride.ARRIVE_CITY
-                    %br
-                    = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
-                  %td
-                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
+            %tr{ :class=>'alt'}
+              %td.lead
+                $
+                = ride.TRIP_COST
+              %td{ :class=>'depart_city'}
+                = ride.DEPART_CITY
+                %br
+                = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
+              %td{ :class=>'arrive_city'}
+                = ride.ARRIVE_CITY
+                %br
+                = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
+              %td
+                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
+
+
+%script{ :type => 'text/javascript'}
+  document.getElementById('hide1').style.display = 'none';
+  document.getElementById('hide2').style.display = 'none';
+  document.getElementById('hide3').style.display = 'none';
+  document.getElementById('hide4').style.display = 'none';
+  document.getElementById('hide5').style.display = 'none';
+  document.getElementById('hide6').style.display = 'none';
 
