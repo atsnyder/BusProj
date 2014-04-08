@@ -48,8 +48,10 @@
       %thead
         %tr
           %th Cost
-          %th Depart
+          %th Departure
+          %th 
           %th Arrival
+          %th 
           %th URL
       %tbody
         - style = 0
@@ -57,18 +59,21 @@
           - if style == 0
             - style = 1
             %tr
-<<<<<<< HEAD
               %td.lead
                 $
                 = ride.TRIP_COST
               %td{ :class=>'depart_city'}
-                = ride.DEPART_CITY
-                %br
-                = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
+                = ride.DEPART_TIME.strftime("%l:%M%p ")
+              %td{ :class=>'depart_city'}
+                = ride.DEPART_CITY 
+                %br  
+                = ride.DEPART_TIME.strftime("%b %-d,%Y") 
+              %td{ :class=>'arrive_city'}
+                = ride.ARRIVE_TIME.strftime("%l:%M%p ")
               %td{ :class=>'arrive_city'}
                 = ride.ARRIVE_CITY
                 %br
-                = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
+                = ride.ARRIVE_TIME.strftime("%b %-d,%Y")
               %td
                 %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
           - else
@@ -78,13 +83,17 @@
                 $
                 = ride.TRIP_COST
               %td{ :class=>'depart_city'}
+                = ride.DEPART_TIME.strftime("%l:%M%p ")
+              %td{ :class=>'depart_city'}
                 = ride.DEPART_CITY
                 %br
-                = ride.DEPART_TIME.strftime("%I:%M%p %a %b%d")
+                = ride.DEPART_TIME.strftime("%b %-d,%Y")
               %td{ :class=>'arrive_city'}
-                = ride.ARRIVE_CITY
+                = ride.ARRIVE_TIME.strftime("%l:%M%p ")
+              %td{ :class=>'arrive_city'}
+                = ride.ARRIVE_CITY                  
                 %br
-                = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
+                = ride.ARRIVE_TIME.strftime("%b %-d,%Y")                    
               %td
                 %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
 
@@ -96,55 +105,3 @@
   document.getElementById('hide4').style.display = 'none';
   document.getElementById('hide5').style.display = 'none';
   document.getElementById('hide6').style.display = 'none';
-=======
-              %th Cost
-              %th Departure
-              %th 
-              %th Arrival
-              %th 
-              %th URL
-          %tbody
-            - style = 0
-            - @rides.map do |ride|
-              - if style == 0
-                - style = 1
-                %tr
-                  %td.lead
-                    $
-                    = ride.TRIP_COST
-                  %td{ :class=>'depart_city'}
-                    = ride.DEPART_TIME.strftime("%l:%M%p ")
-                  %td{ :class=>'depart_city'}
-                    = ride.DEPART_CITY 
-                    %br  
-                    = ride.DEPART_TIME.strftime("%b %-d,%Y") 
-                  %td{ :class=>'arrive_city'}
-                    = ride.ARRIVE_TIME.strftime("%l:%M%p ")
-                  %td{ :class=>'arrive_city'}
-                    = ride.ARRIVE_CITY
-                    %br
-                    = ride.ARRIVE_TIME.strftime("%b %-d,%Y")
-                  %td
-                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
-              - else
-                - style = 0
-                %tr{ :class=>'alt'}
-                  %td.lead
-                    $
-                    = ride.TRIP_COST
-                  %td{ :class=>'depart_city'}
-                    = ride.DEPART_TIME.strftime("%l:%M%p ")
-                  %td{ :class=>'depart_city'}
-                    = ride.DEPART_CITY
-                    %br
-                    = ride.DEPART_TIME.strftime("%b %-d,%Y")
-                  %td{ :class=>'arrive_city'}
-                    = ride.ARRIVE_TIME.strftime("%l:%M%p ")
-                  %td{ :class=>'arrive_city'}
-                    = ride.ARRIVE_CITY                  
-                    %br
-                    = ride.ARRIVE_TIME.strftime("%b %-d,%Y")                    
-                  %td
-                    %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
->>>>>>> today
-
