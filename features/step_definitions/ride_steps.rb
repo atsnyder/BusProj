@@ -1,3 +1,8 @@
+When(/^I click "(.*?)"$/) do |locator|
+  msg = "No element found with the content of '#{locator}'"
+  locate(:xpath, Capybara::XPath.element(locator), msg).click
+end
+
 Given /^I am on the BusRide home page$/ do
   visit rides_path
  end
@@ -7,7 +12,21 @@ Given(/^I have searched for a bus with source "(.*?)"$/) do |from|
 end
 
 And(/^I initial departure date "(.*?)"$/) do |from_date|
+  puts from_date
   fill_in 'from_datepicker', :with => from_date
+  puts find_field("from_datepicker").value.nil?
+  #msg = "No element found with the content of '#{from_date}'"
+  find("#from_datepicker").click
+  puts page.has_css?('div.pika-single')
+  puts page.has_css?('div.radientBG')
+  #within('div.pika-single') do
+  #  find('#day5').click
+  #end
+  #puts find_field("from_datepicker").value.nil?
+  #page.execute_script %Q{ $('#auction_event_date').trigger("focus") } # activate datetime picker
+  #page.execute_script %Q{ $('a.ui-datepicker-next').trigger("click") } # move one month forward
+  #page.execute_script %Q{ $("a.ui-state-default:contains('15')").trigger("click") } # click on day 15
+
 end
 
 And(/^I initial destination "(.*?)"$/) do |to|
@@ -15,7 +34,19 @@ And(/^I initial destination "(.*?)"$/) do |to|
 end
 
 And(/^I initial return departure date "(.*?)"$/) do |to_date|
-  fill_in 'to_datepicker', :with => to_date
+  pending
+  #puts to_date
+  #msg = "No element found with the content of '#{to_date}'"
+  #find("#to_datepicker").click
+  #within('div.pika-single') do
+  #  find('#day5').click
+  #end
+  #puts find_field("to_datepicker").value.nil?
+  #page.execute_script %Q{ $('#auction_event_date').trigger("focus") } # activate datetime picker
+  #page.execute_script %Q{ $('a.ui-datepicker-next').trigger("click") } # move one month forward
+  #page.execute_script %Q{ $("a.ui-state-default:contains('15')").trigger("click") } # click on day 15
+  #puts page.has_css?('div.pika-single')
+  #puts page.has_css?('div.radientBG')
 end
 
 And(/^I initial number of passengers "(.*?)"$/) do |passengers|
@@ -60,7 +91,7 @@ end
 Then(/^I should( not)? see the( back)? result table$/) do |should, back|
   exist = should ? :should_not : :should
   table = back ? '#rides_back_result' : '#rides_result'
-  puts within_frame("go_table")
+  #puts within_frame("go_table")
   page.send(exist, have_css(table))
 end
 

@@ -15,13 +15,15 @@ Scenario: Search for bus with no matches
 Scenario: Search bus for a one way trip
   Given I am on the BusRide home page
   When I choose "One Way Trip"
-  And I have searched for a bus with source "Boston, MA"
-  And I initial destination "Newark, NJ"
+  And I have searched for a bus with source "New York, NY"
+  And I initial destination "Washington, DC"
+  And I initial departure date "Thu Mar 27 2014"
+  And I initial return departure date "Fri Mar 28 2014"
   When I click the search button
   #Then I should be on the BusRide result page
   Then I should see the result table
-  And I should see "Boston, MA" in the "Origin City" column of "result table"
-  And I should see "Newark, NJ" in the "Destination City" column of "result table"
+  And I should see "New York, NY" in the "Origin City" column of "result table"
+  And I should see "Washington, DC" in the "Destination City" column of "result table"
   And I should not see the back result table
 
 Scenario: Search bus for a round trip with no matches
@@ -29,6 +31,8 @@ Scenario: Search bus for a round trip with no matches
   When I choose "Round Trip"
   And I have searched for a bus with source "Boston, MA"
   And I initial destination "Newark, NJ"
+  And I initial departure date "Thu Mar 27 2014"
+  And I initial return departure date "Fri Mar 28 2014"
   When I click the search button
   #Then I should be on the BusRide home page
   Then I should see message "No routes found match the search terms."
@@ -38,6 +42,8 @@ Scenario: Search bus for a round trip
   When I choose "Round Trip"
   And I have searched for a bus with source "New York, NY"
   And I initial destination "Washington, DC"
+  And I initial departure date "Thu Mar 27 2014"
+  And I initial return departure date "Fri Mar 28 2014"
   When I click the search button
   #Then I should be on the BusRide home page
   Then I should see two result table
