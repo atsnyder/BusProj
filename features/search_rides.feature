@@ -7,7 +7,7 @@ Scenario: Search for bus with no matches
   And I initial departure date "Thu Apr 17 2014"
   And I initial destination "Des Moines, IA"
   And I initial return departure date "Fri Apr 18 2014"
-  And I initial number of passengers "1"
+  #And I initial number of passengers "1"
   When I click the search button
   #Then I should be on the BusRide home page
   Then I should see message "No routes found match the search terms."

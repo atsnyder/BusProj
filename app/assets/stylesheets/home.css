@@ -4,12 +4,12 @@ body {
 }
 
 .radientBG{
-   background-image:url('roadBGcrop2.jpg');
+   background-image:url('roadBG.jpg');   
    width:100%;
    position:absolute;
    top: 30%;
    padding-top:75px;
-   height: 500px;
+   height: 100%;
    background-repeat:no-repeat;
    background-attachment:fixed;
    background-position:center;

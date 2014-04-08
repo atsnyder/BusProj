@@ -15,4 +15,6 @@
 //= require pikaday
 //= require home
 //= require autocomplete
-
+//= require jquery.tablesorter
+//= require jquery-latest
+//= require dosearch
