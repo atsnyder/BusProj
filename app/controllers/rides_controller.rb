@@ -21,6 +21,7 @@ def dosearch
     cookies[:from] = params[:search]["from_city"] || cookies[:from]
     cookies[:to] = params[:search]["to_city"] || cookies[:to]
 
+
     cookies[:from_date] = params[:date]["from_Date"] || cookies[:from_date]  
     cookies[:to_date] = params[:date]["to_Date"] ||  cookies[:to_date] 
 
@@ -30,7 +31,7 @@ def dosearch
     params[:date]["to_Date"] = params[:date]["to_Date"] || cookies[:to_date]
 
 
-    @perpage = @perpage || 5
+    @perpage = @perpage || 10
     @perpage = params[:perpage] || @perpage
 
     @round_trip = false
