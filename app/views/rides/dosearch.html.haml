@@ -1,3 +1,6 @@
+
+
+
 %nav.navbar.navbar-default{role: "navigation"}
   .container-fluid
     .navbar-header
@@ -6,15 +9,16 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: "./"} BusRide
+      =link_to 'BusRide', rides_path, :method=>:get, :class => 'navbar-brand'
       
       .navbar-form.navbar-left.form-group
         = form_tag rides_search_path, :method => :post do
-          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:required => true,:onfocus => "javascript:initializeSourceCity();"
-          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
+          = text_field :search, 'from_city', :value => "#{cookies[:from]}", :placeholder => 'From', :required => true, :onfocus => "javascript:initializeSourceCity();"
+          = text_field :search, 'to_city', :value => "#{cookies[:to]}",:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
-          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :required => true,:readonly => 'readonly'
+          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
           = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
+
 .container
   Results:
   = paginate @rides

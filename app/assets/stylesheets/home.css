@@ -4,7 +4,7 @@ body {
 }
 
 .radientBG{
-   background-image:url('roadBG.jpg');   
+   background-image:url('roadBGcrop2.jpg');   
    width:100%;
    position:absolute;
    top: 30%;
@@ -26,7 +26,7 @@ body {
   /* default fallback */
   background: rgb(255, 255, 255) transparent;
   /* nice browsers */
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
   width: 30%;
   padding-top: 10px;
   padding-bottom: 10px;
