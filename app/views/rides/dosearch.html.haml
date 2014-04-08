@@ -72,7 +72,7 @@
                 %br
                 = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
               %td
-                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
+                %a{href:"#{ride.URL}", :target => "_blank"}= ride.COMPANY_NAME
           - else
             - style = 0
             %tr{ :class=>'alt'}
@@ -88,7 +88,7 @@
                 %br
                 = ride.ARRIVE_TIME.strftime("%I:%M%p %a %b%d")
               %td
-                %a{href:"#{ride.URL}", :target => "_parent"}= ride.COMPANY_NAME
+                %a{href:"#{ride.URL}", :target => "_blank"}= ride.COMPANY_NAME
 
 
 %script{ :type => 'text/javascript'}
