@@ -11,7 +11,9 @@ attr_accessible :from_city , :to_city
 
 def self.fetch_results (params,paramsdate)
 	params[:from_city].slice! ", United States"
-	params[:to_city].slice! ", United States"       
+	params[:to_city].slice! ", United States"
+  puts params
+  puts paramsdate
 	table = tablename(paramsdate[:from_Date])         
 	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%'")
 	return rides.to_a
