@@ -27,11 +27,10 @@
       %input#hide3{ :name => "search[to_city]", :value => @back_to}
       %input#hide4{ :name => "date[from_Date]", :value => @from_date}
       %input#hide5{ :name => "date[to_Date]", :value => @to_date}
-      %input#hide6{ :name => "search[button_tag]", :value => "#@button_tag"}
       -if @button_tag
-        = button_tag 'Return Trip' , class: 'search-button' , type: :submit, :id => 'search_button'
+        = button_tag 'Return Trip' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'return'
       -else
-        = button_tag 'Go Trip' , class: 'search-button' , type: :submit, :id => 'search_button'
+        = button_tag 'Go Trip' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'go'
 
 
   %form{:action => rides_search_path, :method => "post"}
@@ -104,4 +103,3 @@
   document.getElementById('hide3').style.display = 'none';
   document.getElementById('hide4').style.display = 'none';
   document.getElementById('hide5').style.display = 'none';
-  document.getElementById('hide6').style.display = 'none';
