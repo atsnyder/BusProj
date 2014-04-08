@@ -12,14 +12,16 @@ end
 
 def dosearch
 
+    params[:search] = params[:search] || {"radio" => cookies[:radio], "from_city" => cookies[:from], "to_city" => cookies[:to]}
+
     params[:date] = params[:date] || {"from_Date" => cookies[:from_date], "to_Date" => cookies[:to_date]}
 
 
-    cookies[:radio] = "OneWay" || params[:search]["radio"]
+    cookies[:radio] = params[:search]["radio"] || "OneWay"
 
 
-    cookies[:from] = cookies[:from] || params[:search]["from_city"]
-    cookies[:to] = cookies[:to] || params[:search]["to_city"]
+    cookies[:from] = params[:search]["from_city"] || cookies[:from]
+    cookies[:to] = params[:search]["to_city"] || cookies[:to]
 
     cookies[:from_date] = params[:date]["from_Date"] || cookies[:from_date]  
     cookies[:to_date] = params[:date]["to_Date"] ||  cookies[:to_date] 
