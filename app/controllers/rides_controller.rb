@@ -16,11 +16,14 @@ def dosearch
 
     params[:date] = params[:date] || {"from_Date" => cookies[:from_date], "to_Date" => cookies[:to_date]}
 
+    params[:submit_btn] =  params[:submit_btn] || cookies[:submit_btn]
+
     cookies[:radio] = params[:search]["radio"] || cookies[:radio]
 
     cookies[:from] = params[:search]["from_city"] || cookies[:from]
     cookies[:to] = params[:search]["to_city"] || cookies[:to]
 
+    cookies[:submit_btn] = params[:submit_btn]
 
     cookies[:from_date] = params[:date]["from_Date"] || cookies[:from_date]  
     cookies[:to_date] = params[:date]["to_Date"] ||  cookies[:to_date] 
@@ -29,7 +32,13 @@ def dosearch
 
     params[:date]["from_Date"] = params[:date]["from_Date"] || cookies[:from_date]
     params[:date]["to_Date"] = params[:date]["to_Date"] || cookies[:to_date]
+    params[:submit_btn] =  params[:submit_btn] || cookies[:submit_btn]
 
+    if(params[:date]["to_Date"] == "")
+      cookies[:radio] = "OnyWay"
+    else
+      cookies[:radio] = "RoundTrip"
+    end
 
     @perpage = @perpage || 10
     @perpage = params[:perpage] || @perpage
@@ -38,12 +47,12 @@ def dosearch
     @rides = Ride.fetch_results(params[:search],params[:date])
     
     @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
-    if(params[:search]["radio"] == "RoundTrip" || params[:date]["to_Date"] != "")
+    if(cookies[:radio] == "RoundTrip")
       @round_trip = true
-      if(params[:search]["button_tag"].nil?)
+      if(cookies[:submit_btn]=="go")
         @button_tag = true
       else
-        @button_tag = (!eval(params[:search]["button_tag"])) || false
+        @button_tag = false
       end
       @back_from = params[:search]["to_city"]
       @back_to = params[:search]["from_city"]
