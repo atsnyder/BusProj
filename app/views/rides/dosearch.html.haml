@@ -1,4 +1,4 @@
-%nav.navbar.navbar-default{role: "navigation"}
+%nav.navbar.navbar-default.navp{role: "navigation"}
   .container-fluid
     .navbar-header
       %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
@@ -19,9 +19,18 @@
 .container
   Results:
   = paginate @rides
-
+  
+  %form{:action => rides_search_path, :method => "post", :class => "rpp"}
+    %select{name: "perpage", onchange: "this.form.submit()"}
+      %option Results per page
+      %option{value: 5} 5
+      %option{value: 10} 10
+      %option{value: 20} 20
+      %option{value: 255} All
+    =link_to "Go Home", rides_path, :target => "_parent"
+  
   -if @round_trip
-    = form_tag rides_search_path, :method => :post do
+    = form_tag rides_search_path, :method => :post, :class => 'search-button' do
       %input#hide1{ :name => "search[radio]", :value => "RoundTrip"}
       %input#hide2{ :name => "search[from_city]", :value => @back_from}
       %input#hide3{ :name => "search[to_city]", :value => @back_to}
@@ -31,16 +40,6 @@
         = button_tag 'Select Return' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'return'
       -else
         = button_tag 'Select Departure' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'go'
-
-
-  %form{:action => rides_search_path, :method => "post"}
-    %select{name: "perpage", onchange: "this.form.submit()"}
-      %option Results per page
-      %option{value: 5} 5
-      %option{value: 10} 10
-      %option{value: 20} 20
-      %option{value: 255} All
-    =link_to "Go Home", rides_path, :target => "_parent"
   
   .table-responsive
     %table#myTable.tablesorter.table.table-hover.h4.table-striped
@@ -103,3 +102,8 @@
   document.getElementById('hide3').style.display = 'none';
   document.getElementById('hide4').style.display = 'none';
   document.getElementById('hide5').style.display = 'none';
+  document.getElementById('hide1').style.visibility = 'hidden';
+  document.getElementById('hide2').style.visibility = 'hidden';
+  document.getElementById('hide3').style.visibility = 'hidden';
+  document.getElementById('hide4').style.visibility = 'hidden';
+  document.getElementById('hide5').style.visibility = 'hidden';
