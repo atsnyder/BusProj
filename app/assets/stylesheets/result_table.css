@@ -66,10 +66,27 @@
   white-space: nowrap;
   overflow: auto;
 }
-
+.pagination {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.last{
+  margin: 0;
+  padding: 0;
+}
 .centerdiv {
   width: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.search-button {
+  float: right;
+  display: inline;
+}
+
+.rpp {
+  display: inline;
 }
