@@ -1,10 +1,10 @@
-- if flash[:notice]
-  %p#notice= flash[:notice]
 %script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places", type: "text/javascript"}
 .radientBG
   .middle
     #hometitle
       BusRide
+    - if flash[:notice]
+      %p#notice= flash[:notice]
     = form_tag rides_search_path, :method => :post do
       .search_field
         %br
@@ -15,8 +15,8 @@
         %br
 
         #destsearch
-          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:required => true,:onfocus => "javascript:initializeSourceCity();"
-          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
+          = text_field :search, 'from_city',:placeholder => 'Departure City',:required => true,:onfocus => "javascript:initializeSourceCity();"
+          = text_field :search, 'to_city',:placeholder => 'Arrival City',:required => true,:onfocus => "javascript:initializeDestinationCity();"
         #datesearch
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
           = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :required => true,:readonly => 'readonly'

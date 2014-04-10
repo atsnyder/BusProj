@@ -60,7 +60,7 @@ def dosearch
       @to_date = params[:date]["from_Date"]
     end
     if(@rides.size == 0)
-      flash[:notice] = "No routes found match the search terms."
+      flash[:notice] = "No routes found matching the search terms."
       redirect_to rides_path
     end
 end
