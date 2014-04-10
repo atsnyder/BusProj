@@ -20,6 +20,11 @@ body {
   font-size: 50px;
 }
 
+#notice{
+  color: red;
+  font-size: 15px;
+}
+
 .middle{
   text-align: center;
   margin:0 auto;
