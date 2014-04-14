@@ -14,7 +14,7 @@
           = text_field :search, 'to_city', :value => "#{cookies[:to]}",:placeholder => 'Arrival City',:required => true,:onfocus => "javascript:initializeDestinationCity();"
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
           = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
-          = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
+          = button_tag 'Search' , class: 'search-button1' , type: :submit, :id => 'search'
 
 .container
   Results:
@@ -30,16 +30,16 @@
     =link_to "Go Home", rides_path, :target => "_parent"
   
   -if @round_trip
-    = form_tag rides_search_path, :method => :post, :class => 'search-button' do
+    = form_tag rides_search_path, :method => :post, :class => 'search-button1' do
       %input#hide1{ :name => "search[radio]", :value => "RoundTrip"}
       %input#hide2{ :name => "search[from_city]", :value => @back_from}
       %input#hide3{ :name => "search[to_city]", :value => @back_to}
       %input#hide4{ :name => "date[from_Date]", :value => @from_date}
       %input#hide5{ :name => "date[to_Date]", :value => @to_date}
       -if @button_tag
-        = button_tag 'Select Return' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'return'
+        = button_tag 'Select Return' , class: 'search-button1' , type: :submit, :name => 'submit_btn', :value => 'return'
       -else
-        = button_tag 'Select Departure' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'go'
+        = button_tag 'Select Departure' , class: 'search-button1' , type: :submit, :name => 'submit_btn', :value => 'go'
   
   .table-responsive
     %table#myTable.tablesorter.table.table-hover.h4.table-striped
