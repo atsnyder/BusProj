@@ -1,0 +1,23 @@
+To test departure city autocomplete:
+ -Enter "new" into departure city field
+ -Expect to see "New York, NY" in drop down list
+ -Select it
+ -Expect to see "New York, NY" in text field
+
+To test destination city autocomplete:
+ -Enter "new" into destination city field
+ -Expect to see "New York, NY" in drop down list
+ -Select it
+ -Expect to see "New York, NY" in text field
+
+To test departure date autocomplete:
+ -Click departure date text box
+ -Expect to see current date in pop up calendar
+ -Select it
+ -Expect to see current date in departure text box
+
+To test destination date autocomplete:
+ -Click destination date text box
+ -Expect to see current date in pop up calendar
+ -Select it
+ -Expect to see current date in destination text box
