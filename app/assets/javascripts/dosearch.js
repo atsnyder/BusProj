@@ -6,7 +6,7 @@ $(document).ready(function()
                                 2 : {sorter : 'false'},
                                 3 : {sorter : 'time'},	
                                 4 : {sorter : 'false'},			
-                        				5 : {sorter : false}
+                        				5 : {sorter : 'false'}
                			  }
            
 		}	
