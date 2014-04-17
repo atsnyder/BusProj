@@ -34,21 +34,16 @@ def dosearch
     params[:date]["to_Date"] = params[:date]["to_Date"] || cookies[:to_date]
     params[:submit_btn] =  params[:submit_btn] || cookies[:submit_btn]
 
-    if(params[:date]["to_Date"] == "")
-      cookies[:radio] = "OnyWay"
-    else
-      cookies[:radio] = "RoundTrip"
-    end
-
     @perpage = @perpage || 10
     @perpage = params[:perpage] || @perpage
 
-    @round_trip = false
+    @round_trip = true
     @rides = Ride.fetch_results(params[:search],params[:date])
     
     @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
-    if(cookies[:radio] == "RoundTrip")
-      @round_trip = true
+    if(params[:search]["radio"] == "OneWay" || params[:date]["to_Date"] == "")
+      @round_trip = false
+    else
       if(cookies[:submit_btn]=="go")
         @button_tag = true
       else

@@ -13,7 +13,7 @@
           = text_field :search, 'from_city', :value => "#{cookies[:from]}", :placeholder => 'From', :required => true, :onfocus => "javascript:initializeSourceCity();"
           = text_field :search, 'to_city', :value => "#{cookies[:to]}",:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
-          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
+          = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date',:readonly => 'readonly'
           = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search'
 
 .container
@@ -28,13 +28,13 @@
       %input#hide4{ :name => "date[from_Date]", :value => @from_date}
       %input#hide5{ :name => "date[to_Date]", :value => @to_date}
       -if @button_tag
-        = button_tag 'Return Trip' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'return'
+        = button_tag 'Return Trip' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'return', :id => "return-trip"
       -else
-        = button_tag 'Go Trip' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'go'
+        = button_tag 'Go Trip' , class: 'search-button' , type: :submit, :name => 'submit_btn', :value => 'go', :id => 'go-trip'
 
 
   %form{:action => rides_search_path, :method => "post"}
-    %select{name: "perpage", onchange: "this.form.submit()"}
+    %select{name: "perpage", onchange: "this.form.submit()", id: "result-per-page"}
       %option Results per page
       %option{value: 5} 5
       %option{value: 10} 10
@@ -61,13 +61,13 @@
               %td.lead
                 $
                 = ride.TRIP_COST
-              %td{ :class=>'depart_city'}
+              %td{ :class=>'depart_time'}
                 = ride.DEPART_TIME.strftime("%l:%M%p ")
               %td{ :class=>'depart_city'}
                 = ride.DEPART_CITY 
                 %br  
                 = ride.DEPART_TIME.strftime("%b %-d,%Y") 
-              %td{ :class=>'arrive_city'}
+              %td{ :class=>'arrive_time'}
                 = ride.ARRIVE_TIME.strftime("%l:%M%p ")
               %td{ :class=>'arrive_city'}
                 = ride.ARRIVE_CITY
@@ -81,13 +81,13 @@
               %td.lead
                 $
                 = ride.TRIP_COST
-              %td{ :class=>'depart_city'}
+              %td{ :class=>'depart_time'}
                 = ride.DEPART_TIME.strftime("%l:%M%p ")
               %td{ :class=>'depart_city'}
                 = ride.DEPART_CITY
                 %br
                 = ride.DEPART_TIME.strftime("%b %-d,%Y")
-              %td{ :class=>'arrive_city'}
+              %td{ :class=>'arrive_time'}
                 = ride.ARRIVE_TIME.strftime("%l:%M%p ")
               %td{ :class=>'arrive_city'}
                 = ride.ARRIVE_CITY                  

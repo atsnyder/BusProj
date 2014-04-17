@@ -16,7 +16,8 @@ And(/^I initial departure date "(.*?)"$/) do |from_date|
   fill_in 'from_datepicker', :with => from_date
   puts find_field("from_datepicker").value.nil?
   #msg = "No element found with the content of '#{from_date}'"
-  find("#from_datepicker").click
+  #page.execute_script("$('whatever_you_want').click()");
+  find("#to_search_box").click
   puts page.has_css?('div.pika-single')
   puts page.has_css?('div.radientBG')
   #within('div.pika-single') do
