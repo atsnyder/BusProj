@@ -21,3 +21,15 @@ To test destination date autocomplete:
  -Expect to see current date in pop up calendar
  -Select it
  -Expect to see current date in destination text box
+
+To test results per page:
+ -Search for ride know to have many results
+ -Count number of results shown
+ -Expect to see 5 by default
+ -Change number of results to 10
+ -Expect to see 10 results listed
+ -Change number of results to 20
+ -Expect to see 20 results listed
+ -Change number of results to all
+ -Expect to see all results listed
+
