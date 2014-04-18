@@ -1,10 +1,10 @@
-- if flash[:notice]
-  %p#notice= flash[:notice]
 %script{src: "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places", type: "text/javascript"}
 .radientBG
   .middle
     #hometitle
       BusRide
+    - if flash[:notice]
+      %p#notice= flash[:notice]
     = form_tag rides_search_path, :method => :post do
       .search_field
         %br
@@ -15,13 +15,62 @@
         %br
 
         #destsearch
-          = text_field :search, 'from_city',:id => 'from_search_box',:placeholder => 'From',:required => true,:onfocus => "javascript:initializeSourceCity();"
-          = text_field :search, 'to_city',:id => 'to_search_box',:placeholder => 'To',:required => true,:onfocus => "javascript:initializeDestinationCity();"
+          = text_field :search, 'from_city',:placeholder => 'Departure City',:required => true,:onfocus => "javascript:initializeSourceCity();"
+          = text_field :search, 'to_city',:placeholder => 'Arrival City',:required => true,:onfocus => "javascript:initializeDestinationCity();"
         #datesearch
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true,:readonly => 'readonly'
           = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :required => true,:readonly => 'readonly'
         %br
         = button_tag 'Search' , class: 'search-button' , type: :submit, :id => 'search', :name => 'submit_btn', :value => 'go'
 
-
+%footer
+  %ul
+    %li
+      %p.home Team Members
+      %ul
+        %li
+          %a{href: "#"} Adam Snyder
+        %li
+          %a{href: "#"} Alexander Lenth
+        %li
+          %a{href: "#"} Naveen Dewda
+        %li
+          %a{href: "#"} Luke Steenson
+        %li
+          %a{href: "#"} Weiqi Yang
+    %li
+      %p.services Emails
+      %ul
+        %li
+          %a{href: ""} adam-snyder@uiowa.edu
+        %li
+          %a{href: "#"} alexander-lenth@uiowa.edu
+        %li
+          %a{href: "#"} naveen-dewda@uiowa.edu
+        %li
+          %a{href: "#"} luke-steenson@uiowa.edu
+        %li
+          %a{href: "#"} weiqi-yang@uiowa.edu
+    %li
+      %p.reachus Linked-In
+      %ul
+        %li
+          %a{href: "#"} Adam Snyder
+        %li
+          %a{href: "#"} Alexander Lenth
+        %li
+          %a{href: "#"} Naveen Dewda
+        %li
+          %a{href: "#"} Luke Steenson
+        %li
+          %a{href: "#"} Weiqi Yang
+    %li
+      %p.clients Clients
+      %ul
+        %li
+          %a{href: "#"} Login Area
+        %li
+          %a{href: "#"} Support Center
+        %li
+          %a{href: "#"} FAQ
 
