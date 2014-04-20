@@ -41,16 +41,6 @@
       -else
         = button_tag 'Select Departure' , class: 'search-button1' , type: :submit, :name => 'submit_btn', :value => 'go', :id => 'go-trip'
 
-
-  %form{:action => rides_search_path, :method => "post"}
-    %select{name: "perpage", onchange: "this.form.submit()", id: "result-per-page"}
-      %option Results per page
-      %option{value: 5} 5
-      %option{value: 10} 10
-      %option{value: 20} 20
-      %option{value: 255} All
-    =link_to "back", rides_path, :target => "_parent"
-  
   .table-responsive
     %table#myTable.tablesorter.table.table-hover.h4.table-striped
       %thead
