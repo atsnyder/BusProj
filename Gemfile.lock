@@ -98,6 +98,8 @@ GEM
     pikaday-gem (1.1.0.0)
       railties (>= 3.1)
     polyglot (0.3.3)
+    rabl (0.9.3)
+      activesupport (>= 2.3.14)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -177,6 +179,7 @@ DEPENDENCIES
   launchy
   mysql2 (~> 0.3.15)
   pikaday-gem (~> 1.1.0.0)
+  rabl
   rails (= 3.2.13)
   rspec-rails
   sass-rails (~> 3.2.3)
