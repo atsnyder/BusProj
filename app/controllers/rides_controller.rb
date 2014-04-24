@@ -12,6 +12,13 @@ end
 
 def dosearch
 
+    cookies[:sort] = params[:sort] || cookies[:sort]
+    params[:sort] = params[:sort] || cookies[:sort]
+
+    cookies[:perpage] = params[:perpage] || cookies[:perpage]
+    params[:perpage] = params[:perpage] || cookies[:perpage]
+    
+
     params[:search] = params[:search] || {"radio" => cookies[:radio], "from_city" => cookies[:from], "to_city" => cookies[:to]}
 
     params[:date] = params[:date] || {"from_Date" => cookies[:from_date], "to_Date" => cookies[:to_date]}
@@ -39,8 +46,14 @@ def dosearch
 
     @round_trip = true
     @rides = Ride.fetch_results(params[:search],params[:date])
-    
-    @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
+        
+    @rides = Ride.sortSearch(@rides, cookies[:sort]) #call sortSearch method, pass sort type
+
+    @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(cookies[:perpage])
+
+
+
+
     if(params[:search]["radio"] == "OneWay" || params[:date]["to_Date"] == "")
       @round_trip = false
     else
@@ -59,5 +72,6 @@ def dosearch
       redirect_to rides_path
     end
 end
+
 
 end

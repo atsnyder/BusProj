@@ -39,5 +39,38 @@ def self.tablename table
 	  return tablename
 end
 
+def self.sortSearch (rides, sort)
+
+  if(sort.eql?("price"))
+    rides = rides.sort_by{|x| [x.TRIP_COST]}
+  end
+
+  if(sort.eql?("priceRev"))
+    rides = rides.sort_by{|x| [x.TRIP_COST]}
+    rides.reverse!
+  end
+
+  if(sort.eql?("dTime"))
+    rides = rides.sort_by{|x| [x.DEPART_TIME]}
+  end
+
+  if(sort.eql?("dTimeRev"))
+    rides = rides.sort_by{|x| [x.DEPART_TIME]}
+    rides.reverse!
+  end
+
+  if(sort.eql?("company"))
+    rides = rides.sort_by{|x| [x.COMPANY_NAME]}
+  end
+
+  if(sort.eql?("companyRev"))
+    rides = rides.sort_by{|x| [x.COMPANY_NAME]}
+    rides.reverse!
+  end
+
+  return rides
+end
+
+
 end
 
