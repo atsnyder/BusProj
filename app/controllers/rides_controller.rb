@@ -1,16 +1,57 @@
 class RidesController < ApplicationController
 
 def index
-
+  @rides = Ride.all
+  respond_to do |format|
+    format.html
+    format.xml  {render}
+    format.json {render}
+  end
 end
 
 def new
 end
 
 def show
+
+    @rides = Ride.fetch_android_results(params[:search],params[:date])
+    
+    @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
+    if(params[:search]["radio"] == "OneWay" || params[:date]["to_Date"] == "")
+      @round_trip = false
+    else
+      if(cookies[:submit_btn]=="go")
+        @button_tag = true
+      else
+        @button_tag = false
+      end
+      @back_from = params[:search]["to_city"]
+      @back_to = params[:search]["from_city"]
+      @from_date = params[:date]["to_Date"]
+      @to_date = params[:date]["from_Date"]
+    end
+#    if(@rides.size == 0)
+#      flash[:notice] = "No routes found matching the search terms."
+#      redirect_to rides_path
+#    end
+    
+    @search = @rides
+    respond_to do |format|
+      format.html
+      format.xml  {render}
+      format.json {render}
+    end
+
 end
 
 def dosearch
+
+    cookies[:sort] = params[:sort] || cookies[:sort]
+    params[:sort] = params[:sort] || cookies[:sort]
+
+    cookies[:perpage] = params[:perpage] || cookies[:perpage]
+    params[:perpage] = params[:perpage] || cookies[:perpage]
+    
 
     params[:search] = params[:search] || {"radio" => cookies[:radio], "from_city" => cookies[:from], "to_city" => cookies[:to]}
 
@@ -39,8 +80,14 @@ def dosearch
 
     @round_trip = true
     @rides = Ride.fetch_results(params[:search],params[:date])
-    
-    @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
+        
+    @rides = Ride.sortSearch(@rides, cookies[:sort]) #call sortSearch method, pass sort type
+
+    @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(cookies[:perpage])
+
+
+
+
     if(params[:search]["radio"] == "OneWay" || params[:date]["to_Date"] == "")
       @round_trip = false
     else
@@ -58,6 +105,14 @@ def dosearch
       flash[:notice] = "No routes found matching the search terms."
       redirect_to rides_path
     end
+    
+    @search = @rides
+    respond_to do |format|
+      format.html
+      format.xml  {render}
+      format.json {render}
+    end
 end
+
 
 end

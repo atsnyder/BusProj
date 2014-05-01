@@ -27,7 +27,23 @@
       %option{value: 10} 10
       %option{value: 20} 20
       %option{value: 255} All
+<<<<<<< HEAD
     =link_to "Go Home", rides_path, :target => "_parent"
+=======
+    =link_to "Back", rides_path, :target => "_parent"
+
+  %form{:action =>  rides_search_path, :method => "post"}
+    %select{name: "sort", onchange: "this.form.submit()"}
+      %option Sort by
+      %option{value: "price"} Price (Low to High)
+      %option{value: "priceRev"} Price (High to Low)
+      %option{value: "dTime"} Departure Time (Earliest first)
+      %option{value: "dTimeRev"} Departure Time (Latest first)
+      %option{value: "company"} Company (A-Z)
+      %option{value: "companyRev"} Company (Z-A)
+
+
+>>>>>>> 2f38186264dd4a93343ab7d280e401c020134112
   
   -if @round_trip
     = form_tag rides_search_path, :method => :post, :class => 'search-button1' do
