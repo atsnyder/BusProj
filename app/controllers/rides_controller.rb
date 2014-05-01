@@ -104,6 +104,7 @@ def dosearch
     if(@rides.size == 0)
       flash[:notice] = "No routes found matching the search terms."
       redirect_to rides_path
+      return
     end
     
     @search = @rides

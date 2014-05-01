@@ -12,29 +12,31 @@ attr_accessible :from_city , :to_city
 def self.fetch_results (params,paramsdate)
 	params[:from_city].slice! ", United States"
 	params[:to_city].slice! ", United States"
-  puts params
-  puts paramsdate
-	table = tablename(paramsdate[:from_Date])         
-	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%'")
-	return rides.to_a
+	table = tablename(paramsdate[:from_Date])
+
+  table_exist = Ride.find_by_sql("SHOW TABLES like '#{table}'")
+
+  if table_exist.length == 0
+      return []
+  else
+       	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params  [:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%'")
+      	return rides.to_a
+  end
 
 end
 
 
-def self.fetch_back_results (params,paramsdate)
-	params[:from_city].slice! ", United States"
-	params[:to_city].slice! ", United States"       
-	table = tablename(paramsdate[:to_Date])         
-	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:to_city]}%' AND ARRIVE_CITY like '%#{params[:from_city]}%'")
-	return rides.to_a
-
-end
+#def self.fetch_back_results (params,paramsdate)
+#	params[:from_city].slice! ", United States"
+#	params[:to_city].slice! ", United States"       
+#	table = tablename(paramsdate[:to_Date])         
+#	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:to_city]}%' AND ARRIVE_CITY like '%#{params[:from_city]}%'")
+#	return rides.to_a
+#end
 
 def self.fetch_android_results (params,paramsdate)
 	params[:from_city].slice! ", United States"
 	params[:to_city].slice! ", United States"
-  puts params
-  puts paramsdate
 	table = tabledroidname(paramsdate[:from_Date])         
 	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%'")
 	return rides.to_a
@@ -81,7 +83,6 @@ def self.tablename table
 	  monthkey = table[4..(table.length-9)]	 
 	  monthvalue = @month[monthkey]
 	  tablename = (year+monthvalue+day)
-	  puts(tablename)
 	  return tablename
 end
 
