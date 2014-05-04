@@ -72,6 +72,11 @@ class MyCatcher(BusCatcher):
 		cur_year_str=str(cur_year)
 	
 		date_str=date.strftime("%m/%d/%Y")
+		date_str_list = re.split("/", date_str)
+		date_str_list[0] = date_str_list[0].lstrip("0")
+		date_str_list[1] = date_str_list[1].lstrip('0')
+		
+		logger.debug(str(date_str_list))
 		
 		msg="From " + cityOrigin_tag + " to " + cityDeparture_tag + " (" + date_str + ")"
 		logger.info(msg)
@@ -108,9 +113,13 @@ class MyCatcher(BusCatcher):
 		logger.info(msg)
 		
 		logger.info("Selecting correct date")
-		date_spot = browser.find_element_by_name("date_forward")
-		date_spot.clear()
-		date_spot.send_keys(date_str)		
+		
+		browser.find_element_by_xpath("//button[@class='ui-datepicker-trigger']").click()
+		browser.find_element_by_link_text(date_str_list[1]).click()
+			
+		#date_spot = browser.find_element_by_name("date_forward")
+		#date_spot.clear()
+		#date_spot.send_keys(date_str)		
 		
 		#self.proxy_obj.take_screenshot()
 		

@@ -23,8 +23,8 @@ settings_dict = {
 				# onlu applicable when proxies are being used, failed requests before proxy switch
 				'min_req_per_proxy': 25,\
 				'max_tries': 4,\
-				'num_processes': 1,\
-				'slowness_factor': 2,\
+				'num_processes': 3,\
+				'slowness_factor': 1,\
 				'repeats_per_browser':2, 
 				'log_creds': ['us-cdbr-east-05.cleardb.net','b3830eaa3b19ce','03c6c2b9','heroku_8726e1df1758d14']}
 
@@ -186,20 +186,20 @@ bolt_trips = [\
 ['Boston', 'New York', 'Boston, MA', 'New York, NY', '02'],\
 ['Boston', 'Newark', 'Boston, MA','Newark, NJ','03'],\
 ['Boston', 'Philadelphia','Boston, MA','Philadelphia, PA','04'],\
-['New York 33rd','Baltimore','New York, NY','Baltimore, MD','05'],\
-['New York 33rd','Washington','New York, NY','Washington, DC','06'],\
-['New York 34th','Boston','New York, NY','Boston, MA','07'],\
-['New York 34th','Philadelphia - Cherry','New York, NY','Philadelphia, PA','08'],\
-['New York 34th','Philadelphia JFK','New York, NY', 'Philadelphia, PA','09'],\
+['New York W 33rd','Baltimore','New York, NY','Baltimore, MD','05'],\
+['New York W 33rd','Washington','New York, NY','Washington, DC','06'],\
+#['New York 34th','Boston','New York, NY','Boston, MA','07'],\
+#['New York 34th','Philadelphia - Cherry','New York, NY','Philadelphia, PA','08'],\
+#['New York 34th','Philadelphia JFK','New York, NY', 'Philadelphia, PA','09'],\
 ['New York 6th','Philadelphia JFK','New York, NY', 'Philadelphia, PA','10'],\
 ['New York 6th','Washington','New York, NY', 'Washington, DC','11'],\
 ['Newark','Baltimore','Newark, NJ','Baltimore, MD','12'],\
 ['Newark','Boston','Newark, NJ','Boston, MA','13'],\
 ['Newark','Philadelphia','Newark, NJ','Philadelphia, PA','14'],\
 ['Newark','Washington','Newark, NJ','Washington, DC','15'],\
-['Philadelphia - Cherry','New York 34th','Philadelphia, PA','New York, NY','16'],\
+['Philadelphia - Cherry','New York W 33rd','Philadelphia, PA','New York, NY','16'],\
 ['Philadelphia JFK','Boston','Philadelphia, PA','Boston, MA','17'],\
-['Philadelphia JFK','New York 34th','Philadelphia, PA','New York, NY','18'],\
+['Philadelphia JFK','New York W 33rd','Philadelphia, PA','New York, NY','18'],\
 ['Philadelphia JFK','New York 6th','Philadelphia, PA','New York, NY','19'],\
 ['Philadelphia JFK','Newark','Philadelphia, PA','Newark, NJ','20'],\
 ['Washington','New York 33rd','Washington, DC','New York, NY','21'],\
