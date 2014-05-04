@@ -91,7 +91,7 @@ def dosearch
         
     @rides = Ride.sortSearch(@rides, cookies[:sort]) #call sortSearch method, pass sort type
 
-    @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
+    @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(cookies[:perpage])
 
 
 
