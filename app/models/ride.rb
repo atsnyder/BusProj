@@ -19,7 +19,7 @@ def self.fetch_results (params,paramsdate)
   if table_exist.length == 0
       return []
   else
-       	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params  [:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%'")
+       	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%' AND TRIP_COST IS NOT NULL")
       	return rides.to_a
   end
 
@@ -38,7 +38,7 @@ def self.fetch_android_results (params,paramsdate)
 	params[:from_city].slice! ", United States"
 	params[:to_city].slice! ", United States"
 	table = tabledroidname(paramsdate[:from_Date])         
-	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%'")
+	rides = Ride.find_by_sql("SELECT * from #{table} WHERE DEPART_CITY like '%#{params[:from_city]}%' AND ARRIVE_CITY like '%#{params[:to_city]}%' AND TRIP_COST IS NOT NULL")
 	return rides.to_a
 
 end
