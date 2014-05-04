@@ -17,7 +17,7 @@
           = button_tag 'Search' , class: 'search-button1' , type: :submit, :id => 'search'
 
 .container
-  Results:
+  Search Results:
   = paginate @rides
   
   %form{:action => rides_search_path, :method => "post", :class => "rpp"}
@@ -27,7 +27,17 @@
       %option{value: 10} 10
       %option{value: 20} 20
       %option{value: 255} All
-    =link_to "Back", rides_path, :target => "_parent"
+
+  %form{:action =>  rides_search_path, :method => "post", :class => "rpp"}
+    %select{name: "sort", onchange: "this.form.submit()"}
+      %option Sort by
+      %option{value: "price"} Price (Low to High)
+      %option{value: "priceRev"} Price (High to Low)
+      %option{value: "dTime"} Departure Time (Earliest first)
+      %option{value: "dTimeRev"} Departure Time (Latest first)
+      %option{value: "company"} Company (A-Z)
+      %option{value: "companyRev"} Company (Z-A)
+
   
   -if @round_trip
     = form_tag rides_search_path, :method => :post, :class => 'search-button1' do
@@ -42,9 +52,6 @@
         = button_tag 'Select Departure' , class: 'search-button1' , type: :submit, :name => 'submit_btn', :value => 'go', :id => 'go-trip'
 
 
-
-  
-  
   .table-responsive
     %table#myTable.tablesorter.table.table-hover.h4.table-striped
       %thead
