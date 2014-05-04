@@ -78,7 +78,7 @@ class MyCatcher(BusCatcher):
 	
 		# select Northeast
 		logger.info("Selecting northeast...")
-		elem_1 = browser.find_element_by_id("ctl00_cphM_forwardRouteUC_lstRegion_repeater_ctl01_link")
+		elem_1 = browser.find_element_by_id("ctl00_cphM_forwardRouteUC_lstRegion_repeater_ctl00_link")
 		#elem_1=browser.find_element_by_partial_link_text("Northeast")
 		elem_1.click()
 		time.sleep(5 * settings_dict['slowness_factor'])

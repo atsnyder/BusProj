@@ -14,7 +14,7 @@ end
 
 def show
 
-    @rides = Ride.fetch_android_results(params[:search],params[:date])
+    @rides = Ride.fetch_android_results(params[:search], params[:date])
     
     @rides = Kaminari.paginate_array(@rides).page(params[:page]).per(@perpage)
     if(params[:search]["radio"] == "OneWay" || params[:date]["to_Date"] == "")
@@ -46,12 +46,9 @@ end
 
 def dosearch
 
-    cookies[:sort] = params[:sort] || cookies[:sort]
-    params[:sort] = params[:sort] || cookies[:sort]
 
-    cookies[:perpage] = params[:perpage] || cookies[:perpage]
-    params[:perpage] = params[:perpage] || cookies[:perpage]
-    
+
+
 
     params[:search] = params[:search] || {"radio" => cookies[:radio], "from_city" => cookies[:from], "to_city" => cookies[:to]}
 
@@ -75,8 +72,19 @@ def dosearch
     params[:date]["to_Date"] = params[:date]["to_Date"] || cookies[:to_date]
     params[:submit_btn] =  params[:submit_btn] || cookies[:submit_btn]
 
-    @perpage = @perpage || 10
-    @perpage = params[:perpage] || @perpage
+
+
+    params[:sort] = params[:sort] || "dTime"
+
+    cookies[:sort] = params[:sort] || cookies[:sort]
+    params[:sort] = params[:sort] || cookies[:sort]
+
+
+    params[:perpage] = params[:perpage] || 10
+
+    cookies[:perpage] = params[:perpage] || cookies[:perpage]
+    params[:perpage] = params[:perpage] || cookies[:perpage]
+
 
     @round_trip = true
     @rides = Ride.fetch_results(params[:search],params[:date])

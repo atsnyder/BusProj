@@ -137,7 +137,7 @@ class MyCatcher(BusCatcher):
 		time.sleep(7 * settings_dict['slowness_factor']) 			
 		logger.info("Clicking on search button...")
 		#self.take_screenshot()
-		elem_3=browser.find_element_by_id("ff_submit_button")
+		elem_3=browser.find_element_by_name("_handler=amtrak.presentation.handler.request.rail.farefamilies.AmtrakRailFareFamiliesSearchRequestHandler/_xpath=/sessionWorkflow/productWorkflow[@product='Rail']")
 		elem_3.click()
 		time.sleep(15 * settings_dict['slowness_factor']) 
 		#self.take_screenshot()		
@@ -148,17 +148,17 @@ class MyCatcher(BusCatcher):
 		#file_str= my_log_dir + "/" + COMPANY_NAME + "_"  + now_str + ".png"
 		#browser.save_screenshot(file_str)
 		
-		bottom_buttons = browser.find_elements_by_xpath("//div[7]/div/div[2]/span/a")
+		bottom_buttons = browser.find_elements_by_xpath("//div[@id='pagination_nav']/span/a")
 		page_ct = len(bottom_buttons) - 2 
-	
-		for _page_ in range(page_ct):
-			
-			# if we want to look at the next page of results
-			if _page_ > 0: 
-				logger.info("Selecting next page...")
-				bottom_buttons = browser.find_elements_by_xpath("//div[7]/div/div[2]/span/a")
-				bottom_buttons[-1].click()
-				time.sleep(5 * settings_dict['slowness_factor'])
+
+		if True:
+			logger.info("what")			
+			# //div[2]/div/div/div[3]/div[4]/div/span/a if we want to look at the next page of results
+			#if _page_ > 0: 
+			#	logger.info("Selecting next page...")
+			#	bottom_buttons = browser.find_elements_by_xpath("//div[7]/div/div[2]/span/a")
+			#	bottom_buttons[-1].click()
+			#	time.sleep(5 * settings_dict['slowness_factor'])
 			
 			# parse entire table 
 			logger.info("Parsing table...")
@@ -166,7 +166,7 @@ class MyCatcher(BusCatcher):
 			html_str=str(text_html)
 			resp_for_scrapy=TextResponse('none',200,{},html_str,[],None)
 			hxs=HtmlXPathSelector(resp_for_scrapy)
-			table_rows = hxs.select("//*[@class='availability'] | //*[@class='availability last']")
+			table_rows = hxs.select("//*[@class='ffam-fare-families-container ffam-four-column']/form")
 			row_ct=len(table_rows)
 			#self.take_screenshot()
 			
@@ -183,16 +183,20 @@ class MyCatcher(BusCatcher):
 					logger.debug("Executing row " + str(1 + x) + " of " + str(row_ct))
 					
 					cur_node_elements=table_rows[x]
-					depart_and_arrive = cur_node_elements.select('.//span[@class="time_point"]')
+					depart_and_arrive = cur_node_elements.select('.//div[@class="ffam-time"]')
 					
-					travel_time=cur_node_elements.select('.//div[@class="duration_data"]/text()')
-					depart_time_num = depart_and_arrive[0].re("\d{1,2}\:\d\d")
-					depart_time_sig = depart_and_arrive[0].re("[AP][M]")
-					arrive_time_num = depart_and_arrive[1].re("\d{1,2}\:\d\d")
-					arrive_time_sig = depart_and_arrive[1].re("[AP][M]")
+					travel_time=cur_node_elements.select('.//div[@class="ffam-length"]/text()')
+					this_num = depart_and_arrive[0].re("\d{1,2}\:\d\d")
+					this_sig = depart_and_arrive[0].re("[ap][m]")
+					depart_time_num = this_num[0] #depart_and_arrive[0].re("\d{1,2}\:\d\d")
+					depart_time_sig = this_sig[0] #depart_and_arrive[0].re("[ap][m]")
+					arrive_time_num = this_num[1] #depart_and_arrive[0].re(".\d{1,2}\:\d\d")
+					arrive_time_sig = this_sig[1] #depart_and_arrive[0].re(".[AP][M]")
 					
-					cost_str_array=cur_node_elements.select('.//span[@class="price"]').re("\d{1,3}\.\d\d")
+					logger.debug(str(depart_time_num) + str(depart_time_sig) + str(arrive_time_num) + str(arrive_time_sig))
 					
+					cost_str_array=cur_node_elements.select('.//span[@id="_lowestFareFFBean"]').re("\d{1,3}\.\d\d")
+					logger.debug(str(cost_str_array))
 					if len(cost_str_array)>0:
 						cost_num_array=[int(float(number)) for number in cost_str_array]
 						travel_price=min(cost_num_array)
@@ -204,9 +208,9 @@ class MyCatcher(BusCatcher):
 					if bool_value == True:
 						msg= "Depart date: " + date_str
 						logger.debug(msg)
-						msg= "Depart time: " + depart_time_num[0] + " " + depart_time_sig[0]
+						msg= "Depart time: " + depart_time_num + " " + depart_time_sig
 						logger.debug(msg)	
-						msg= "Arrive time: " + arrive_time_num[0] + " " + arrive_time_sig[0]
+						msg= "Arrive time: " + arrive_time_num + " " + arrive_time_sig
 						logger.debug(msg)
 						
 						if bool(travel_price)==False:
@@ -219,16 +223,16 @@ class MyCatcher(BusCatcher):
 							travel_price_sql=travel_price
 							
 						# create depart datetime object
-						depart_time_list=re.split(":",depart_time_num[0])
+						depart_time_list=re.split(":",depart_time_num)
 						depart_minute=int(depart_time_list[1])
 						pre_depart_hour=int(depart_time_list[0])
 						
-						if depart_time_sig[0]=='AM':
+						if depart_time_sig =='am':
 							if pre_depart_hour==12:
 								depart_hour=pre_depart_hour-12
 							else:
 								depart_hour=pre_depart_hour
-						elif depart_time_sig[0]=='PM':
+						elif depart_time_sig =='pm':
 							if pre_depart_hour==12:
 								depart_hour=pre_depart_hour
 							else:

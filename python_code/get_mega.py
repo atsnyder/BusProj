@@ -77,7 +77,7 @@ class MyCatcher(BusCatcher):
 		logger.info(msg)
 		
 		logger.info("Clicking on origin city...")
-		drop_down=browser.find_element_by_id("JourneyPlanner_ddlLeavingFrom")
+		drop_down=browser.find_element_by_id("JourneyPlanner_ddlOrigin")
 		drop_down_elements=drop_down.find_elements_by_xpath("./option")
 		
 		if len(drop_down_elements) == 0:
@@ -94,7 +94,7 @@ class MyCatcher(BusCatcher):
 		msg="Clicking on destination city..."
 		logger.info(msg)
 		
-		drop_down=browser.find_element_by_id("JourneyPlanner_ddlTravellingTo")
+		drop_down=browser.find_element_by_id("JourneyPlanner_ddlDest")
 		drop_down_elements=drop_down.find_elements_by_xpath("./option")
 		
 		if len(drop_down_elements) == 0:
@@ -126,7 +126,7 @@ class MyCatcher(BusCatcher):
 		#browser.find_element_by_id("JourneyPlanner_btnSearch").click()
 		# browser.execute_script("return WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions('JourneyPlanner$btnSearch', '', true, 'jp', '', false, false))")
 
-		browser.find_element_by_id("JourneyPlanner_btnSearch").send_keys(Keys.ENTER)
+		browser.find_element_by_id("JourneyPlanner_btnSearch").click()
 		
 		time.sleep(10 * settings_dict['slowness_factor']) 
 		
@@ -136,7 +136,7 @@ class MyCatcher(BusCatcher):
 		html_str=str(text_html)
 		resp_for_scrapy=TextResponse('none',200,{},html_str,[],None)
 		hxs=HtmlXPathSelector(resp_for_scrapy)
-		table_rows=hxs.select('//ul[@class="journey standard"]')	
+		table_rows=hxs.select('//ul[@class="journey standard none"]')	
 		row_ct=len(table_rows)		
 		
 		#self.proxy_obj.take_screenshot()
