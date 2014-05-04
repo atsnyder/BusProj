@@ -10,7 +10,7 @@ COMPANY_NAME = "Peterpan"
 
 class MyCatcher(BusCatcher):
 	def __init__(self,day_diff_array=[],do_makeups=False):
-		BusCatcher.__init__(self,day_diff_array,COMPANY_NAME,do_makeups,use_proxies=True)
+		BusCatcher.__init__(self,day_diff_array,COMPANY_NAME,do_makeups)
 		self.prepare_for_launch()
 
 	def get_makeup_tr_obj(self,job):
@@ -67,24 +67,24 @@ class MyCatcher(BusCatcher):
 		msg="From " + cityOrigin_tag + " to " + cityDeparture_tag + " (" + date_str + ")"
 		logger.info(msg)
 		
-		time.sleep(12 * settings_dict['slowness_factor']) 
+		#time.sleep(12 * settings_dict['slowness_factor']) 
 		logger.info("Loading URL...")
-		browser.get("http://peterpanbus.com/")
+		browser.get("https://ws.peterpanbus.com/purchase/default.aspx")
 		time.sleep(20 * settings_dict['slowness_factor'])
 		
-		logger.info("Clicking on Buy Tickets")
-		elem_0 = browser.find_element_by_id("buy_tickets").click()
-		time.sleep(8 * settings_dict['slowness_factor']) 
+		#logger.info("Clicking on Buy Tickets")
+		#elem_0 = browser.find_element_by_id("buy_tickets").click()
+		#time.sleep(8 * settings_dict['slowness_factor']) 
 		
 		#raise RuntimeError("Just a test for restart browser")
 		
 		logger.info("Clicking on one-way tickets") 
-		elem_0 = browser.find_element_by_id("ctl00_ContentPlaceHolder_ETicketsSelector1_OneWayRadioButtonList").click()
+		browser.find_element_by_id("MainContent_triptype1").click()
 		time.sleep(3 * settings_dict['slowness_factor']) 
 		
 		msg="Clicking on origin city..."
 		logger.info(msg)
-		drop_down=browser.find_element_by_id("ctl00_ContentPlaceHolder_ETicketsSelector1_OrigDropDownList")
+		drop_down=browser.find_element_by_id("MainContent_origin")
 		drop_down_elements=drop_down.find_elements_by_xpath("./option")
 		city_origin_minimal = re.split(",",cityOrigin.lower())[0]
 
@@ -97,7 +97,7 @@ class MyCatcher(BusCatcher):
 		
 		msg="Clicking on destination city..."
 		logger.info(msg)
-		drop_down=browser.find_element_by_id("ctl00_ContentPlaceHolder_ETicketsSelector1_DestDropDownList")
+		drop_down=browser.find_element_by_id("MainContent_destinater")
 		drop_down_elements=drop_down.find_elements_by_xpath("./option")
 		city_departure_minimal = re.split(",",cityDeparture.lower())[0]
 		# matches "Baltimore, MD" to "Baltimore Downtown, MD" by lowercasing and then matching		
@@ -112,14 +112,23 @@ class MyCatcher(BusCatcher):
 		
 		logger.info("Clicking on correct month...")
 		peterpan_month_str=cur_month_str[0:2]
-		month_button = browser.find_element_by_partial_link_text(peterpan_month_str).click()
+		month_button = browser.find_element_by_id("MainContent_datepickerdep").click()
 		time.sleep(5 * settings_dict['slowness_factor'])
 		
+		logger.debug(str(cur_day))
+		
 		logger.info("Clicking on correct day...")
-		days_boxes = browser.find_elements_by_xpath("//table/tbody/tr[2]/td[2]/div/div/table[2]/tbody/tr/td")
-		ind_diff = 10 - int(days_boxes[10].text)
-		cur_day_index = date.day + ind_diff
-		days_boxes[cur_day_index].find_element_by_tag_name('a').click()
+		#browser.find_element_by_xpath("//button[@class='ui-datepicker-trigger']").click()
+		browser.find_element_by_link_text(str(cur_day)).click()
+		
+		#days_boxes = browser.find_elements_by_xpath("//table/tbody/tr[2]/td[2]/div/div/table[2]/tbody/tr/td")
+		#ind_diff = 10 - int(days_boxes[10].text)
+		#cur_day_index = date.day + ind_diff
+		#days_boxes[cur_day_index].find_element_by_tag_name('a').click()
+		time.sleep(10 * settings_dict['slowness_factor'])
+		
+		logger.info("Clicking search...")
+		browser.find_element_by_id("MainContent_ImageButton1").click()
 		time.sleep(10 * settings_dict['slowness_factor'])
 		
 		# parse entire table 
@@ -128,8 +137,8 @@ class MyCatcher(BusCatcher):
 		html_str=str(text_html)
 		resp_for_scrapy=TextResponse('none',200,{},html_str,[],None)
 		hxs=HtmlXPathSelector(resp_for_scrapy)
-		schedule=hxs.select('//table[@class="SchedulesListView"]')		
-		table_rows=schedule.select(".//tbody/tr")
+		table_rows=hxs.select('//tr[@class="selectit"]')		
+		#table_rows=schedule.select(".//tbody/tr")
 		row_ct=len(table_rows)		
 	
 		if row_ct == 0:
@@ -141,12 +150,14 @@ class MyCatcher(BusCatcher):
 			for x in xrange(row_ct):
 			
 				cur_node_elements=table_rows[x]
-				travel_price=cur_node_elements.select('.//td[contains(@class,"AdultColumnCell")]').re("\d{1,3}\.\d\d")
-				depart_time_num=cur_node_elements.select('.//td[contains(@class,"DepartsColumnCell")]').re("\d{1,2}\:\d\d")
-				depart_time_sig=cur_node_elements.select('.//td[contains(@class,"DepartsColumnCell")]').re("[AP][M]")
-				arrive_time_num=cur_node_elements.select('.//td[contains(@class,"ArrivesColumnCell")]').re("\d{1,2}\:\d\d")
-				arrive_time_sig=cur_node_elements.select('.//td[contains(@class,"ArrivesColumnCell")]').re("[AP][M]")
-				travel_time=cur_node_elements.select('.//td[@class="TimeColumnCell"]').re("\d{1,2}\:\d\d")
+				travel_price=cur_node_elements.select('./td[6]/b').re("\d{1,3}\.\d\d")
+				depart_time_num=cur_node_elements.select('./td[2]').re("\d{1,2}\:\d\d")
+				depart_time_sig=cur_node_elements.select('./td[2]').re("[AP][M]")
+				arrive_time_num=cur_node_elements.select('./td[3]').re("\d{1,2}\:\d\d")
+				arrive_time_sig=cur_node_elements.select('./td[3]').re("[AP][M]")
+				#travel_time=cur_node_elements.select('./td[4]/b').re("\d{1,2}\[h ]\d\d")
+				
+				logger.debug(str(travel_price) + str(depart_time_num) + str(depart_time_sig) + str(arrive_time_num) + str(arrive_time_sig))
 				
 				if len(travel_price)==0:
 					travel_price=None
@@ -189,11 +200,11 @@ class MyCatcher(BusCatcher):
 					depart_datetime=datetime.datetime(year=cur_year,month=cur_month,day=cur_day,hour=depart_hour,minute=depart_minute)
 					
 					# compute travel time 
-					hour_min_tuple = re.split(":",travel_time[0])
-					hour_str = hour_min_tuple[0]
-					minute_str = hour_min_tuple[1]
-					hour_diff = int(hour_str)
-					minute_diff = int(minute_str)
+					#hour_min_tuple = re.split("h ",travel_time)
+					#hour_str = hour_min_tuple[0]
+					#minute_str = hour_min_tuple[1]
+					hour_diff = 3
+					minute_diff = 25
 					
 					trip_delta=timedelta(hours=hour_diff,minutes=minute_diff)
 					arrive_datetime=depart_datetime+trip_delta
@@ -213,10 +224,10 @@ class MyCatcher(BusCatcher):
 					logger.info(msg)
 					continue	
 					
-				elif bool(len(travel_time)) == False:
-					msg="Travel time is missing! Continue with next row"
-					logger.info(msg)
-					continue 
+				#elif bool(len(travel_time)) == False:
+					#msg="Travel time is missing! Continue with next row"
+					#logger.info(msg)
+					#continue 
 			
 		if settings_dict['include_database'] and settings_dict['include_makeup']:
 			msg= "Updating makeup table..."

@@ -105,6 +105,11 @@ class MyCatcher(BusCatcher):
 		browser.find_element_by_id("ctl00_MainContent_sd").send_keys(date_str)
 		time.sleep(5 * settings_dict['slowness_factor']) 
 		
+		# id: ctl00_MainContent_rbFareType_1
+		logger.info("Clicking on Full Fare button...")
+		browser.find_element_by_id("ctl00_MainContent_rbFareType_1").click()
+		time.sleep(5 * settings_dict['slowness_factor'])	
+		
 		msg="Clicking on search button..."
 		logger.info(msg)
 	
