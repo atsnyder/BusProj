@@ -23,7 +23,7 @@ settings_dict = {
 				# onlu applicable when proxies are being used, failed requests before proxy switch
 				'min_req_per_proxy': 25,\
 				'max_tries': 4,\
-				'num_processes': 3,\
+				'num_processes': 9,\
 				'slowness_factor': 1,\
 				'repeats_per_browser':2, 
 				'log_creds': ['us-cdbr-east-05.cleardb.net','b3830eaa3b19ce','03c6c2b9','heroku_8726e1df1758d14']}

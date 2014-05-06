@@ -22,6 +22,12 @@ body {
    z-index:2;
 }
 
+input[readonly="readonly"]:invalid{
+  color: red;
+  background-color: red;
+  border-color: red;
+}
+
 #hometitle{
   font-family: Arial;
   font-size: 50px;
