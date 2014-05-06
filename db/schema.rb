@@ -13,127 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20140219182333) do
 
-  create_table "2014april20", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april21", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april22", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april23", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april24", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april25", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april26", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april27", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april28", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april29", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014april30", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
   create_table "2014march10", :primary_key => "TRIP_ID", :force => true do |t|
     t.string   "COMPANY_NAME", :limit => 40
     t.string   "DEPART_CITY",  :limit => 40
@@ -167,6 +46,149 @@ ActiveRecord::Schema.define(:version => 20140219182333) do
     t.string   "URL",          :limit => 500
   end
 
+  create_table "2014may10", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may11", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may12", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may13", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may14", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may15", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may16", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may4", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may5", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may6", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may7", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may8", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
+  create_table "2014may9", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string   "COMPANY_NAME", :limit => 40
+    t.string   "DEPART_CITY",  :limit => 40
+    t.string   "ARRIVE_CITY",  :limit => 40
+    t.datetime "DEPART_TIME"
+    t.datetime "ARRIVE_TIME"
+    t.string   "TRIP_LENGTH",  :limit => 12
+    t.integer  "TRIP_COST"
+    t.string   "URL",          :limit => 500
+  end
+
   create_table "boltbus_makeup", :primary_key => "TRIP_ID", :force => true do |t|
     t.string "COMPANY_NAME", :limit => 40
     t.string "DEPART_CITY",  :limit => 40
@@ -189,6 +211,20 @@ ActiveRecord::Schema.define(:version => 20140219182333) do
   end
 
   create_table "greyhound_makeup", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string "COMPANY_NAME", :limit => 40
+    t.string "DEPART_CITY",  :limit => 40
+    t.string "ARRIVE_CITY",  :limit => 40
+    t.date   "DEPART_DATE"
+  end
+
+  create_table "megabus_makeup", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string "COMPANY_NAME", :limit => 40
+    t.string "DEPART_CITY",  :limit => 40
+    t.string "ARRIVE_CITY",  :limit => 40
+    t.date   "DEPART_DATE"
+  end
+
+  create_table "peterpan_makeup", :primary_key => "TRIP_ID", :force => true do |t|
     t.string "COMPANY_NAME", :limit => 40
     t.string "DEPART_CITY",  :limit => 40
     t.string "ARRIVE_CITY",  :limit => 40

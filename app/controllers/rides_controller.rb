@@ -74,16 +74,17 @@ def dosearch
 
 
 
-    params[:sort] = params[:sort] || "dTime"
 
     cookies[:sort] = params[:sort] || cookies[:sort]
     params[:sort] = params[:sort] || cookies[:sort]
 
+    params[:sort] = params[:sort] || "dTime"
 
-    params[:perpage] = params[:perpage] || 10
 
     cookies[:perpage] = params[:perpage] || cookies[:perpage]
     params[:perpage] = params[:perpage] || cookies[:perpage]
+
+    params[:perpage] = params[:perpage] || 10
 
 
     @round_trip = true
