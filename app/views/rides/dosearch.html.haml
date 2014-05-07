@@ -8,13 +8,13 @@
         %span.icon-bar
       =link_to 'BusRide', rides_path, :method=>:get, :class => 'navbar-brand'
       
-      .navbar-form.navbar-left.form-group
+      .navbar-form.navbar-left.form-group.disformdo
         = form_tag rides_search_path, :method => :post do
           = text_field :search, 'from_city', :value => "#{cookies[:from]}", :placeholder => 'Departure City', :required => true, :onfocus => "javascript:initializeSourceCity();"
           = text_field :search, 'to_city', :value => "#{cookies[:to]}",:placeholder => 'Arrival City',:required => true,:onfocus => "javascript:initializeDestinationCity();"
           = text_field :date, 'from_Date',:id => 'from_datepicker',:placeholder => 'From date', :required => true, :readonly => 'readonly'
           = text_field :date, 'to_Date',:id => 'to_datepicker',:placeholder => 'Return date', :readonly => 'readonly'
-          = button_tag 'Search' , class: 'search-button1' , type: :submit, :id => 'search'
+          = button_tag 'Search' , type: :submit, :id => 'search'
 
 .container
   Search Results:

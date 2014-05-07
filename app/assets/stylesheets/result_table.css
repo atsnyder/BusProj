@@ -96,6 +96,10 @@ th.header {
   margin-right: auto;
 }
 
+.disformdo{
+  display: inline;
+}
+
 .search-button1 {
   float: right;
   display: inline;
