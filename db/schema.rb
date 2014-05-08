@@ -123,28 +123,6 @@ ActiveRecord::Schema.define(:version => 20140219182333) do
     t.string   "URL",          :limit => 500
   end
 
-  create_table "2014may4", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
-  create_table "2014may5", :primary_key => "TRIP_ID", :force => true do |t|
-    t.string   "COMPANY_NAME", :limit => 40
-    t.string   "DEPART_CITY",  :limit => 40
-    t.string   "ARRIVE_CITY",  :limit => 40
-    t.datetime "DEPART_TIME"
-    t.datetime "ARRIVE_TIME"
-    t.string   "TRIP_LENGTH",  :limit => 12
-    t.integer  "TRIP_COST"
-    t.string   "URL",          :limit => 500
-  end
-
   create_table "2014may6", :primary_key => "TRIP_ID", :force => true do |t|
     t.string   "COMPANY_NAME", :limit => 40
     t.string   "DEPART_CITY",  :limit => 40
@@ -187,6 +165,13 @@ ActiveRecord::Schema.define(:version => 20140219182333) do
     t.string   "TRIP_LENGTH",  :limit => 12
     t.integer  "TRIP_COST"
     t.string   "URL",          :limit => 500
+  end
+
+  create_table "amtrak_makeup", :primary_key => "TRIP_ID", :force => true do |t|
+    t.string "COMPANY_NAME", :limit => 40
+    t.string "DEPART_CITY",  :limit => 40
+    t.string "ARRIVE_CITY",  :limit => 40
+    t.date   "DEPART_DATE"
   end
 
   create_table "boltbus_makeup", :primary_key => "TRIP_ID", :force => true do |t|

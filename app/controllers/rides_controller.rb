@@ -116,12 +116,7 @@ def dosearch
       return
     end
     
-    @search = @rides
-    respond_to do |format|
-      format.html
-      format.xml  {render}
-      format.json {render}
-    end
+
 end
 
 

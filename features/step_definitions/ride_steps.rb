@@ -8,7 +8,7 @@ Given /^I am on the BusRide home page$/ do
  end
 
 Given(/^I have searched for a bus with source "(.*?)"$/) do |from|
-  fill_in 'from_search_box', :with => from
+  fill_in 'search_from_city', :with => from
 end
 
 And(/^I initial departure date "(.*?)"$/) do |from_date|
@@ -17,7 +17,7 @@ And(/^I initial departure date "(.*?)"$/) do |from_date|
   puts find_field("from_datepicker").value.nil?
   #msg = "No element found with the content of '#{from_date}'"
   #page.execute_script("$('whatever_you_want').click()");
-  find("#to_search_box").click
+  find("#search_to_city").click
   puts page.has_css?('div.pika-single')
   puts page.has_css?('div.radientBG')
   #within('div.pika-single') do
@@ -31,7 +31,7 @@ And(/^I initial departure date "(.*?)"$/) do |from_date|
 end
 
 And(/^I initial destination "(.*?)"$/) do |to|
-  fill_in 'to_search_box', :with => to
+  fill_in 'search_to_city', :with => to
 end
 
 And(/^I initial return departure date "(.*?)"$/) do |to_date|
@@ -48,10 +48,6 @@ And(/^I initial return departure date "(.*?)"$/) do |to_date|
   #page.execute_script %Q{ $("a.ui-state-default:contains('15')").trigger("click") } # click on day 15
   #puts page.has_css?('div.pika-single')
   #puts page.has_css?('div.radientBG')
-end
-
-And(/^I initial number of passengers "(.*?)"$/) do |passengers|
-  fill_in 'passengers_box', :with => passengers
 end
 
 When(/^I click the search button$/) do

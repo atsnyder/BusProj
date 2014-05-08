@@ -21,12 +21,10 @@ describe RidesController do
       cookies[:from_date].should == "Sun Apr 20 2014"
       cookies[:radio].should == "RoundTrip"
 
-      #@button_tag.should == true;
-
       post :dosearch, {:search => {:radio => "OneWay", :from_city => "New York, NY", :to_city => "Baltimore, MD"}, :date => {:from_Date => "Sun Apr 20 2014", :to_Date => "Sun Apr 20 2014"}}
 
       cookies[:radio].should == "OneWay"
-      #@button_tag.should == false
+
     end  
 
 
