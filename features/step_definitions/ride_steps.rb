@@ -1,6 +1,10 @@
-When(/^I click "(.*?)"$/) do |locator|
-  msg = "No element found with the content of '#{locator}'"
-  locate(:xpath, Capybara::XPath.element(locator), msg).click
+When(/^I click the "(.*?)" button$/) do |btn|
+  click_button btn
+end
+
+And(/^I should( not)? see the "(.*?)" button$/) do |should, btn|
+  exist = should ? :should_not : :should
+  page.send(exist, have_css(btn))
 end
 
 Given /^I am on the BusRide home page$/ do
@@ -8,54 +12,23 @@ Given /^I am on the BusRide home page$/ do
  end
 
 Given(/^I have searched for a bus with source "(.*?)"$/) do |from|
-  fill_in 'from_search_box', :with => from
+  fill_in 'search_from_city', :with => from
 end
 
 And(/^I initial departure date "(.*?)"$/) do |from_date|
-  puts from_date
   fill_in 'from_datepicker', :with => from_date
-  puts find_field("from_datepicker").value.nil?
-  #msg = "No element found with the content of '#{from_date}'"
-  #page.execute_script("$('whatever_you_want').click()");
-  find("#to_search_box").click
-  puts page.has_css?('div.pika-single')
-  puts page.has_css?('div.radientBG')
-  #within('div.pika-single') do
-  #  find('#day5').click
-  #end
-  #puts find_field("from_datepicker").value.nil?
-  #page.execute_script %Q{ $('#auction_event_date').trigger("focus") } # activate datetime picker
-  #page.execute_script %Q{ $('a.ui-datepicker-next').trigger("click") } # move one month forward
-  #page.execute_script %Q{ $("a.ui-state-default:contains('15')").trigger("click") } # click on day 15
-
 end
 
 And(/^I initial destination "(.*?)"$/) do |to|
-  fill_in 'to_search_box', :with => to
+  fill_in 'search_to_city', :with => to
 end
 
 And(/^I initial return departure date "(.*?)"$/) do |to_date|
-  pending
-  #puts to_date
-  #msg = "No element found with the content of '#{to_date}'"
-  #find("#to_datepicker").click
-  #within('div.pika-single') do
-  #  find('#day5').click
-  #end
-  #puts find_field("to_datepicker").value.nil?
-  #page.execute_script %Q{ $('#auction_event_date').trigger("focus") } # activate datetime picker
-  #page.execute_script %Q{ $('a.ui-datepicker-next').trigger("click") } # move one month forward
-  #page.execute_script %Q{ $("a.ui-state-default:contains('15')").trigger("click") } # click on day 15
-  #puts page.has_css?('div.pika-single')
-  #puts page.has_css?('div.radientBG')
+  fill_in 'to_datepicker', :with => to_date
 end
 
 And(/^I initial number of passengers "(.*?)"$/) do |passengers|
   fill_in 'passengers_box', :with => passengers
-end
-
-When(/^I click the search button$/) do
-  click_button "search"
 end
 
 Then(/^I should be on the Search Results page$/) do
@@ -91,28 +64,24 @@ end
 
 Then(/^I should( not)? see the( back)? result table$/) do |should, back|
   exist = should ? :should_not : :should
-  table = back ? '#rides_back_result' : '#rides_result'
+  table = '#myTable'#back ? '#rides_back_result' : '#rides_result'
   #puts within_frame("go_table")
   page.send(exist, have_css(table))
 end
 
-Then(/^I should see "(.*?)" in the "(.*?)" column of "(.*?)"$/) do |text, column, table|
-  if(table == "result table")
-    table_id = "#rides_result"
-  elsif(table == "back result table")
-    table_id = "#rides_back_result"
-  end
+Then(/^I should see "(.*?)" in the "(.*?)" column$/) do |text, column|
+  table_id = '#myTable'
  
-  if(column == "Origin City")
+  if(column == "Departure")
     within table_id do
-      page.all(text) do |t|
-        t.should have_css('td.depart_city')
+      page.all('td.depart_city') do |t|
+        t.should have_content(text)
       end
     end
-  elsif(column == "Destination City")
+  elsif(column == "Arrival")
     within table_id do
-      page.all(text) do |t|
-        t.should have_css('td.arrive_city')
+      page.all('td.arrive_city') do |t|
+        t.should have_content(text)
       end
     end
   end
@@ -121,5 +90,13 @@ end
 
 Then(/^I should see two result table$/) do
   pending
+end
+
+Then(/^I should see "(.*?)" results$/) do |rpp|
+  assert page.body.scan('$').length == rpp.to_i, "#{page.body.scan('$').length} results per page"
+end
+
+When(/^I choose "(.*?)" from the "(.*?)" box$/) do |choice, box|
+  select(choice, :from => box)
 end
 
