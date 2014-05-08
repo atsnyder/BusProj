@@ -17,7 +17,7 @@ end
 
 And(/^I initial departure date "(.*?)"$/) do |from_date|
   fill_in 'from_datepicker', :with => from_date
-<<<<<<< HEAD
+
   puts find_field("from_datepicker").value.nil?
   #msg = "No element found with the content of '#{from_date}'"
   #page.execute_script("$('whatever_you_want').click()");
