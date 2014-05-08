@@ -70,8 +70,6 @@ def self.tabledroidname table
 	    tempdate[0] = 'November'
 	  when '12'
 	    tempdate[0] = 'December'
-	  else
-	    tempdate[0] = "goofed"
 	  end
 	  tablename = (tempdate[2]+tempdate[0]+tempdate[1])
 	  return tablename

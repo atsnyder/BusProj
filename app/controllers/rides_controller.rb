@@ -96,7 +96,6 @@ def dosearch
 
 
 
-
     if(params[:search]["radio"] == "OneWay" || params[:date]["to_Date"] == "")
       @round_trip = false
     else
